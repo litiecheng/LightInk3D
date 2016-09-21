@@ -1,0 +1,68 @@
+
+{
+    ["LightInk3DOPENGL"] = 
+    {
+        ["defines_if_ok"] = "LightInk3DOPENGL"
+    ,   ["__scriptdir"] = "E:\\LightInk\\LightInk3D\\xmake"
+    ,   ["showmenu"] = true
+    ,   ["default"] = true
+    }
+
+,   ["LightInk3D2D"] = 
+    {
+        ["defines_if_ok"] = "LightInk3D2D"
+    ,   ["__scriptdir"] = "E:\\LightInk\\LightInk3D\\xmake"
+    ,   ["showmenu"] = true
+    ,   ["default"] = true
+    }
+
+,   ["LightInk3DLua"] = 
+    {
+        ["defines_if_ok"] = "LightInk3DLua"
+    ,   ["__scriptdir"] = "E:\\LightInk\\LightInk3D\\xmake"
+    ,   ["showmenu"] = true
+    ,   ["default"] = true
+    }
+
+,   ["LightInk3DSQLite"] = 
+    {
+        ["defines_if_ok"] = "LightInk3DSQLite"
+    ,   ["__scriptdir"] = "E:\\LightInk\\LightInk3D\\xmake"
+    ,   ["showmenu"] = true
+    ,   ["default"] = true
+    }
+
+,   ["LightInk3DNAVIGATION"] = 
+    {
+        ["defines_if_ok"] = "LightInk3DNAVIGATION"
+    ,   ["__scriptdir"] = "E:\\LightInk\\LightInk3D\\xmake"
+    ,   ["showmenu"] = true
+    ,   ["default"] = true
+    }
+
+,   ["LightInk3DPHYSICS"] = 
+    {
+        ["defines_if_ok"] = "LightInk3DPHYSICS"
+    ,   ["__scriptdir"] = "E:\\LightInk\\LightInk3D\\xmake"
+    ,   ["showmenu"] = true
+    ,   ["default"] = true
+    }
+
+,   ["LightInk3DDX9"] = 
+    {
+        ["defines_if_ok"] = "LightInk3DDX9"
+    ,   ["__scriptdir"] = "E:\\LightInk\\LightInk3D\\xmake"
+    ,   ["showmenu"] = true
+    ,   ["default"] = true
+    }
+
+,   ["__version"] = "XMake v2.0.5"
+,   ["LightInk3DNETWORK"] = 
+    {
+        ["defines_if_ok"] = "LightInk3DNETWORK"
+    ,   ["__scriptdir"] = "E:\\LightInk\\LightInk3D\\xmake"
+    ,   ["showmenu"] = true
+    ,   ["default"] = true
+    }
+
+}

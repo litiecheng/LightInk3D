@@ -20,117 +20,61 @@
 # THE SOFTWARE.
 #
 
-# Check existence of stdint.h for LibCpuId
-include (CheckIncludeFiles)
-check_include_files (stdint.h HAVE_STDINT_H)
-if (HAVE_STDINT_H)
-    add_definitions (-DHAVE_STDINT_H)
+# Set CMake minimum version and CMake policy required by LightInk3D module
+if (WIN32)
+    cmake_minimum_required (VERSION 3.2.3)      # Going forward all platforms will use this as minimum version
+else ()
+    cmake_minimum_required (VERSION 2.8.6)
 endif ()
-
-# Setup RPATH settings
-if (URHO3D_LIB_TYPE STREQUAL SHARED AND NOT WIN32 AND NOT ANDROID AND NOT IOS AND NOT WEB)
-    # Add RPATH entries when building
-    set (CMAKE_SKIP_BUILD_RPATH FALSE)
-    # But don't set them yet in the build tree
-    set (CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
-    if (APPLE)
-        if (CMAKE_VERSION VERSION_GREATER 2.8.12 OR CMAKE_VERSION VERSION_EQUAL 2.8.12)
-            set (CMAKE_MACOSX_RPATH TRUE)
-        endif ()
-        set (ORIGIN @loader_path)
-    else ()
-        set (ORIGIN $ORIGIN)
+if (COMMAND cmake_policy)
+    cmake_policy (SET CMP0003 NEW)
+    if (CMAKE_VERSION VERSION_GREATER 2.8.12 OR CMAKE_VERSION VERSION_EQUAL 2.8.12)
+        # INTERFACE_LINK_LIBRARIES defines the link interface
+        cmake_policy (SET CMP0022 NEW)
     endif ()
-    # When installing/packaging set the first RPATH entry to the library location relative to the executable
-    set (CMAKE_INSTALL_RPATH ${ORIGIN}/../lib${LIB_SUFFIX}/${PATH_SUFFIX})    # The library location is based on SDK install destination
-    # The second entry to the library location relative to the executable in the tool directory
-    list (APPEND CMAKE_INSTALL_RPATH ${ORIGIN}/../../lib${LIB_SUFFIX}/${PATH_SUFFIX})    # The tools are installed one directory further down from normal executable
-    # The last entry to the install destination of the library, if the destination location is not in the system default search path
-    list (FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} isSystemDir)
-    if (isSystemDir STREQUAL -1)
-        list (APPEND CMAKE_INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/${DEST_LIBRARY_DIR})
+    if (CMAKE_VERSION VERSION_GREATER 3.0.0 OR CMAKE_VERSION VERSION_EQUAL 3.0.0)
+        # Disallow use of the LOCATION target property - so we set to OLD as we still need it
+        cmake_policy (SET CMP0026 OLD)
+        # MACOSX_RPATH is enabled by default
+        cmake_policy (SET CMP0042 NEW)
     endif ()
 endif ()
 
-# Add targets
-foreach (TARGET FreeType JO LZ4 PugiXml rapidjson SDL StanHull STB)
-    add_subdirectory (ThirdParty/${TARGET})
-endforeach ()
+# Set CMake modules search path
+set (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/Modules)
 
-if (URHO3D_ANGELSCRIPT)
-    add_subdirectory (ThirdParty/AngelScript)
-    if (EMSCRIPTEN OR (ARM AND NATIVE_64BIT))
-        add_subdirectory (ThirdParty/boost)
-    endif ()
+# Include LightInk3D Cmake common module
+include (LightInk3DCommon)
+
+# Setup SDK install destinations
+set (PATH_SUFFIX LightInk3D)
+
+if (ANDROID)
+    # For Android platform, install to a path similar to ANDROID_LIBRARY_OUTPUT_PATH variable, e.g. libs/armeabi-v7a
+    set (LIB_SUFFIX s/${ANDROID_NDK_ABI_NAME})
+elseif (LightInk3D_64BIT)
+    # Install to 'lib64'
+	set (LIB_SUFFIX 64)
 endif ()
+set (DEST_INCLUDE_DIR include/LightInk3D)    # The include directory path contains the 'LightInk3D' suffix regardless of PATH_SUFFIX variable
+set (DEST_SHARE_DIR share/${PATH_SUFFIX})
+set (DEST_BUNDLE_DIR ${DEST_SHARE_DIR}/Applications)
+# Note to package maintainer: ${PATH_SUFFIX} for library could be removed if the extra path is not desired, but if so then the RPATH setting in Source's CMakeLists.txt needs to be adjusted accordingly
+set (DEST_LIBRARY_DIR lib${LIB_SUFFIX}/${PATH_SUFFIX})
+# Install application launcher scripts
+install (PROGRAMS ${APP_SCRIPTS} DESTINATION ${DEST_RUNTIME_DIR})   # DEST_RUNTIME_DIR variable is set by the set_output_directories() macro call in the LightInk3DCommon module
+# Install resource directories required by applications built with LightInk3D library
+install (DIRECTORY ${CMAKE_SOURCE_DIR}/../res/assets/Autoload ${CMAKE_SOURCE_DIR}/../res/assets/CoreData ${CMAKE_SOURCE_DIR}/../res/assets/Data DESTINATION ${DEST_SHARE_DIR}/Resources)
+# Install CMake modules and toolchains provided by and for LightInk3D
+install (DIRECTORY ${CMAKE_SOURCE_DIR}/ DESTINATION ${DEST_SHARE_DIR}/cmake)    # Note: the trailing slash is significant
 
-if (URHO3D_LUA)
-    add_subdirectory (ThirdParty/Lua${JIT})
-    add_subdirectory (ThirdParty/toluapp/src/lib)
-endif ()
 
-if (URHO3D_NETWORK)
-    add_subdirectory (ThirdParty/Civetweb)
-    add_subdirectory (ThirdParty/kNet)
-endif ()
+# ThirdParty source
+add_subdirectory (ThirdParty)
 
-if (URHO3D_DATABASE_ODBC)
-    add_subdirectory (ThirdParty/nanodbc)
-endif ()
-if (URHO3D_DATABASE_SQLITE)
-    add_subdirectory (ThirdParty/SQLite)
-endif ()
+# LightInk3D source
+add_subdirectory (LightInk3D)
 
-if (URHO3D_NAVIGATION)
-    add_subdirectory (ThirdParty/Detour)
-    add_subdirectory (ThirdParty/DetourCrowd)
-    add_subdirectory (ThirdParty/DetourTileCache)
-    add_subdirectory (ThirdParty/Recast)
-endif ()
-
-if (URHO3D_URHO2D)
-    add_subdirectory (ThirdParty/Box2D)
-    if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/ThirdParty/spine)
-        add_subdirectory (ThirdParty/spine)
-        # Add definition for Spine
-        add_definitions (-DURHO3D_SPINE)
-    endif ()
-endif ()
-
-if (URHO3D_PHYSICS)
-    add_subdirectory (ThirdParty/Bullet)
-endif ()
-
-if (NOT ANDROID AND NOT ARM AND NOT WEB)
-    if (URHO3D_OPENGL)
-        add_subdirectory (ThirdParty/GLEW)
-    elseif (NOT URHO3D_D3D11)
-        add_subdirectory (ThirdParty/MojoShader)
-    endif ()
-    if (NOT CMAKE_SYSTEM_NAME STREQUAL Linux)
-        add_subdirectory (ThirdParty/LibCpuId)
-    endif ()
-endif ()
-
-# Urho3D game engine library
-add_subdirectory (Urho3D)
-
-# Urho3D Clang tools
-if (URHO3D_CLANG_TOOLS)
-    add_subdirectory (Clang-Tools)
-endif ()
-
-# Urho3D tools
+#LightInk3D tools
 add_subdirectory (Tools)
 
-# Urho3D samples
-# Samples are built on iOS platform too when enabled. Currently there is no available mechanism to package each sample apps into individual *.apk
-# for Android platform, so we deploy all samples into one apk and use a simple list view activity launcher to select the sample to run
-if (URHO3D_SAMPLES)
-    add_subdirectory (Samples)
-endif ()
-
-# Urho3D extras
-if (URHO3D_EXTRAS)
-    add_subdirectory (Extras)
-endif ()
