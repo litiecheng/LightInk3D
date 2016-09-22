@@ -1,13 +1,32 @@
 
 
 
-local name = "LightInk3D"
-local deps = { 
-	ThirdParty = {
-		include = "../../include/ThirdParty",
-		xmake = "../ThirdParty",
-	}
+local name = "ThirdParty"
+local dirs = {
+	"Box2D",
+	"Bullet",
+	"Detour",
+	"DetourCrowd",
+	"DetourTileCache",
+	"FreeType",
+	"GLEW",
+	"JO",
+	"kNet",
+	"LibCpuId",
+	"LightInkLua",
+	"LightInkMsgPack",
+	"LZ4",
+	"MojoShader",
+	"Mustache",
+	"PugiXml",
+	"rapidjson",
+	"Recast",
+	"SDL",
+	"SQLite",
+	"StanHull",
+	"STB",
 }
+
 local output = g_output
 
 set_project(name)
@@ -18,39 +37,20 @@ add_subfiles("../LightInk3DOption.lua")
 set_mode_config(name)
 
 
-for k, v in pairs(deps) do
-	add_subdirs(v.xmake)
-end
-
-local prefixInclude = "../../include/LightInk3D/"
-local prefixSrc = "../../src/LightInk3D/"
+local prefixInclude = "../../include/ThirdParty/"
+local prefixSrc = "../../src/ThirdParty/"
 -- add target
 target(name)
 
     -- set kind
     set_kind("shared")
 	
-	for k, v in pairs(deps) do
-		-- add deps
-		add_deps(k)
-		-- add links
-		add_links(k)
-	end
-	
 	add_includedirs(prefixInclude)
-	for k, v in pairs(deps) do
-		add_includedirs(v.include)
-	end
+
 	if output then
 		set_targetdir(output.bin)
 		set_objectdir(output.obj)
 		set_headerdir(output.include)
-		
-		-- add link directory
-		add_linkdirs(output.bin)
-	else
-		-- add link directory
-		add_linkdirs("$(buildir)")
 	end
 
 	add_options("LightInk3DLua")
@@ -63,6 +63,10 @@ target(name)
 	add_options("LightInk3DPHYSICS")
 	add_options("LightInk3DNAVIGATION")
 	add_options("LightInk3DNETWORK")
+	
+	for k, v in ipairs(dirs) do
+		add_subdirs(v)
+	end
 
 	local normalDir = { 
 		Audio = "/**", 

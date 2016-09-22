@@ -33,7 +33,7 @@ option("LightInk3DLua")
 	
 	set_showmenu(true)
 	
-	add_defines_if_ok("LightInk3DLua")
+	add_defines_if_ok("URHO3D_LUA")
 	
 option("LightInk3DEMSCRIPTEN")
 	
@@ -41,7 +41,7 @@ option("LightInk3DEMSCRIPTEN")
 	
 	set_showmenu(true)
 	
-	add_defines_if_ok("LightInk3DEMSCRIPTEN")
+	add_defines_if_ok("__EMSCRIPTEN__")
 	
 option("LightInk3DSQLite")
 	
@@ -49,7 +49,8 @@ option("LightInk3DSQLite")
 	
 	set_showmenu(true)
 	
-	add_defines_if_ok("LightInk3DSQLite")
+	add_defines_if_ok("URHO3D_DATABASE")
+	add_defines_if_ok("URHO3D_DATABASE_SQLITE")
 	
 option("LightInk3DOPENGL")
 	
@@ -57,7 +58,7 @@ option("LightInk3DOPENGL")
 	
 	set_showmenu(true)
 	
-	add_defines_if_ok("LightInk3DOPENGL")
+	add_defines_if_ok("URHO3D_OPENGL")
 
 option("LightInk3DDX9")
 	
@@ -73,7 +74,7 @@ option("LightInk3DDX11")
 	
 	set_showmenu(true)
 	
-	add_defines_if_ok("LightInk3DDX11")
+	add_defines_if_ok("URHO3D_D3D11")
 	
 option("LightInk3D2D")
 	
@@ -81,7 +82,7 @@ option("LightInk3D2D")
 	
 	set_showmenu(true)
 	
-	add_defines_if_ok("LightInk3D2D")
+	add_defines_if_ok("URHO3D_URHO2D")
 	
 option("LightInk3DPHYSICS")
 	
@@ -89,7 +90,7 @@ option("LightInk3DPHYSICS")
 	
 	set_showmenu(true)
 	
-	add_defines_if_ok("LightInk3DPHYSICS")
+	add_defines_if_ok("URHO3D_PHYSICS")
 
 option("LightInk3DNAVIGATION")
 	
@@ -97,7 +98,7 @@ option("LightInk3DNAVIGATION")
 	
 	set_showmenu(true)
 	
-	add_defines_if_ok("LightInk3DNAVIGATION")
+	add_defines_if_ok("URHO3D_NAVIGATION")
 	
 
 option("LightInk3DNETWORK")
@@ -106,7 +107,7 @@ option("LightInk3DNETWORK")
 	
 	set_showmenu(true)
 	
-	add_defines_if_ok("LightInk3DNETWORK")	
+	add_defines_if_ok("URHO3D_NETWORK")	
 	
 	
 	
