@@ -24,6 +24,10 @@ function set_mode_config(name)
 		set_strip("all")
 	
 	end
+	
+	if is_arch("*64") then
+		add_defines("URHO3D_64BIT")
+	end
 end
 
 
@@ -108,7 +112,6 @@ option("LightInk3DNETWORK")
 	set_showmenu(true)
 	
 	add_defines_if_ok("URHO3D_NETWORK")	
-	
 	
 	
 

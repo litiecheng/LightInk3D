@@ -3,28 +3,28 @@
 
 local name = "ThirdParty"
 local dirs = {
-	"Box2D",
-	"Bullet",
-	"Detour",
-	"DetourCrowd",
-	"DetourTileCache",
-	"FreeType",
-	"GLEW",
-	"JO",
-	"kNet",
-	"LibCpuId",
-	"LightInkLua",
-	"LightInkMsgPack",
-	"LZ4",
-	"MojoShader",
-	"Mustache",
-	"PugiXml",
-	"rapidjson",
-	"Recast",
-	"SDL",
-	"SQLite",
-	"StanHull",
-	"STB",
+	Box2D = { option = "LightInk3D2D", }, 
+	Bullet = { option = "LightInk3DPHYSICS", }, 
+	Detour = { option = "LightInk3DNAVIGATION", }, 
+	DetourCrowd = { option = "LightInk3DNAVIGATION", }, 
+	DetourTileCache = { option = "LightInk3DNAVIGATION", }, 
+	FreeType = { }, 
+	GLEW = { option = "LightInk3DOPENGL", }, 
+	JO = { }, 
+	kNet = { option = "LightInk3DNETWORK", }, 
+	LibCpuId = { plat = "linux", }, 
+	LightInkLua = { option = "LightInk3DLua", }, 
+	LightInkMsgPack = { option = "LightInk3DNETWORK", }, 
+	LZ4 = { }, 
+	MojoShader = { plat = "windows", option = "LightInk3DDX9", }, 
+	Mustache = { }, 
+	PugiXml = { }, 
+	rapidjson = { }, 
+	Recast = { option = "LightInk3DNAVIGATION", }, 
+	SDL = { }, 
+	SQLite = { option = "LightInk3DSQLite", }, 
+	StanHull = { "", }, 
+	STB = { "", }, 
 }
 
 local output = g_output
@@ -65,56 +65,16 @@ target(name)
 	add_options("LightInk3DNETWORK")
 	
 	for k, v in ipairs(dirs) do
-		add_subdirs(v)
-	end
-
-	local normalDir = { 
-		Audio = "/**", 
-		Container = "/**", 
-		Core = "/**", 
-		Graphics = "/*",
-		Engine = "/**", 
-		Input = "/**", 
-		IO = "/**", 
-		Math = "/**", 
-		Resource = "/**", 
-		Scene = "/**", 
-		UI = "/**",
-	}
-	-- add headers
-	add_headers(prefixInclude .. "*.h", prefixInclude .. "*.hpp")
-	for k, v in pairs(normalDir) do
-		add_headers(prefixInclude .. k .. v .. ".h", prefixInclude .. k .. v .. ".hpp")
-	end
-	
-	
-    -- add files
-	add_files(prefixSrc .. "*.cpp", prefixSrc .. "*.c")
-    for k, v in pairs(normalDir) do
-		add_files(prefixSrc .. k .. v .. ".cpp", prefixSrc .. k .. v .. ".c")
-	end
-	
-	
-	local optionDir = {
-		LightInk3DLua = "LuaScript/**",
-		LightInk3DSQLite = "Database/**",
-		LightInk3DOPENGL = "Graphics/OpenGL/**",
-		LightInk3DDX9 = "Graphics/Direct3D9/**",
-		LightInk3DDX11 = "Graphics/Direct3D11/**", 
-		LightInk3D2D = "2D/**",
-		LightInk3DPHYSICS = "Physics/**",
-		LightInk3DNAVIGATION = "Navigation/**",
-		LightInk3DNETWORK = "Network/**",
-	}
-	
-	
-	for k, v in pairs(optionDir) do
-		if is_option(k) then
-			add_headers(prefixInclude .. v .. ".h", prefixInclude .. v .. ".hpp")
-			add_files(prefixSrc .. v .. ".cpp", prefixSrc .. v .. ".c")
+		if (v.plat and not is_plat(v.plat)) or 
+			(v.option and not is_option(v.option))then
+			on_run(function()
+				print(string.format("subdirs = %s, must plat = %s, option = %s", k, v.plat, v.option))
+			end)
+		else
+			add_subdirs(k)
 		end
+		
 	end
-	
 	
 	
 	

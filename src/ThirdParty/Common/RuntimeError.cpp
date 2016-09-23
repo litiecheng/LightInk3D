@@ -61,6 +61,18 @@ namespace LightInk
 	LIGHTINK_DEFINE_ERROR_DES(RE_ThreadSelfExit, "Thread Self Exit!!!");
 	LIGHTINK_DEFINE_ERROR_DES(RE_UnknownError, "Error!!!Unknown --> Unknown Error!!!");
 
+	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_TypeError, "Error!!!Msgpack --> Type Error!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_StringLenError, "Error!!!Msgpack --> String Length Error!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_ArrayLenError, "Error!!!Msgpack --> Array Length Error!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_MemoryNotEnoughError, "Error!!!Msgpack --> Memory Not Enough Error!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_DataCompressedError, "Error!!!Msgpack --> Data Has Compressed or Uncompressed Error!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_DataEncryptError, "Error!!!Msgpack --> Data Has Encrypt or Decrypt Error!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_DataOutOfRangeError, "Error!!!Msgpack --> Data Is Out of Range Error!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_EmptyData, "Error!!!Msgpack --> Data Is Empty!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_DisableResize, "Error!!!Msgpack --> The Buffer Is FixLen, Disable Resize!!!");
+
+	
+	
 	LIGHTINK_DEFINE_ERROR_DES(RE_Memory_MemoryNotEnoughError, "Error!!!Memory --> Memory Is Not Enought!!!");
 	LIGHTINK_DEFINE_ERROR_DES(RE_Memory_MemoryOutofRange, "Error!!!Memory --> Memory Is Outof Range!!!");
 
@@ -86,6 +98,16 @@ namespace LightInk
 	LIGHTINK_GET_ERROR_DES(RE_Success)
 	LIGHTINK_GET_ERROR_DES(RE_ThreadSelfExit)
 	LIGHTINK_GET_ERROR_DES(RE_UnknownError)
+	
+	LIGHTINK_GET_ERROR_DES(RE_Msgpack_TypeError)
+	LIGHTINK_GET_ERROR_DES(RE_Msgpack_StringLenError)
+	LIGHTINK_GET_ERROR_DES(RE_Msgpack_ArrayLenError)
+	LIGHTINK_GET_ERROR_DES(RE_Msgpack_MemoryNotEnoughError)
+	LIGHTINK_GET_ERROR_DES(RE_Msgpack_DataCompressedError)
+	LIGHTINK_GET_ERROR_DES(RE_Msgpack_DataEncryptError)
+	LIGHTINK_GET_ERROR_DES(RE_Msgpack_DataOutOfRangeError)
+	LIGHTINK_GET_ERROR_DES(RE_Msgpack_EmptyData)
+	LIGHTINK_GET_ERROR_DES(RE_Msgpack_DisableResize)
 
 
 	LIGHTINK_GET_ERROR_DES(RE_Memory_MemoryNotEnoughError)

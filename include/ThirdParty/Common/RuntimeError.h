@@ -41,6 +41,16 @@ namespace LightInk
 		RE_Success = 0,
 		RE_ThreadSelfExit = 1,
 		RE_UnknownError = 2,
+		
+		RE_Msgpack_TypeError,
+		RE_Msgpack_StringLenError,
+		RE_Msgpack_ArrayLenError,
+		RE_Msgpack_MemoryNotEnoughError,
+		RE_Msgpack_DataCompressedError,
+		RE_Msgpack_DataEncryptError,
+		RE_Msgpack_DataOutOfRangeError,
+		RE_Msgpack_EmptyData,
+		RE_Msgpack_DisableResize,
 
 		RE_Memory_MemoryNotEnoughError,
 		RE_Memory_MemoryOutofRange,
