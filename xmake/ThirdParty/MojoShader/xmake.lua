@@ -1,20 +1,23 @@
 
 
-local name = "MojoShader"
+if is_plat("windows") and is_option("LightInk3DDX9") then
 
-local prefixInclude = "../../../include/ThirdParty/" .. name
-local prefixSrc = "../../../src/ThirdParty/" .. name
+	local name = "MojoShader"
 
+	local prefixInclude = "../../../include/ThirdParty/" .. name
+	local prefixSrc = "../../../src/ThirdParty/" .. name
 
-
--- add headers
-add_headers(prefixInclude .. "/*.h")
-
+	add_includedirs(prefixInclude)
 	
--- add files
-add_files(prefixSrc .. "/*.c")
+	add_defines("_CRT_SECURE_NO_WARNINGS=1")
+
+	-- add headers
+	add_headers(prefixInclude .. "/*.h")
+
+		
+	-- add files
+	add_files(prefixSrc .. "/*.c")
 
 
 
-	
-
+end

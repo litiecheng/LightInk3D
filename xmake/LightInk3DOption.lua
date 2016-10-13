@@ -28,6 +28,12 @@ function set_mode_config(name)
 	if is_arch("*64") then
 		add_defines("URHO3D_64BIT")
 	end
+	if is_plat("windows") then
+		add_defines("_WINDOWS", "WIN32")
+	end
+	
+	set_languages("c99", "cxx98")
+	
 end
 
 
