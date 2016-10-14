@@ -12,7 +12,7 @@ add_headers(prefixInclude .. "/**.h", prefixInclude .. "/**.hpp")
 
 	
 -- add files
-add_files(prefixSrc .. "/**.cpp", prefixSrc .. "/**.c")
+add_files(prefixSrc .. "/**.cpp")
 
 
 

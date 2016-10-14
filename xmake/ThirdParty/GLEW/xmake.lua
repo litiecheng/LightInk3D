@@ -15,7 +15,7 @@ if is_option("LightInk3DOPENGL") then
 
 		
 	-- add files
-	add_files(prefixSrc .. "/**.cpp", prefixSrc .. "/**.c")
+	add_files(prefixSrc .. "/**.c")
 
 
 

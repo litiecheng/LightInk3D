@@ -23,7 +23,7 @@ local dirs = {
 	"PugiXml", 
 	"rapidjson", 
 	"Recast", 
-	--"SDL", 
+	"SDL", 
 	"SQLite", 
 	"StanHull",
 	"STB", 

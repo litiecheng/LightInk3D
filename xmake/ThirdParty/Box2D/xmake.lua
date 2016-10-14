@@ -13,6 +13,6 @@ if is_option("LightInk3D2D") then
 
 		
 	-- add files
-	add_files(prefixSrc .. "/**.cpp", prefixSrc .. "/**.c")
+	add_files(prefixSrc .. "/**.cpp")
 
 end

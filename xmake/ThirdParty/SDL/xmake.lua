@@ -263,6 +263,8 @@ local sdl_plat_sub = {
 
 add_includedirs(prefixInclude)
 
+add_defines("SDL_EXPORTS")
+
 -- add headers
 add_headers(prefixInclude .. "/*.h|SDL_config_*.h")
 add_headers(prefixSrc .. "/*.h")

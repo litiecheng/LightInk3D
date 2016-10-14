@@ -26,7 +26,7 @@ if is_option("LightInk3DPHYSICS") then
 
 		
 	-- add files
-	add_files(prefixSrc .. "/**.cpp", prefixSrc .. "/**.c")
+	add_files(prefixSrc .. "/**.cpp")
 	
 end
 
