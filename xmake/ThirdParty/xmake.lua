@@ -2,7 +2,7 @@
 
 
 local name = "ThirdParty"
-----[[
+
 local dirs = {
 	"Box2D", 
 	"Bullet", 
@@ -24,11 +24,10 @@ local dirs = {
 	"rapidjson", 
 	"Recast", 
 	--"SDL", 
-	--"SQLite", 
+	"SQLite", 
 	"StanHull",
 	"STB", 
-}--]]
---local dirs = {"SDL"}
+}
 
 local output = g_output
 

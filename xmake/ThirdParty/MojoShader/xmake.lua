@@ -16,7 +16,7 @@ if is_plat("windows") and is_option("LightInk3DDX9") then
 
 		
 	-- add files
-	add_files(prefixSrc .. "/*.c")
+	add_files(prefixSrc .. "/*.cpp")
 
 
 

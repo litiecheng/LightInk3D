@@ -502,7 +502,7 @@ static char *local_getline(char *zLine, FILE *in){
   while( 1 ){
     if( n+100>nLine ){
       nLine = nLine*2 + 100;
-      zLine = (char *)realloc(zLine, nLine);
+      zLine = realloc(zLine, nLine);
       if( zLine==0 ) return 0;
     }
     if( fgets(&zLine[n], nLine - n, in)==0 ){
@@ -529,7 +529,7 @@ static char *local_getline(char *zLine, FILE *in){
     if( zTrans ){
       int nTrans = strlen30(zTrans)+1;
       if( nTrans>nLine ){
-        zLine = (char *)realloc(zLine, nTrans);
+        zLine = realloc(zLine, nTrans);
         if( zLine==0 ){
           sqlite3_free(zTrans);
           return 0;
@@ -1283,7 +1283,7 @@ static void set_table_name(ShellState *p, const char *zName){
     }
   }
   if( needQuote ) n += 2;
-  z = p->zDestTable = (char *)malloc( n+1 );
+  z = p->zDestTable = malloc( n+1 );
   if( z==0 ){
     raw_printf(stderr,"Error: out of memory\n");
     exit(1);
@@ -1408,7 +1408,7 @@ static char *save_err_msg(
   sqlite3 *db            /* Database to query */
 ){
   int nErrMsg = 1+strlen30(sqlite3_errmsg(db));
-  char *zErrMsg = (char *)sqlite3_malloc64(nErrMsg);
+  char *zErrMsg = sqlite3_malloc64(nErrMsg);
   if( zErrMsg ){
     memcpy(zErrMsg, sqlite3_errmsg(db), nErrMsg);
   }
@@ -2112,7 +2112,7 @@ static int run_schema_dump_query(
       sqlite3_free(zErr);
       zErr = 0;
     }
-    zQ2 = (char *)malloc( len+100 );
+    zQ2 = malloc( len+100 );
     if( zQ2==0 ) return rc;
     sqlite3_snprintf(len+100, zQ2, "%s ORDER BY rowid DESC", zQuery);
     rc = sqlite3_exec(p->db, zQ2, dump_callback, p, &zErr);
@@ -2581,7 +2581,7 @@ struct ImportCtx {
 static void import_append_char(ImportCtx *p, int c){
   if( p->n+1>=p->nAlloc ){
     p->nAlloc += p->nAlloc + 100;
-    p->z = (char *)sqlite3_realloc64(p->z, p->nAlloc);
+    p->z = sqlite3_realloc64(p->z, p->nAlloc);
     if( p->z==0 ){
       raw_printf(stderr, "out of memory\n");
       exit(1);
@@ -2729,7 +2729,7 @@ static void tryToCloneData(
     goto end_data_xfer;
   }
   n = sqlite3_column_count(pQuery);
-  zInsert = (char *)sqlite3_malloc64(200 + nTable + n*3);
+  zInsert = sqlite3_malloc64(200 + nTable + n*3);
   if( zInsert==0 ){
     raw_printf(stderr, "out of memory\n");
     goto end_data_xfer;
@@ -3544,7 +3544,7 @@ static int do_meta_command(char *zLine, ShellState *p){
     sqlite3_finalize(pStmt);
     pStmt = 0;
     if( nCol==0 ) return 0; /* no columns, no error */
-    zSql = (char *)sqlite3_malloc64( nByte*2 + 20 + nCol*2 );
+    zSql = sqlite3_malloc64( nByte*2 + 20 + nCol*2 );
     if( zSql==0 ){
       raw_printf(stderr, "Error: out of memory\n");
       xCloser(sCtx.in);
@@ -4441,7 +4441,7 @@ static int do_meta_command(char *zLine, ShellState *p){
       if( nRow>=nAlloc ){
         char **azNew;
         int n2 = nAlloc*2 + 10;
-        azNew = (char **)sqlite3_realloc64(azResult, sizeof(azResult[0])*n2);
+        azNew = sqlite3_realloc64(azResult, sizeof(azResult[0])*n2);
         if( azNew==0 ){
           rc = shellNomemError();
           break;
@@ -4924,7 +4924,7 @@ static int process_input(ShellState *p, FILE *in){
     nLine = strlen30(zLine);
     if( nSql+nLine+2>=nAlloc ){
       nAlloc = nSql+nLine+100;
-      zSql = (char *)realloc(zSql, nAlloc);
+      zSql = realloc(zSql, nAlloc);
       if( zSql==0 ){
         raw_printf(stderr, "Error: out of memory\n");
         exit(1);
@@ -5035,7 +5035,7 @@ static char *find_home_dir(void){
     zPath = getenv("HOMEPATH");
     if( zDrive && zPath ){
       n = strlen30(zDrive) + strlen30(zPath) + 1;
-      home_dir = (char *)malloc( n );
+      home_dir = malloc( n );
       if( home_dir==0 ) return 0;
       sqlite3_snprintf(n, home_dir, "%s%s", zDrive, zPath);
       return home_dir;
@@ -5048,7 +5048,7 @@ static char *find_home_dir(void){
 
   if( home_dir ){
     int n = strlen30(home_dir) + 1;
-    char *z = (char *)malloc( n );
+    char *z = malloc( n );
     if( z ) memcpy(z, home_dir, n);
     home_dir = z;
   }
@@ -5234,7 +5234,7 @@ int SQLITE_CDECL wmain(int argc, wchar_t **wargv){
   main_init(&data);
 #if !SQLITE_SHELL_IS_UTF8
   sqlite3_initialize();
-  argv = (char **)sqlite3_malloc64(sizeof(argv[0])*argc);
+  argv = sqlite3_malloc64(sizeof(argv[0])*argc);
   if( argv==0 ){
     raw_printf(stderr, "out of memory\n");
     exit(1);
@@ -5285,7 +5285,7 @@ int SQLITE_CDECL wmain(int argc, wchar_t **wargv){
         ** mean that nothing is read from stdin */
         readStdin = 0;
         nCmd++;
-        azCmd = (char **)realloc(azCmd, sizeof(azCmd[0])*nCmd);
+        azCmd = realloc(azCmd, sizeof(azCmd[0])*nCmd);
         if( azCmd==0 ){
           raw_printf(stderr, "out of memory\n");
           exit(1);
@@ -5561,7 +5561,7 @@ int SQLITE_CDECL wmain(int argc, wchar_t **wargv){
       zHome = find_home_dir();
       if( zHome ){
         nHistory = strlen30(zHome) + 20;
-        if( (zHistory = (char *)malloc(nHistory))!=0 ){
+        if( (zHistory = malloc(nHistory))!=0 ){
           sqlite3_snprintf(nHistory, zHistory,"%s/.sqlite_history", zHome);
         }
       }

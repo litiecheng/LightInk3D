@@ -10,12 +10,15 @@ if is_option("LightInk3DLua") or is_option("LightInk3DNETWORK") then
 
 	-- add headers
 	add_headers(prefixInclude .. "/*.h", prefixInclude .. "/*.cpp")
-
+	add_headers(prefixInclude .. "/Atomic/*.h")
 		
 	-- add files
 	add_files(prefixSrc .. "/*.cpp", prefixSrc .. "/*.c")
 
-
+	if not is_plat("windows") then
+		add_files(prefixSrc .. "/Atomic/*.c")
+	end
+	
 end
 	
 

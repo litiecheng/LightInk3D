@@ -3,9 +3,16 @@
 function set_mode_config(name)
 	if is_mode("debug") then
 		if is_plat("windows") then
-			add_cxflags("-ZI", "-Fd$(buildir)\\" .. name .. ".pdb")
+			-- enable some checkers
+			add_cxflags("-Gs", "-RTC1") 
+
+			-- link libcmtd.lib
+			add_cxflags("-MDd") 
+			
+			add_cxflags("-Zi", "-Fd$(buildir)\\" .. name .. ".pdb")
 			add_ldflags("-pdb:$(buildir)\\" .. name .. ".pdb")
 			add_arflags("-pdb:$(buildir)\\" .. name .. ".pdb")
+			add_defines("_DEBUG=1")
 		else
 			-- enable the debug symbols
 			set_symbols("debug")
@@ -22,6 +29,12 @@ function set_mode_config(name)
 
 		-- strip all symbols
 		set_strip("all")
+		if is_plat("windows") then
+			-- link libcmt.lib
+			add_cxflags("-MD") 
+		else
+		
+		end
 	
 	end
 	
@@ -29,10 +42,11 @@ function set_mode_config(name)
 		add_defines("URHO3D_64BIT")
 	end
 	if is_plat("windows") then
-		add_defines("_WINDOWS", "WIN32")
+		add_defines("_WINDOWS", "WINDOWS", "_WIN32", "WIN32")
 	end
 	
-	set_languages("c99", "cxx98")
+	--set_languages("c99", "cxx98")
+	--add_defines("__cplusplus")
 	
 end
 

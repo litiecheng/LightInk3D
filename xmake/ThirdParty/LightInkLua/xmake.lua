@@ -7,12 +7,13 @@ if is_option("LightInk3DLua") then
 	local prefixSrc = "../../../src/ThirdParty/" .. name
 
 	add_includedirs(prefixInclude)
+	
+	add_defines("LIGHTINK_AS_DLL", "LIGHTINK_EXPORTS")
 
 	-- add headers
-	add_headers(prefixInclude .. "/Atomic/mintomic.h.h", 
-				prefixInclude .. "/LuaEngine/**.h", 
+	add_headers(prefixInclude .. "/LuaEngine/**.h", 
 				prefixInclude .. "/LuaEngine/**.hpp", 
-				prefixInclude .. "/LuaEngine/*.cpp")
+				prefixInclude .. "/LuaEngine/**.cpp")
 
 		
 	-- add files

@@ -12,9 +12,6 @@
 #ifndef _INCL_MOJOSHADER_H_
 #define _INCL_MOJOSHADER_H_
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 /* You can define this if you aren't generating mojoshader_version.h */
 // Urho3D: commented out to avoid the define
@@ -3222,9 +3219,6 @@ void MOJOSHADER_glDeleteShader(MOJOSHADER_glShader *shader);
  */
 void MOJOSHADER_glDestroyContext(MOJOSHADER_glContext *ctx);
 
-#ifdef __cplusplus
-}
-#endif
 
 #endif  /* include-once blocker. */
 
