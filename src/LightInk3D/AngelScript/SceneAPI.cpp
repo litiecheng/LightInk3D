@@ -20,16 +20,16 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/APITemplates.h"
-#include "../Graphics/DebugRenderer.h"
-#include "../IO/PackageFile.h"
-#include "../Scene/ObjectAnimation.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SmoothedTransform.h"
-#include "../Scene/SplinePath.h"
-#include "../Scene/ValueAnimation.h"
+#include "AngelScript/APITemplates.h"
+#include "Graphics/DebugRenderer.h"
+#include "IO/PackageFile.h"
+#include "Scene/ObjectAnimation.h"
+#include "Scene/Scene.h"
+#include "Scene/SmoothedTransform.h"
+#include "Scene/SplinePath.h"
+#include "Scene/ValueAnimation.h"
 
 namespace Urho3D
 {

@@ -20,12 +20,12 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../IO/File.h"
-#include "../IO/FileSystem.h"
-#include "../IO/FileWatcher.h"
-#include "../IO/Log.h"
+#include "IO/File.h"
+#include "IO/FileSystem.h"
+#include "IO/FileWatcher.h"
+#include "IO/Log.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -39,7 +39,7 @@ extern "C"
 #elif defined(__APPLE__) && !defined(IOS)
 extern "C"
 {
-#include "../IO/MacFileWatcher.h"
+#include "IO/MacFileWatcher.h"
 }
 #endif
 
@@ -137,7 +137,7 @@ bool FileWatcher::StartWatching(const String& pathName, bool watchSubDirs)
             {
                 String subDirFullPath = AddTrailingSlash(path_ + subDirs[i]);
 
-                // Don't watch ./ or ../ sub-directories
+                // Don't watch ./ or  sub-directories
                 if (!subDirFullPath.EndsWith("./"))
                 {
                     handle = inotify_add_watch(watchHandle_, subDirFullPath.CString(), (unsigned)flags);

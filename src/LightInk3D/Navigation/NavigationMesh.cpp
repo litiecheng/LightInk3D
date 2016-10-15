@@ -20,32 +20,32 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/Profiler.h"
-#include "../Graphics/DebugRenderer.h"
-#include "../Graphics/Drawable.h"
-#include "../Graphics/Geometry.h"
-#include "../Graphics/Model.h"
-#include "../Graphics/StaticModel.h"
-#include "../Graphics/TerrainPatch.h"
-#include "../Graphics/VertexBuffer.h"
-#include "../IO/Log.h"
-#include "../IO/MemoryBuffer.h"
-#include "../Navigation/CrowdAgent.h"
-#include "../Navigation/DynamicNavigationMesh.h"
-#include "../Navigation/NavArea.h"
-#include "../Navigation/NavBuildData.h"
-#include "../Navigation/Navigable.h"
-#include "../Navigation/NavigationEvents.h"
-#include "../Navigation/NavigationMesh.h"
-#include "../Navigation/Obstacle.h"
-#include "../Navigation/OffMeshConnection.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "Graphics/DebugRenderer.h"
+#include "Graphics/Drawable.h"
+#include "Graphics/Geometry.h"
+#include "Graphics/Model.h"
+#include "Graphics/StaticModel.h"
+#include "Graphics/TerrainPatch.h"
+#include "Graphics/VertexBuffer.h"
+#include "IO/Log.h"
+#include "IO/MemoryBuffer.h"
+#include "Navigation/CrowdAgent.h"
+#include "Navigation/DynamicNavigationMesh.h"
+#include "Navigation/NavArea.h"
+#include "Navigation/NavBuildData.h"
+#include "Navigation/Navigable.h"
+#include "Navigation/NavigationEvents.h"
+#include "Navigation/NavigationMesh.h"
+#include "Navigation/Obstacle.h"
+#include "Navigation/OffMeshConnection.h"
 #ifdef URHO3D_PHYSICS
-#include "../Physics/CollisionShape.h"
+#include "Physics/CollisionShape.h"
 #endif
-#include "../Scene/Scene.h"
+#include "Scene/Scene.h"
 
 #include <cfloat>
 #include <Detour/DetourNavMesh.h>
@@ -53,7 +53,7 @@
 #include <Detour/DetourNavMeshQuery.h>
 #include <Recast/Recast.h>
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

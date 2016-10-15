@@ -20,21 +20,21 @@
 // THE SOFTWARE.
 //
 
-#include "../../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../../Core/Context.h"
-#include "../../Core/Profiler.h"
-#include "../../Graphics/Graphics.h"
-#include "../../Graphics/GraphicsEvents.h"
-#include "../../Graphics/GraphicsImpl.h"
-#include "../../Graphics/Renderer.h"
-#include "../../Graphics/TextureCube.h"
-#include "../../IO/FileSystem.h"
-#include "../../IO/Log.h"
-#include "../../Resource/ResourceCache.h"
-#include "../../Resource/XMLFile.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/GraphicsEvents.h"
+#include "Graphics/GraphicsImpl.h"
+#include "Graphics/Renderer.h"
+#include "Graphics/TextureCube.h"
+#include "IO/FileSystem.h"
+#include "IO/Log.h"
+#include "Resource/ResourceCache.h"
+#include "Resource/XMLFile.h"
 
-#include "../../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:4355)

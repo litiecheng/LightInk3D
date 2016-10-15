@@ -20,13 +20,13 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/APITemplates.h"
-#include "../Math/Frustum.h"
-#include "../Math/Polyhedron.h"
-#include "../Math/Ray.h"
-#include "../Math/Matrix2.h"
+#include "AngelScript/APITemplates.h"
+#include "Math/Frustum.h"
+#include "Math/Polyhedron.h"
+#include "Math/Ray.h"
+#include "Math/Matrix2.h"
 
 namespace Urho3D
 {

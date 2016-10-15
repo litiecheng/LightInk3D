@@ -20,27 +20,27 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Profiler.h"
-#include "../IO/File.h"
-#include "../IO/FileSystem.h"
-#include "../IO/Log.h"
-#include "../IO/MemoryBuffer.h"
-#include "../IO/PackageFile.h"
-#include "../Network/Connection.h"
-#include "../Network/Network.h"
-#include "../Network/NetworkEvents.h"
-#include "../Network/NetworkPriority.h"
-#include "../Network/Protocol.h"
-#include "../Resource/ResourceCache.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
-#include "../Scene/SmoothedTransform.h"
+#include "Core/Profiler.h"
+#include "IO/File.h"
+#include "IO/FileSystem.h"
+#include "IO/Log.h"
+#include "IO/MemoryBuffer.h"
+#include "IO/PackageFile.h"
+#include "Network/Connection.h"
+#include "Network/Network.h"
+#include "Network/NetworkEvents.h"
+#include "Network/NetworkPriority.h"
+#include "Network/Protocol.h"
+#include "Resource/ResourceCache.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
+#include "Scene/SmoothedTransform.h"
 
 #include <kNet/kNet.h>
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

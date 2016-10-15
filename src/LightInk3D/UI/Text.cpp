@@ -20,20 +20,20 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/Profiler.h"
-#include "../Graphics/Texture2D.h"
-#include "../IO/Log.h"
-#include "../Resource/ResourceCache.h"
-#include "../UI/Font.h"
-#include "../UI/FontFace.h"
-#include "../UI/Text.h"
-#include "../Resource/Localization.h"
-#include "../Resource/ResourceEvents.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "Graphics/Texture2D.h"
+#include "IO/Log.h"
+#include "Resource/ResourceCache.h"
+#include "UI/Font.h"
+#include "UI/FontFace.h"
+#include "UI/Text.h"
+#include "Resource/Localization.h"
+#include "Resource/ResourceEvents.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

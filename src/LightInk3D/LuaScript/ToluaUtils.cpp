@@ -20,13 +20,13 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../IO/VectorBuffer.h"
+#include "IO/VectorBuffer.h"
 
 #include <toluapp/tolua++.h>
 
-#include "../LuaScript/ToluaUtils.h"
+#include "LuaScript/ToluaUtils.h"
 
 const char* tolua_tourho3dstring(lua_State* L, int narg, const char* str)
 {

@@ -20,14 +20,14 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Audio/OggVorbisSoundStream.h"
-#include "../Audio/Sound.h"
+#include "Audio/OggVorbisSoundStream.h"
+#include "Audio/Sound.h"
 
 #include <STB/stb_vorbis.h>
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

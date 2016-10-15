@@ -20,15 +20,15 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Graphics/AnimatedModel.h"
-#include "../Graphics/Animation.h"
-#include "../Graphics/AnimationState.h"
-#include "../Graphics/DrawableEvents.h"
-#include "../IO/Log.h"
+#include "Graphics/AnimatedModel.h"
+#include "Graphics/Animation.h"
+#include "Graphics/AnimationState.h"
+#include "Graphics/DrawableEvents.h"
+#include "IO/Log.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

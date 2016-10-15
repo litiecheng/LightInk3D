@@ -20,15 +20,15 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Graphics/Graphics.h"
-#include "../Graphics/Material.h"
-#include "../Graphics/RenderPath.h"
-#include "../IO/Log.h"
-#include "../Resource/XMLFile.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/Material.h"
+#include "Graphics/RenderPath.h"
+#include "IO/Log.h"
+#include "Resource/XMLFile.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:6293)

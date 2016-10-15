@@ -15,8 +15,8 @@ if is_option("LightInk3DNETWORK") then
 	
 	-- add headers
 	add_headers(prefixInclude .. "/*.h")
-	add_headers(prefixInclude .. "/" .. name .. "*.h")
-	add_headers(prefixInclude .. "/" .. name .. "*.inl")
+	add_headers(prefixInclude .. "/" .. name .. "/*.h")
+	add_headers(prefixInclude .. "/" .. name .. "/*.inl")
 
 	if is_plat("windows") then
 		add_headers(prefixInclude .. "/" .. name .. "/win32/*.h")

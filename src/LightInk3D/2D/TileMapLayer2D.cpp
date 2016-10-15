@@ -20,18 +20,18 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Graphics/DebugRenderer.h"
-#include "../Resource/ResourceCache.h"
-#include "../Scene/Node.h"
-#include "../Urho2D/StaticSprite2D.h"
-#include "../Urho2D/TileMap2D.h"
-#include "../Urho2D/TileMapLayer2D.h"
-#include "../Urho2D/TmxFile2D.h"
+#include "Core/Context.h"
+#include "Graphics/DebugRenderer.h"
+#include "Resource/ResourceCache.h"
+#include "Scene/Node.h"
+#include "2D/StaticSprite2D.h"
+#include "2D/TileMap2D.h"
+#include "2D/TileMapLayer2D.h"
+#include "2D/TmxFile2D.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

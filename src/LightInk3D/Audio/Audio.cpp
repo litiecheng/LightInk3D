@@ -20,21 +20,21 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Audio/Audio.h"
-#include "../Audio/Sound.h"
-#include "../Audio/SoundListener.h"
-#include "../Audio/SoundSource3D.h"
-#include "../Core/Context.h"
-#include "../Core/CoreEvents.h"
-#include "../Core/ProcessUtils.h"
-#include "../Core/Profiler.h"
-#include "../IO/Log.h"
+#include "Audio/Audio.h"
+#include "Audio/Sound.h"
+#include "Audio/SoundListener.h"
+#include "Audio/SoundSource3D.h"
+#include "Core/Context.h"
+#include "Core/CoreEvents.h"
+#include "Core/ProcessUtils.h"
+#include "Core/Profiler.h"
+#include "IO/Log.h"
 
 #include <SDL/SDL.h>
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:6293)

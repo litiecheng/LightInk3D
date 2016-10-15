@@ -20,22 +20,22 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/CoreEvents.h"
-#include "../Core/ProcessUtils.h"
-#include "../Core/Profiler.h"
-#include "../Engine/EngineEvents.h"
-#include "../IO/File.h"
-#include "../IO/FileSystem.h"
-#include "../IO/Log.h"
-#include "../LuaScript/LuaFile.h"
-#include "../LuaScript/LuaFunction.h"
-#include "../LuaScript/LuaScript.h"
-#include "../LuaScript/LuaScriptEventInvoker.h"
-#include "../LuaScript/LuaScriptInstance.h"
-#include "../Resource/ResourceCache.h"
-#include "../Scene/Scene.h"
+#include "Core/CoreEvents.h"
+#include "Core/ProcessUtils.h"
+#include "Core/Profiler.h"
+#include "Engine/EngineEvents.h"
+#include "IO/File.h"
+#include "IO/FileSystem.h"
+#include "IO/Log.h"
+#include "LuaScript/LuaFile.h"
+#include "LuaScript/LuaFunction.h"
+#include "LuaScript/LuaScript.h"
+#include "LuaScript/LuaScriptEventInvoker.h"
+#include "LuaScript/LuaScriptInstance.h"
+#include "Resource/ResourceCache.h"
+#include "Scene/Scene.h"
 
 extern "C"
 {
@@ -43,9 +43,9 @@ extern "C"
 }
 
 #include <toluapp/tolua++.h>
-#include "../LuaScript/ToluaUtils.h"
+#include "LuaScript/ToluaUtils.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 extern int tolua_AudioLuaAPI_open(lua_State*);
 extern int tolua_CoreLuaAPI_open(lua_State*);

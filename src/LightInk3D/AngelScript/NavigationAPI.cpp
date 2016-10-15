@@ -22,15 +22,15 @@
 
 #ifdef URHO3D_NAVIGATION
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/APITemplates.h"
-#include "../Navigation/Navigable.h"
-#include "../Navigation/CrowdAgent.h"
-#include "../Navigation/DynamicNavigationMesh.h"
-#include "../Navigation/NavArea.h"
-#include "../Navigation/Obstacle.h"
-#include "../Navigation/OffMeshConnection.h"
+#include "AngelScript/APITemplates.h"
+#include "Navigation/Navigable.h"
+#include "Navigation/CrowdAgent.h"
+#include "Navigation/DynamicNavigationMesh.h"
+#include "Navigation/NavArea.h"
+#include "Navigation/Obstacle.h"
+#include "Navigation/OffMeshConnection.h"
 
 namespace Urho3D
 {

@@ -20,27 +20,27 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/CoreEvents.h"
-#include "../Engine/Console.h"
-#include "../Engine/EngineEvents.h"
-#include "../Graphics/Graphics.h"
-#include "../Input/Input.h"
-#include "../IO/IOEvents.h"
-#include "../IO/Log.h"
-#include "../Resource/ResourceCache.h"
-#include "../UI/DropDownList.h"
-#include "../UI/Font.h"
-#include "../UI/LineEdit.h"
-#include "../UI/ListView.h"
-#include "../UI/ScrollBar.h"
-#include "../UI/Text.h"
-#include "../UI/UI.h"
-#include "../UI/UIEvents.h"
+#include "Core/Context.h"
+#include "Core/CoreEvents.h"
+#include "Engine/Console.h"
+#include "Engine/EngineEvents.h"
+#include "Graphics/Graphics.h"
+#include "Input/Input.h"
+#include "IO/IOEvents.h"
+#include "IO/Log.h"
+#include "Resource/ResourceCache.h"
+#include "UI/DropDownList.h"
+#include "UI/Font.h"
+#include "UI/LineEdit.h"
+#include "UI/ListView.h"
+#include "UI/ScrollBar.h"
+#include "UI/Text.h"
+#include "UI/UI.h"
+#include "UI/UIEvents.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

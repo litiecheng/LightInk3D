@@ -20,25 +20,25 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/CoreEvents.h"
-#include "../Core/Profiler.h"
-#include "../Core/WorkQueue.h"
-#include "../IO/FileSystem.h"
-#include "../IO/FileWatcher.h"
-#include "../IO/Log.h"
-#include "../IO/PackageFile.h"
-#include "../Resource/BackgroundLoader.h"
-#include "../Resource/Image.h"
-#include "../Resource/JSONFile.h"
-#include "../Resource/PListFile.h"
-#include "../Resource/ResourceCache.h"
-#include "../Resource/ResourceEvents.h"
-#include "../Resource/XMLFile.h"
+#include "Core/Context.h"
+#include "Core/CoreEvents.h"
+#include "Core/Profiler.h"
+#include "Core/WorkQueue.h"
+#include "IO/FileSystem.h"
+#include "IO/FileWatcher.h"
+#include "IO/Log.h"
+#include "IO/PackageFile.h"
+#include "Resource/BackgroundLoader.h"
+#include "Resource/Image.h"
+#include "Resource/JSONFile.h"
+#include "Resource/PListFile.h"
+#include "Resource/ResourceCache.h"
+#include "Resource/ResourceEvents.h"
+#include "Resource/XMLFile.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 #include <cstdio>
 
@@ -841,7 +841,7 @@ String ResourceCache::SanitateResourceName(const String& nameIn) const
 {
     // Sanitate unsupported constructs from the resource name
     String name = GetInternalPath(nameIn);
-    name.Replace("../", "");
+    name.Replace("", "");
     name.Replace("./", "");
 
     // If the path refers to one of the resource directories, normalize the resource name

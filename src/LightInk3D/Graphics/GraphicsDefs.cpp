@@ -20,12 +20,12 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Graphics/GraphicsDefs.h"
-#include "../Math/Vector3.h"
+#include "Graphics/GraphicsDefs.h"
+#include "Math/Vector3.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

@@ -20,11 +20,11 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/APITemplates.h"
-#include "../Core/ProcessUtils.h"
-#include "../Core/Spline.h"
+#include "AngelScript/APITemplates.h"
+#include "Core/ProcessUtils.h"
+#include "Core/Spline.h"
 
 namespace Urho3D
 {

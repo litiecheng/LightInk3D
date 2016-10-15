@@ -22,12 +22,12 @@
 
 #ifdef URHO3D_NETWORK
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/APITemplates.h"
-#include "../Network/HttpRequest.h"
-#include "../Network/Network.h"
-#include "../Network/NetworkPriority.h"
+#include "AngelScript/APITemplates.h"
+#include "Network/HttpRequest.h"
+#include "Network/Network.h"
+#include "Network/NetworkPriority.h"
 
 namespace Urho3D
 {

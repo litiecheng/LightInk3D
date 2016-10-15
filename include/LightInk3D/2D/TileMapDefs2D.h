@@ -23,7 +23,7 @@
 #pragma once
 
 #include "../Container/RefCounted.h"
-#include "../Urho2D/Sprite2D.h"
+#include "../2D/Sprite2D.h"
 
 namespace Urho3D
 {

@@ -20,17 +20,17 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Graphics/DebugRenderer.h"
-#include "../IO/Log.h"
-#include "../Navigation/DynamicNavigationMesh.h"
-#include "../Navigation/Obstacle.h"
-#include "../Navigation/NavigationEvents.h"
-#include "../Scene/Scene.h"
+#include "Core/Context.h"
+#include "Graphics/DebugRenderer.h"
+#include "IO/Log.h"
+#include "Navigation/DynamicNavigationMesh.h"
+#include "Navigation/Obstacle.h"
+#include "Navigation/NavigationEvents.h"
+#include "Scene/Scene.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

@@ -20,14 +20,14 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Profiler.h"
-#include "../IO/File.h"
-#include "../IO/FileSystem.h"
-#include "../IO/Log.h"
-#include "../IO/MemoryBuffer.h"
-#include "../IO/PackageFile.h"
+#include "Core/Profiler.h"
+#include "IO/File.h"
+#include "IO/FileSystem.h"
+#include "IO/Log.h"
+#include "IO/MemoryBuffer.h"
+#include "IO/PackageFile.h"
 
 #ifdef __ANDROID__
 #include <SDL/SDL_rwops.h>
@@ -36,7 +36,7 @@
 #include <cstdio>
 #include <LZ4/lz4.h>
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

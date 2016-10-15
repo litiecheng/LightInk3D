@@ -20,12 +20,12 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Graphics/DrawableEvents.h"
-#include "../Scene/Component.h"
-#include "../Scene/Node.h"
-#include "../Urho2D/SpriterInstance2D.h"
+#include "Graphics/DrawableEvents.h"
+#include "Scene/Component.h"
+#include "Scene/Node.h"
+#include "2D/SpriterInstance2D.h"
 
 #include <cmath>
 

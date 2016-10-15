@@ -20,11 +20,11 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Profiler.h"
-#include "../IO/NamedPipe.h"
-#include "../IO/Log.h"
+#include "Core/Profiler.h"
+#include "IO/NamedPipe.h"
+#include "IO/Log.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -35,7 +35,7 @@
 #include <unistd.h>
 #endif
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

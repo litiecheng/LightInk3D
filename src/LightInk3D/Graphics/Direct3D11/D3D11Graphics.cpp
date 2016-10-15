@@ -20,31 +20,31 @@
 // THE SOFTWARE.
 //
 
-#include "../../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../../Core/Context.h"
-#include "../../Core/ProcessUtils.h"
-#include "../../Core/Profiler.h"
-#include "../../Graphics/ConstantBuffer.h"
-#include "../../Graphics/Geometry.h"
-#include "../../Graphics/Graphics.h"
-#include "../../Graphics/GraphicsEvents.h"
-#include "../../Graphics/GraphicsImpl.h"
-#include "../../Graphics/IndexBuffer.h"
-#include "../../Graphics/Renderer.h"
-#include "../../Graphics/Shader.h"
-#include "../../Graphics/ShaderPrecache.h"
-#include "../../Graphics/ShaderProgram.h"
-#include "../../Graphics/Texture2D.h"
-#include "../../Graphics/VertexBuffer.h"
-#include "../../IO/File.h"
-#include "../../IO/Log.h"
-#include "../../Resource/ResourceCache.h"
+#include "Core/Context.h"
+#include "Core/ProcessUtils.h"
+#include "Core/Profiler.h"
+#include "Graphics/ConstantBuffer.h"
+#include "Graphics/Geometry.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/GraphicsEvents.h"
+#include "Graphics/GraphicsImpl.h"
+#include "Graphics/IndexBuffer.h"
+#include "Graphics/Renderer.h"
+#include "Graphics/Shader.h"
+#include "Graphics/ShaderPrecache.h"
+#include "Graphics/ShaderProgram.h"
+#include "Graphics/Texture2D.h"
+#include "Graphics/VertexBuffer.h"
+#include "IO/File.h"
+#include "IO/Log.h"
+#include "Resource/ResourceCache.h"
 
 #include <SDL/SDL.h>
 #include <SDL/SDL_syswm.h>
 
-#include "../../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:4355)

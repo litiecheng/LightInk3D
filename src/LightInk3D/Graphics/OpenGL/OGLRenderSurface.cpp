@@ -20,16 +20,16 @@
 // THE SOFTWARE.
 //
 
-#include "../../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../../Graphics/Camera.h"
-#include "../../Graphics/Graphics.h"
-#include "../../Graphics/GraphicsImpl.h"
-#include "../../Graphics/Renderer.h"
-#include "../../Graphics/RenderSurface.h"
-#include "../../Graphics/Texture.h"
+#include "Graphics/Camera.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/GraphicsImpl.h"
+#include "Graphics/Renderer.h"
+#include "Graphics/RenderSurface.h"
+#include "Graphics/Texture.h"
 
-#include "../../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef GL_ES_VERSION_2_0
 #define GL_RENDERBUFFER_EXT GL_RENDERBUFFER

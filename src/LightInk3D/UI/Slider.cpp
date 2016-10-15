@@ -20,15 +20,15 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Input/InputEvents.h"
-#include "../IO/Log.h"
-#include "../UI/Slider.h"
-#include "../UI/UIEvents.h"
+#include "Core/Context.h"
+#include "Input/InputEvents.h"
+#include "IO/Log.h"
+#include "UI/Slider.h"
+#include "UI/UIEvents.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

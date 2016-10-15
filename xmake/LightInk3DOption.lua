@@ -8,10 +8,15 @@ function set_mode_config(name)
 
 			-- link libcmtd.lib
 			add_cxflags("-MDd") 
-			
-			add_cxflags("-Zi", "-Fd$(buildir)\\" .. name .. ".pdb")
-			add_ldflags("-pdb:$(buildir)\\" .. name .. ".pdb")
-			add_arflags("-pdb:$(buildir)\\" .. name .. ".pdb")
+			local output = g_output
+			if output then
+				output = output.bin .. "/"
+			else
+				output = "$(buildir)/"
+			end
+			add_cxflags("-Zi")--, "-Fd" .. output .. name .. ".pdb")
+			add_ldflags("-pdb:" .. output .. name .. ".pdb")
+			--add_arflags("-pdb:" .. output .. name .. ".pdb")
 			add_defines("_DEBUG=1")
 		else
 			-- enable the debug symbols
@@ -78,7 +83,7 @@ option("LightInk3DSQLite")
 	
 option("LightInk3DOPENGL")
 	
-	set_default(true)
+	set_default(false)
 	
 	set_showmenu(true)
 	
@@ -132,6 +137,28 @@ option("LightInk3DNETWORK")
 	set_showmenu(true)
 	
 	add_defines_if_ok("URHO3D_NETWORK")	
+	
+	
+option("LightInk3DDUMMYAUDIO")
+	set_default(true)
+	
+	set_showmenu(true)
+	
+	add_defines_if_ok("SDL_AUDIO_DRIVER_DUMMY")
+	
+option("LightInk3DDISKAUDIO")
+	set_default(true)
+	
+	set_showmenu(true)
+	
+	add_defines_if_ok("SDL_AUDIO_DRIVER_DISK")
+	
+option("LightInk3DVIDEO_DUMMY")
+	set_default(true)
+	
+	set_showmenu(true)
+	
+	add_defines_if_ok("SDL_VIDEO_DRIVER_DUMMY")
 	
 	
 

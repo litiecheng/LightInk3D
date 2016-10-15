@@ -20,17 +20,17 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/Script.h"
-#include "../Core/Context.h"
-#include "../IO/File.h"
-#include "../IO/FileSystem.h"
-#include "../IO/Log.h"
+#include "AngelScript/Script.h"
+#include "Core/Context.h"
+#include "IO/File.h"
+#include "IO/FileSystem.h"
+#include "IO/Log.h"
 
 #include <AngelScript/angelscript.h>
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

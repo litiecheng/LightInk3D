@@ -20,9 +20,9 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/Addons.h"
+#include "AngelScript/Addons.h"
 
 #include <cstring>
 #include <new>

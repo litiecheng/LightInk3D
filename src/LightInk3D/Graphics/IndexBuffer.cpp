@@ -22,13 +22,13 @@
 
 // This file contains IndexBuffer code common to all graphics APIs.
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Graphics/Graphics.h"
-#include "../Graphics/IndexBuffer.h"
-#include "../IO/Log.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/IndexBuffer.h"
+#include "IO/Log.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

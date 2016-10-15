@@ -20,23 +20,23 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/Profiler.h"
-#include "../Graphics/DebugRenderer.h"
-#include "../IO/Log.h"
-#include "../Navigation/CrowdAgent.h"
-#include "../Navigation/CrowdManager.h"
-#include "../Navigation/DynamicNavigationMesh.h"
-#include "../Navigation/NavigationEvents.h"
-#include "../Scene/Node.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "Graphics/DebugRenderer.h"
+#include "IO/Log.h"
+#include "Navigation/CrowdAgent.h"
+#include "Navigation/CrowdManager.h"
+#include "Navigation/DynamicNavigationMesh.h"
+#include "Navigation/NavigationEvents.h"
+#include "Scene/Node.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
 
 #include <DetourCrowd/DetourCrowd.h>
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

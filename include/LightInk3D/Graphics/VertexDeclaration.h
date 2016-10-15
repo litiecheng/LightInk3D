@@ -24,8 +24,12 @@
 
 #if defined(URHO3D_OPENGL)
 //#error OpenGL Graphics API does not have VertexDeclaration class, remove this header file in your build to fix this error
-#elif defined(URHO3D_D3D11)
+#endif
+
+#if defined(URHO3D_D3D11)
 #include "Direct3D11/D3D11VertexDeclaration.h"
-#else
+#endif
+
+#if defined(LightInk3DDX9)
 #include "Direct3D9/D3D9VertexDeclaration.h"
 #endif

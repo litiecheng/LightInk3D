@@ -20,15 +20,15 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../IO/Log.h"
+#include "IO/Log.h"
 #if defined(URHO3D_PHYSICS) || defined(URHO3D_URHO2D)
-#include "../Physics/PhysicsEvents.h"
+#include "Physics/PhysicsEvents.h"
 #endif
-#include "../Scene/LogicComponent.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
+#include "Scene/LogicComponent.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
 
 namespace Urho3D
 {

@@ -20,18 +20,18 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Graphics/Texture2D.h"
-#include "../Input/Input.h"
-#include "../IO/Log.h"
-#include "../Resource/ResourceCache.h"
-#include "../UI/UI.h"
+#include "Core/Context.h"
+#include "Graphics/Texture2D.h"
+#include "Input/Input.h"
+#include "IO/Log.h"
+#include "Resource/ResourceCache.h"
+#include "UI/UI.h"
 
 #include <SDL/SDL_mouse.h>
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

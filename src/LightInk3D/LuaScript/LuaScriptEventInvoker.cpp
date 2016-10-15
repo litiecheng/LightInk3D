@@ -20,13 +20,13 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../LuaScript/LuaFunction.h"
-#include "../LuaScript/LuaScriptEventInvoker.h"
-#include "../LuaScript/LuaScriptInstance.h"
+#include "LuaScript/LuaFunction.h"
+#include "LuaScript/LuaScriptEventInvoker.h"
+#include "LuaScript/LuaScriptInstance.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

@@ -20,28 +20,28 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/Profiler.h"
-#include "../Core/WorkQueue.h"
-#include "../Graphics/Camera.h"
-#include "../Graphics/Geometry.h"
-#include "../Graphics/GraphicsEvents.h"
-#include "../Graphics/IndexBuffer.h"
-#include "../Graphics/Material.h"
-#include "../Graphics/OctreeQuery.h"
-#include "../Graphics/Technique.h"
-#include "../Graphics/Texture2D.h"
-#include "../Graphics/VertexBuffer.h"
-#include "../Graphics/View.h"
-#include "../IO/Log.h"
-#include "../Scene/Node.h"
-#include "../Scene/Scene.h"
-#include "../Urho2D/Drawable2D.h"
-#include "../Urho2D/Renderer2D.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "Core/WorkQueue.h"
+#include "Graphics/Camera.h"
+#include "Graphics/Geometry.h"
+#include "Graphics/GraphicsEvents.h"
+#include "Graphics/IndexBuffer.h"
+#include "Graphics/Material.h"
+#include "Graphics/OctreeQuery.h"
+#include "Graphics/Technique.h"
+#include "Graphics/Texture2D.h"
+#include "Graphics/VertexBuffer.h"
+#include "Graphics/View.h"
+#include "IO/Log.h"
+#include "Scene/Node.h"
+#include "Scene/Scene.h"
+#include "2D/Drawable2D.h"
+#include "2D/Renderer2D.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

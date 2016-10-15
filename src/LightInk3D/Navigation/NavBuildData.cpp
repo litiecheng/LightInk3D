@@ -20,9 +20,9 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Navigation/NavBuildData.h"
+#include "Navigation/NavBuildData.h"
 
 #include <DetourTileCache/DetourTileCacheBuilder.h>
 #include <Recast/Recast.h>

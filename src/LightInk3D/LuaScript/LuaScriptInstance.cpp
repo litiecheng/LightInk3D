@@ -20,29 +20,29 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/CoreEvents.h"
-#include "../Core/Context.h"
-#include "../Core/ProcessUtils.h"
-#include "../IO/Log.h"
-#include "../IO/MemoryBuffer.h"
-#include "../LuaScript/LuaFile.h"
-#include "../LuaScript/LuaFunction.h"
-#include "../LuaScript/LuaScript.h"
-#include "../LuaScript/LuaScriptEventInvoker.h"
-#include "../LuaScript/LuaScriptInstance.h"
+#include "Core/CoreEvents.h"
+#include "Core/Context.h"
+#include "Core/ProcessUtils.h"
+#include "IO/Log.h"
+#include "IO/MemoryBuffer.h"
+#include "LuaScript/LuaFile.h"
+#include "LuaScript/LuaFunction.h"
+#include "LuaScript/LuaScript.h"
+#include "LuaScript/LuaScriptEventInvoker.h"
+#include "LuaScript/LuaScriptInstance.h"
 #if defined(URHO3D_PHYSICS) || defined(URHO3D_URHO2D)
-#include "../Physics/PhysicsEvents.h"
+#include "Physics/PhysicsEvents.h"
 #endif
-#include "../Resource/ResourceCache.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
+#include "Resource/ResourceCache.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
 
 #include <toluapp/tolua++.h>
-#include "../LuaScript/ToluaUtils.h"
+#include "LuaScript/ToluaUtils.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

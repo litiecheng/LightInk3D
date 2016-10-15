@@ -20,15 +20,15 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../IO/Deserializer.h"
-#include "../IO/FileSystem.h"
-#include "../IO/Log.h"
-#include "../LuaScript/LuaFile.h"
-#include "../Core/ProcessUtils.h"
-#include "../IO/Serializer.h"
+#include "Core/Context.h"
+#include "IO/Deserializer.h"
+#include "IO/FileSystem.h"
+#include "IO/Log.h"
+#include "LuaScript/LuaFile.h"
+#include "Core/ProcessUtils.h"
+#include "IO/Serializer.h"
 
 extern "C"
 {
@@ -36,7 +36,7 @@ extern "C"
 #include <lauxlib.h>
 }
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

@@ -20,12 +20,12 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Math/Frustum.h"
-#include "../Math/Polyhedron.h"
+#include "Math/Frustum.h"
+#include "Math/Polyhedron.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:6293)

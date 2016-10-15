@@ -20,16 +20,16 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Graphics/Geometry.h"
-#include "../Graphics/Graphics.h"
-#include "../Graphics/IndexBuffer.h"
-#include "../Graphics/VertexBuffer.h"
-#include "../IO/Log.h"
-#include "../Math/Ray.h"
+#include "Graphics/Geometry.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/IndexBuffer.h"
+#include "Graphics/VertexBuffer.h"
+#include "IO/Log.h"
+#include "Math/Ray.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

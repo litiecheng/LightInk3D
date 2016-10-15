@@ -20,10 +20,10 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Math/MathDefs.h"
-#include "../Urho2D/SpriterData2D.h"
+#include "Math/MathDefs.h"
+#include "2D/SpriterData2D.h"
 
 #include <PugiXml/pugixml.hpp>
 

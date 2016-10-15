@@ -21,22 +21,22 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Graphics/Camera.h"
-#include "../Graphics/DebugRenderer.h"
-#include "../IO/File.h"
-#include "../Graphics/Geometry.h"
-#include "../Graphics/Material.h"
-#include "../Graphics/Octree.h"
-#include "../Graphics/Renderer.h"
-#include "../Graphics/VertexBuffer.h"
-#include "../Graphics/Zone.h"
-#include "../IO/Log.h"
-#include "../Scene/Scene.h"
+#include "Core/Context.h"
+#include "Graphics/Camera.h"
+#include "Graphics/DebugRenderer.h"
+#include "IO/File.h"
+#include "Graphics/Geometry.h"
+#include "Graphics/Material.h"
+#include "Graphics/Octree.h"
+#include "Graphics/Renderer.h"
+#include "Graphics/VertexBuffer.h"
+#include "Graphics/Zone.h"
+#include "IO/Log.h"
+#include "Scene/Scene.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:6293)

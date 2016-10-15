@@ -20,15 +20,15 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Profiler.h"
-#include "../IO/Log.h"
-#include "../Network/HttpRequest.h"
+#include "Core/Profiler.h"
+#include "IO/Log.h"
+#include "Network/HttpRequest.h"
 
 #include <Civetweb/civetweb.h>
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

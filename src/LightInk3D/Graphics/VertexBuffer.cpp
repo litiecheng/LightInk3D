@@ -22,13 +22,13 @@
 
 // This file contains VertexBuffer code common to all graphics APIs.
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Graphics/Graphics.h"
-#include "../Graphics/VertexBuffer.h"
-#include "../Math/MathDefs.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/VertexBuffer.h"
+#include "Math/MathDefs.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

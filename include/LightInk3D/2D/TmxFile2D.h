@@ -23,7 +23,7 @@
 #pragma once
 
 #include "../Resource/Resource.h"
-#include "../Urho2D/TileMapDefs2D.h"
+#include "../2D/TileMapDefs2D.h"
 
 namespace Urho3D
 {

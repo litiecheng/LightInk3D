@@ -20,10 +20,10 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/StringUtils.h"
-#include "../IO/VectorBuffer.h"
+#include "Core/StringUtils.h"
+#include "IO/VectorBuffer.h"
 
 #include <cstring>
 

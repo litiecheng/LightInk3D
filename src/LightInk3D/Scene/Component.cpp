@@ -20,22 +20,22 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Resource/JSONValue.h"
-#include "../Scene/Component.h"
-#include "../Scene/ReplicationState.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
+#include "Core/Context.h"
+#include "Resource/JSONValue.h"
+#include "Scene/Component.h"
+#include "Scene/ReplicationState.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
 #ifdef URHO3D_PHYSICS
-#include "../Physics/PhysicsWorld.h"
+#include "Physics/PhysicsWorld.h"
 #endif
 #ifdef URHO3D_URHO2D
-#include "../Urho2D/PhysicsWorld2D.h"
+#include "2D/PhysicsWorld2D.h"
 #endif
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:6293)

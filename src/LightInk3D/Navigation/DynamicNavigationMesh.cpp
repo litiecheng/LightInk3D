@@ -20,24 +20,24 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
 
-#include "../Core/Context.h"
-#include "../Core/Profiler.h"
-#include "../Graphics/DebugRenderer.h"
-#include "../IO/Log.h"
-#include "../IO/MemoryBuffer.h"
-#include "../Navigation/CrowdAgent.h"
-#include "../Navigation/DynamicNavigationMesh.h"
-#include "../Navigation/NavArea.h"
-#include "../Navigation/NavBuildData.h"
-#include "../Navigation/NavigationEvents.h"
-#include "../Navigation/Obstacle.h"
-#include "../Navigation/OffMeshConnection.h"
-#include "../Scene/Node.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "Graphics/DebugRenderer.h"
+#include "IO/Log.h"
+#include "IO/MemoryBuffer.h"
+#include "Navigation/CrowdAgent.h"
+#include "Navigation/DynamicNavigationMesh.h"
+#include "Navigation/NavArea.h"
+#include "Navigation/NavBuildData.h"
+#include "Navigation/NavigationEvents.h"
+#include "Navigation/Obstacle.h"
+#include "Navigation/OffMeshConnection.h"
+#include "Scene/Node.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
 
 #include <LZ4/lz4.h>
 #include <Detour/DetourNavMesh.h>
@@ -47,7 +47,7 @@
 #include <Recast/Recast.h>
 
 // DebugNew is deliberately not used because the macro 'free' conflicts with DetourTileCache's LinearAllocator interface
-//#include "../DebugNew.h"
+//#include "DebugNew.h"
 
 static const unsigned TILECACHE_MAXLAYERS = 255;
 

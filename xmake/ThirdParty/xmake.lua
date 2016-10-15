@@ -6,6 +6,7 @@ local name = "ThirdParty"
 local dirs = {
 	"Box2D", 
 	"Bullet", 
+	"Civetweb", 
 	"Common",
 	"Detour", 
 	"DetourCrowd", 
@@ -66,6 +67,9 @@ target(name)
 	add_options("LightInk3DPHYSICS")
 	add_options("LightInk3DNAVIGATION")
 	add_options("LightInk3DNETWORK")
+	add_options("LightInk3DDUMMYAUDIO")
+	add_options("LightInk3DDISKAUDIO")
+	add_options("LightInk3DVIDEO_DUMMY")
 
 
 for k, v in ipairs(dirs) do

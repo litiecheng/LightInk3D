@@ -20,19 +20,19 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../IO/Log.h"
-#include "../Resource/ResourceCache.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
-#include "../Urho2D/AnimatedSprite2D.h"
-#include "../Urho2D/AnimationSet2D.h"
-#include "../Urho2D/Sprite2D.h"
-#include "../Urho2D/SpriterInstance2D.h"
+#include "Core/Context.h"
+#include "IO/Log.h"
+#include "Resource/ResourceCache.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
+#include "2D/AnimatedSprite2D.h"
+#include "2D/AnimationSet2D.h"
+#include "2D/Sprite2D.h"
+#include "2D/SpriterInstance2D.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef URHO3D_SPINE
 #include <spine/spine.h>

@@ -22,16 +22,16 @@
 
 #ifdef URHO3D_THREADING
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/Profiler.h"
-#include "../IO/Log.h"
-#include "../Resource/BackgroundLoader.h"
-#include "../Resource/ResourceCache.h"
-#include "../Resource/ResourceEvents.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "IO/Log.h"
+#include "Resource/BackgroundLoader.h"
+#include "Resource/ResourceCache.h"
+#include "Resource/ResourceEvents.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

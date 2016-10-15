@@ -21,16 +21,15 @@
 //
 
 #include "Precompiled.h"
-
 #include "LibraryInfo.h"
-#include "librevision.h"
+#include "Common/LightInkVersion.h"
 
 namespace Urho3D
 {
 
 const char* GetRevision()
 {
-    return revision;
+    return LightInk::get_version_string();
 }
 
 const char* GetCompilerDefines()
@@ -38,8 +37,12 @@ const char* GetCompilerDefines()
     return ""
 #ifdef URHO3D_OPENGL
     "#define URHO3D_OPENGL\n"
-#elif defined(URHO3D_D3D11)
+#endif
+#if defined(URHO3D_D3D11)
     "#define URHO3D_D3D11\n"
+#endif
+#if defined(LightInk3DDX9)
+	"#define LightInk3DDX9\n"
 #endif
 #ifdef URHO3D_SSE
     "#define URHO3D_SSE\n"

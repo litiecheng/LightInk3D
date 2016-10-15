@@ -20,13 +20,13 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../IO/Log.h"
-#include "../Scene/ValueAnimation.h"
-#include "../Scene/ValueAnimationInfo.h"
+#include "IO/Log.h"
+#include "Scene/ValueAnimation.h"
+#include "Scene/ValueAnimationInfo.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

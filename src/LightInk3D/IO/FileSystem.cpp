@@ -20,17 +20,17 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Container/ArrayPtr.h"
-#include "../Core/Context.h"
-#include "../Core/CoreEvents.h"
-#include "../Core/Thread.h"
-#include "../Engine/EngineEvents.h"
-#include "../IO/File.h"
-#include "../IO/FileSystem.h"
-#include "../IO/IOEvents.h"
-#include "../IO/Log.h"
+#include "Container/ArrayPtr.h"
+#include "Core/Context.h"
+#include "Core/CoreEvents.h"
+#include "Core/Thread.h"
+#include "Engine/EngineEvents.h"
+#include "IO/File.h"
+#include "IO/FileSystem.h"
+#include "IO/IOEvents.h"
+#include "IO/Log.h"
 
 #ifdef __ANDROID__
 #include <SDL/SDL_rwops.h>
@@ -78,7 +78,7 @@ const char* SDL_IOS_GetDocumentsDir();
 #endif
 }
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

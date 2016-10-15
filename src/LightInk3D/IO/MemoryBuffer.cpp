@@ -20,9 +20,9 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../IO/MemoryBuffer.h"
+#include "IO/MemoryBuffer.h"
 
 namespace Urho3D
 {

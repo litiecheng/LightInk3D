@@ -27,8 +27,12 @@
 
 #if defined(URHO3D_OPENGL)
 #include "OpenGL/OGLGraphicsImpl.h"
-#elif defined(URHO3D_D3D11)
+#endif
+
+#if defined(URHO3D_D3D11)
 #include "Direct3D11/D3D11GraphicsImpl.h"
-#else
+#endif
+
+#if defined(LightInk3DDX9)
 #include "Direct3D9/D3D9GraphicsImpl.h"
 #endif

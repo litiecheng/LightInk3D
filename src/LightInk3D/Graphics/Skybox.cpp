@@ -20,15 +20,15 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Graphics/Batch.h"
-#include "../Graphics/Camera.h"
-#include "../Graphics/Skybox.h"
-#include "../Scene/Node.h"
+#include "Core/Context.h"
+#include "Graphics/Batch.h"
+#include "Graphics/Camera.h"
+#include "Graphics/Skybox.h"
+#include "Scene/Node.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

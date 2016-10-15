@@ -20,13 +20,13 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Graphics/Graphics.h"
-#include "../Graphics/Shader.h"
-#include "../Graphics/ShaderVariation.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/Shader.h"
+#include "Graphics/ShaderVariation.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

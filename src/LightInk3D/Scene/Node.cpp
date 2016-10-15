@@ -20,23 +20,23 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/Profiler.h"
-#include "../IO/Log.h"
-#include "../IO/MemoryBuffer.h"
-#include "../Resource/XMLFile.h"
-#include "../Resource/JSONFile.h"
-#include "../Scene/Component.h"
-#include "../Scene/ObjectAnimation.h"
-#include "../Scene/ReplicationState.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
-#include "../Scene/SmoothedTransform.h"
-#include "../Scene/UnknownComponent.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "IO/Log.h"
+#include "IO/MemoryBuffer.h"
+#include "Resource/XMLFile.h"
+#include "Resource/JSONFile.h"
+#include "Scene/Component.h"
+#include "Scene/ObjectAnimation.h"
+#include "Scene/ReplicationState.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
+#include "Scene/SmoothedTransform.h"
+#include "Scene/UnknownComponent.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:6293)

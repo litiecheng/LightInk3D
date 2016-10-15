@@ -20,27 +20,27 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/Profiler.h"
-#include "../Graphics/AnimatedModel.h"
-#include "../Graphics/Batch.h"
-#include "../Graphics/Camera.h"
-#include "../Graphics/DecalSet.h"
-#include "../Graphics/Geometry.h"
-#include "../Graphics/Graphics.h"
-#include "../Graphics/IndexBuffer.h"
-#include "../Graphics/Material.h"
-#include "../Graphics/Tangent.h"
-#include "../Graphics/VertexBuffer.h"
-#include "../IO/Log.h"
-#include "../IO/MemoryBuffer.h"
-#include "../Resource/ResourceCache.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "Graphics/AnimatedModel.h"
+#include "Graphics/Batch.h"
+#include "Graphics/Camera.h"
+#include "Graphics/DecalSet.h"
+#include "Graphics/Geometry.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/IndexBuffer.h"
+#include "Graphics/Material.h"
+#include "Graphics/Tangent.h"
+#include "Graphics/VertexBuffer.h"
+#include "IO/Log.h"
+#include "IO/MemoryBuffer.h"
+#include "Resource/ResourceCache.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:6293)

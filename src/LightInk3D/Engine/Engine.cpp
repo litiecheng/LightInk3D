@@ -20,49 +20,49 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Audio/Audio.h"
-#include "../Core/Context.h"
-#include "../Core/CoreEvents.h"
-#include "../Core/EventProfiler.h"
-#include "../Core/ProcessUtils.h"
-#include "../Core/WorkQueue.h"
-#include "../Engine/Console.h"
-#include "../Engine/DebugHud.h"
-#include "../Engine/Engine.h"
-#include "../Graphics/Graphics.h"
-#include "../Graphics/Renderer.h"
-#include "../Input/Input.h"
-#include "../IO/FileSystem.h"
-#include "../IO/Log.h"
-#include "../IO/PackageFile.h"
+#include "Audio/Audio.h"
+#include "Core/Context.h"
+#include "Core/CoreEvents.h"
+#include "Core/EventProfiler.h"
+#include "Core/ProcessUtils.h"
+#include "Core/WorkQueue.h"
+#include "Engine/Console.h"
+#include "Engine/DebugHud.h"
+#include "Engine/Engine.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/Renderer.h"
+#include "Input/Input.h"
+#include "IO/FileSystem.h"
+#include "IO/Log.h"
+#include "IO/PackageFile.h"
 #ifdef URHO3D_NAVIGATION
-#include "../Navigation/NavigationMesh.h"
+#include "Navigation/NavigationMesh.h"
 #endif
 #ifdef URHO3D_NETWORK
-#include "../Network/Network.h"
+#include "Network/Network.h"
 #endif
 #ifdef URHO3D_DATABASE
-#include "../Database/Database.h"
+#include "Database/Database.h"
 #endif
 #ifdef URHO3D_PHYSICS
-#include "../Physics/PhysicsWorld.h"
+#include "Physics/PhysicsWorld.h"
 #endif
-#include "../Resource/ResourceCache.h"
-#include "../Resource/Localization.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
-#include "../UI/UI.h"
+#include "Resource/ResourceCache.h"
+#include "Resource/Localization.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
+#include "UI/UI.h"
 #ifdef URHO3D_URHO2D
-#include "../Urho2D/Urho2D.h"
+#include "2D/Urho2D.h"
 #endif
 
 #if defined(__EMSCRIPTEN__) && defined(URHO3D_TESTING)
 #include <emscripten/emscripten.h>
 #endif
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 
 #if defined(_MSC_VER) && defined(_DEBUG)

@@ -20,23 +20,23 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/CoreEvents.h"
-#include "../Core/Mutex.h"
-#include "../Core/ProcessUtils.h"
-#include "../Core/Profiler.h"
-#include "../Core/StringUtils.h"
-#include "../Graphics/Graphics.h"
-#include "../Graphics/GraphicsEvents.h"
-#include "../Input/Input.h"
-#include "../IO/FileSystem.h"
-#include "../IO/Log.h"
-#include "../IO/RWOpsWrapper.h"
-#include "../Resource/ResourceCache.h"
-#include "../UI/Text.h"
-#include "../UI/UI.h"
+#include "Core/Context.h"
+#include "Core/CoreEvents.h"
+#include "Core/Mutex.h"
+#include "Core/ProcessUtils.h"
+#include "Core/Profiler.h"
+#include "Core/StringUtils.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/GraphicsEvents.h"
+#include "Input/Input.h"
+#include "IO/FileSystem.h"
+#include "IO/Log.h"
+#include "IO/RWOpsWrapper.h"
+#include "Resource/ResourceCache.h"
+#include "UI/Text.h"
+#include "UI/UI.h"
 
 #include <SDL/SDL.h>
 
@@ -44,7 +44,7 @@
 #include <emscripten/html5.h>
 #endif
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 extern "C" int SDL_AddTouch(SDL_TouchID touchID, const char* name);
 

@@ -20,13 +20,13 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Resource/XMLElement.h"
-#include "../Resource/JSONFile.h"
-#include "../Urho2D/TileMapDefs2D.h"
+#include "Resource/XMLElement.h"
+#include "Resource/JSONFile.h"
+#include "2D/TileMapDefs2D.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

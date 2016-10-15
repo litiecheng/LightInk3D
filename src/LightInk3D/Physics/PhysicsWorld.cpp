@@ -20,23 +20,23 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/Mutex.h"
-#include "../Core/Profiler.h"
-#include "../Graphics/DebugRenderer.h"
-#include "../Graphics/Model.h"
-#include "../IO/Log.h"
-#include "../Math/Ray.h"
-#include "../Physics/CollisionShape.h"
-#include "../Physics/Constraint.h"
-#include "../Physics/PhysicsEvents.h"
-#include "../Physics/PhysicsUtils.h"
-#include "../Physics/PhysicsWorld.h"
-#include "../Physics/RigidBody.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
+#include "Core/Context.h"
+#include "Core/Mutex.h"
+#include "Core/Profiler.h"
+#include "Graphics/DebugRenderer.h"
+#include "Graphics/Model.h"
+#include "IO/Log.h"
+#include "Math/Ray.h"
+#include "Physics/CollisionShape.h"
+#include "Physics/Constraint.h"
+#include "Physics/PhysicsEvents.h"
+#include "Physics/PhysicsUtils.h"
+#include "Physics/PhysicsWorld.h"
+#include "Physics/RigidBody.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
 
 #include <Bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h>
 #include <Bullet/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h>

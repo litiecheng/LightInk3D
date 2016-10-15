@@ -20,18 +20,18 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../IO/Log.h"
-#include "../IO/VectorBuffer.h"
-#include "../LuaScript/LuaFunction.h"
-#include "../LuaScript/LuaScript.h"
-#include "../LuaScript/LuaScriptInstance.h"
+#include "IO/Log.h"
+#include "IO/VectorBuffer.h"
+#include "LuaScript/LuaFunction.h"
+#include "LuaScript/LuaScript.h"
+#include "LuaScript/LuaScriptInstance.h"
 
 #include <toluapp/tolua++.h>
-#include "../LuaScript/ToluaUtils.h"
+#include "LuaScript/ToluaUtils.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

@@ -20,20 +20,20 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Audio/Audio.h"
-#include "../Audio/AudioEvents.h"
-#include "../Audio/Sound.h"
-#include "../Audio/SoundSource.h"
-#include "../Audio/SoundStream.h"
-#include "../Core/Context.h"
-#include "../IO/Log.h"
-#include "../Resource/ResourceCache.h"
-#include "../Scene/Node.h"
-#include "../Scene/ReplicationState.h"
+#include "Audio/Audio.h"
+#include "Audio/AudioEvents.h"
+#include "Audio/Sound.h"
+#include "Audio/SoundSource.h"
+#include "Audio/SoundStream.h"
+#include "Core/Context.h"
+#include "IO/Log.h"
+#include "Resource/ResourceCache.h"
+#include "Scene/Node.h"
+#include "Scene/ReplicationState.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

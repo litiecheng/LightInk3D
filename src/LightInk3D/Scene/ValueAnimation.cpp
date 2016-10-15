@@ -20,20 +20,20 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/StringUtils.h"
-#include "../IO/Deserializer.h"
-#include "../IO/Log.h"
-#include "../IO/Serializer.h"
-#include "../Resource/XMLFile.h"
-#include "../Resource/JSONFile.h"
-#include "../Scene/Animatable.h"
-#include "../Scene/ObjectAnimation.h"
-#include "../Scene/ValueAnimation.h"
+#include "Core/Context.h"
+#include "Core/StringUtils.h"
+#include "IO/Deserializer.h"
+#include "IO/Log.h"
+#include "IO/Serializer.h"
+#include "Resource/XMLFile.h"
+#include "Resource/JSONFile.h"
+#include "Scene/Animatable.h"
+#include "Scene/ObjectAnimation.h"
+#include "Scene/ValueAnimation.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

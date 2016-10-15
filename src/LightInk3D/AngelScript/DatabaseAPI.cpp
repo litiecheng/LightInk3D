@@ -22,10 +22,10 @@
 
 #ifdef URHO3D_DATABASE
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/APITemplates.h"
-#include "../Database/Database.h"
+#include "AngelScript/APITemplates.h"
+#include "Database/Database.h"
 
 namespace Urho3D
 {

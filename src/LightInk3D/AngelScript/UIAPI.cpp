@@ -20,27 +20,27 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/APITemplates.h"
-#include "../Input/Input.h"
-#include "../UI/CheckBox.h"
-#include "../UI/DropDownList.h"
-#include "../UI/FileSelector.h"
-#include "../UI/Font.h"
-#include "../UI/LineEdit.h"
-#include "../UI/ListView.h"
-#include "../UI/MessageBox.h"
-#include "../UI/ScrollBar.h"
-#include "../UI/Slider.h"
-#include "../UI/Sprite.h"
-#include "../UI/Text.h"
-#include "../UI/Text3D.h"
-#include "../UI/ToolTip.h"
-#include "../UI/UI.h"
-#include "../UI/View3D.h"
+#include "AngelScript/APITemplates.h"
+#include "Input/Input.h"
+#include "UI/CheckBox.h"
+#include "UI/DropDownList.h"
+#include "UI/FileSelector.h"
+#include "UI/Font.h"
+#include "UI/LineEdit.h"
+#include "UI/ListView.h"
+#include "UI/MessageBox.h"
+#include "UI/ScrollBar.h"
+#include "UI/Slider.h"
+#include "UI/Sprite.h"
+#include "UI/Text.h"
+#include "UI/Text3D.h"
+#include "UI/ToolTip.h"
+#include "UI/UI.h"
+#include "UI/View3D.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

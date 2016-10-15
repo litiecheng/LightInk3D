@@ -20,13 +20,13 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/APITemplates.h"
-#include "../IO/Compression.h"
-#include "../IO/FileSystem.h"
-#include "../IO/NamedPipe.h"
-#include "../IO/PackageFile.h"
+#include "AngelScript/APITemplates.h"
+#include "IO/Compression.h"
+#include "IO/FileSystem.h"
+#include "IO/NamedPipe.h"
+#include "IO/PackageFile.h"
 
 namespace Urho3D
 {

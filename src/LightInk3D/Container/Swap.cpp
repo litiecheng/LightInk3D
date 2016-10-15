@@ -20,9 +20,9 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Container/ListBase.h"
+#include "Container/ListBase.h"
 
 namespace Urho3D
 {

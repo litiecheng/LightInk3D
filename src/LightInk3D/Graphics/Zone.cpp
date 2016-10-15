@@ -20,18 +20,18 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Graphics/DebugRenderer.h"
-#include "../Graphics/Octree.h"
-#include "../Graphics/TextureCube.h"
-#include "../Graphics/Zone.h"
-#include "../Resource/ResourceCache.h"
-#include "../Scene/Node.h"
-#include "../Scene/Scene.h"
+#include "Core/Context.h"
+#include "Graphics/DebugRenderer.h"
+#include "Graphics/Octree.h"
+#include "Graphics/TextureCube.h"
+#include "Graphics/Zone.h"
+#include "Resource/ResourceCache.h"
+#include "Scene/Node.h"
+#include "Scene/Scene.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

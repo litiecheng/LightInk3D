@@ -20,9 +20,9 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Audio/SoundStream.h"
+#include "Audio/SoundStream.h"
 
 namespace Urho3D
 {

@@ -20,14 +20,14 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/StringUtils.h"
-#include "../IO/Log.h"
-#include "../Resource/JSONValue.h"
+#include "Core/Context.h"
+#include "Core/StringUtils.h"
+#include "IO/Log.h"
+#include "Resource/JSONValue.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

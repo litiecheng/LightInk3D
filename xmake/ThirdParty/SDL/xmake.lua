@@ -188,7 +188,7 @@ local sdl_plat_sub = {
 		iphoneos = {"/pthread/*.c"},
 		macosx = {"/pthread/*.c"},
 		linux = {"/pthread/*.c"},
-		windows = {"/windows/*.c"},
+		windows = {"/windows/*.c", "/generic/SDL_syscond.c"},
 		wiz = {"/pthread/*.c"},
 		psp = {"/psp/*.c"},
 	}, 
@@ -265,12 +265,24 @@ add_includedirs(prefixInclude)
 
 add_defines("SDL_EXPORTS")
 
+if is_plat("windows") then
+	add_links("winmm")
+	add_links("imm32")
+	add_links("ole32")
+	add_links("oleaut32")
+	add_links("user32")
+	add_links("shell32")
+	add_links("gdi32")
+	add_links("version")
+end
+
+
 -- add headers
 add_headers(prefixInclude .. "/*.h|SDL_config_*.h")
 add_headers(prefixSrc .. "/*.h")
 for k, v in pairs(sdl_sub_h) do
 	for ki, vi in ipairs(v) do
-		add_headers(prefixSrc .. vi)
+		add_headers(prefixSrc .. "/" .. k .. vi)
 	end
 end
 
@@ -299,7 +311,7 @@ end
 add_files(prefixSrc .. "/*.c")
 for k, v in pairs(sdl_sub) do
 	for ki, vi in ipairs(v) do
-		add_files(prefixSrc .. vi)
+		add_files(prefixSrc .. "/" .. k .. vi)
 	end
 end
 

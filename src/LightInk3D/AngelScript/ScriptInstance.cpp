@@ -20,26 +20,26 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../AngelScript/Script.h"
-#include "../AngelScript/ScriptFile.h"
-#include "../AngelScript/ScriptInstance.h"
-#include "../Core/Context.h"
-#include "../Core/Profiler.h"
-#include "../IO/Log.h"
-#include "../IO/MemoryBuffer.h"
+#include "AngelScript/Script.h"
+#include "AngelScript/ScriptFile.h"
+#include "AngelScript/ScriptInstance.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "IO/Log.h"
+#include "IO/MemoryBuffer.h"
 #if defined(URHO3D_PHYSICS) || defined(URHO3D_URHO2D)
-#include "../Physics/PhysicsEvents.h"
+#include "Physics/PhysicsEvents.h"
 #endif
-#include "../Resource/ResourceCache.h"
-#include "../Resource/ResourceEvents.h"
-#include "../Scene/Scene.h"
-#include "../Scene/SceneEvents.h"
+#include "Resource/ResourceCache.h"
+#include "Resource/ResourceEvents.h"
+#include "Scene/Scene.h"
+#include "Scene/SceneEvents.h"
 
 #include <AngelScript/angelscript.h>
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

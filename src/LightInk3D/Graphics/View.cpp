@@ -20,37 +20,37 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Profiler.h"
-#include "../Core/WorkQueue.h"
-#include "../Graphics/Camera.h"
-#include "../Graphics/DebugRenderer.h"
-#include "../Graphics/Geometry.h"
-#include "../Graphics/Graphics.h"
-#include "../Graphics/GraphicsEvents.h"
-#include "../Graphics/GraphicsImpl.h"
-#include "../Graphics/Material.h"
-#include "../Graphics/OcclusionBuffer.h"
-#include "../Graphics/Octree.h"
-#include "../Graphics/Renderer.h"
-#include "../Graphics/RenderPath.h"
-#include "../Graphics/ShaderVariation.h"
-#include "../Graphics/Skybox.h"
-#include "../Graphics/Technique.h"
-#include "../Graphics/Texture2D.h"
-#include "../Graphics/Texture2DArray.h"
-#include "../Graphics/Texture3D.h"
-#include "../Graphics/TextureCube.h"
-#include "../Graphics/VertexBuffer.h"
-#include "../Graphics/View.h"
-#include "../IO/FileSystem.h"
-#include "../IO/Log.h"
-#include "../Resource/ResourceCache.h"
-#include "../Scene/Scene.h"
-#include "../UI/UI.h"
+#include "Core/Profiler.h"
+#include "Core/WorkQueue.h"
+#include "Graphics/Camera.h"
+#include "Graphics/DebugRenderer.h"
+#include "Graphics/Geometry.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/GraphicsEvents.h"
+#include "Graphics/GraphicsImpl.h"
+#include "Graphics/Material.h"
+#include "Graphics/OcclusionBuffer.h"
+#include "Graphics/Octree.h"
+#include "Graphics/Renderer.h"
+#include "Graphics/RenderPath.h"
+#include "Graphics/ShaderVariation.h"
+#include "Graphics/Skybox.h"
+#include "Graphics/Technique.h"
+#include "Graphics/Texture2D.h"
+#include "Graphics/Texture2DArray.h"
+#include "Graphics/Texture3D.h"
+#include "Graphics/TextureCube.h"
+#include "Graphics/VertexBuffer.h"
+#include "Graphics/View.h"
+#include "IO/FileSystem.h"
+#include "IO/Log.h"
+#include "Resource/ResourceCache.h"
+#include "Scene/Scene.h"
+#include "UI/UI.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {
@@ -1702,7 +1702,7 @@ void View::SetRenderTargets(RenderPathCommand& command)
             {
                 useColorWrite = false;
                 useCustomDepth = true;
-#if !defined(URHO3D_OPENGL) && !defined(URHO3D_D3D11)
+#if defined(LightInk3DDX9)
                 // On D3D9 actual depth-only rendering is illegal, we need a color rendertarget
                 if (!depthOnlyDummyTexture_)
                 {

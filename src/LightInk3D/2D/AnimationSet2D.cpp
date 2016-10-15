@@ -20,24 +20,24 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Container/ArrayPtr.h"
-#include "../Core/Context.h"
-#include "../Graphics/Graphics.h"
-#include "../Graphics/Texture2D.h"
-#include "../IO/FileSystem.h"
-#include "../IO/Log.h"
-#include "../Math/AreaAllocator.h"
-#include "../Resource/Image.h"
-#include "../Resource/ResourceCache.h"
-#include "../Resource/XMLFile.h"
-#include "../Urho2D/AnimationSet2D.h"
-#include "../Urho2D/Sprite2D.h"
-#include "../Urho2D/SpriterData2D.h"
-#include "../Urho2D/SpriteSheet2D.h"
+#include "Container/ArrayPtr.h"
+#include "Core/Context.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/Texture2D.h"
+#include "IO/FileSystem.h"
+#include "IO/Log.h"
+#include "Math/AreaAllocator.h"
+#include "Resource/Image.h"
+#include "Resource/ResourceCache.h"
+#include "Resource/XMLFile.h"
+#include "2D/AnimationSet2D.h"
+#include "2D/Sprite2D.h"
+#include "2D/SpriterData2D.h"
+#include "2D/SpriteSheet2D.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef URHO3D_SPINE
 #include <spine/spine.h>

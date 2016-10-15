@@ -20,9 +20,9 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Thread.h"
+#include "Core/Thread.h"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -30,7 +30,7 @@
 #include <pthread.h>
 #endif
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

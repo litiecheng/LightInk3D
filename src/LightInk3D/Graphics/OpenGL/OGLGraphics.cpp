@@ -20,31 +20,31 @@
 // THE SOFTWARE.
 //
 
-#include "../../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../../Core/Context.h"
-#include "../../Core/Mutex.h"
-#include "../../Core/ProcessUtils.h"
-#include "../../Core/Profiler.h"
-#include "../../Graphics/ConstantBuffer.h"
-#include "../../Graphics/Graphics.h"
-#include "../../Graphics/GraphicsEvents.h"
-#include "../../Graphics/GraphicsImpl.h"
-#include "../../Graphics/IndexBuffer.h"
-#include "../../Graphics/RenderSurface.h"
-#include "../../Graphics/Shader.h"
-#include "../../Graphics/ShaderPrecache.h"
-#include "../../Graphics/ShaderProgram.h"
-#include "../../Graphics/ShaderVariation.h"
-#include "../../Graphics/Texture2D.h"
-#include "../../Graphics/VertexBuffer.h"
-#include "../../IO/File.h"
-#include "../../IO/Log.h"
-#include "../../Resource/ResourceCache.h"
+#include "Core/Context.h"
+#include "Core/Mutex.h"
+#include "Core/ProcessUtils.h"
+#include "Core/Profiler.h"
+#include "Graphics/ConstantBuffer.h"
+#include "Graphics/Graphics.h"
+#include "Graphics/GraphicsEvents.h"
+#include "Graphics/GraphicsImpl.h"
+#include "Graphics/IndexBuffer.h"
+#include "Graphics/RenderSurface.h"
+#include "Graphics/Shader.h"
+#include "Graphics/ShaderPrecache.h"
+#include "Graphics/ShaderProgram.h"
+#include "Graphics/ShaderVariation.h"
+#include "Graphics/Texture2D.h"
+#include "Graphics/VertexBuffer.h"
+#include "IO/File.h"
+#include "IO/Log.h"
+#include "Resource/ResourceCache.h"
 
 #include <SDL/SDL.h>
 
-#include "../../DebugNew.h"
+#include "DebugNew.h"
 
 #ifdef GL_ES_VERSION_2_0
 #define GL_DEPTH_COMPONENT24 GL_DEPTH_COMPONENT24_OES

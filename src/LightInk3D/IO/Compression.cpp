@@ -20,13 +20,13 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Container/ArrayPtr.h"
-#include "../IO/Compression.h"
-#include "../IO/Deserializer.h"
-#include "../IO/Serializer.h"
-#include "../IO/VectorBuffer.h"
+#include "Container/ArrayPtr.h"
+#include "IO/Compression.h"
+#include "IO/Deserializer.h"
+#include "IO/Serializer.h"
+#include "IO/VectorBuffer.h"
 
 #include <LZ4/lz4.h>
 #include <LZ4/lz4hc.h>

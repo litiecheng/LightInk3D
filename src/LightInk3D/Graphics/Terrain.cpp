@@ -20,26 +20,26 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../Core/Profiler.h"
-#include "../Graphics/DrawableEvents.h"
-#include "../Graphics/Geometry.h"
-#include "../Graphics/IndexBuffer.h"
-#include "../Graphics/Material.h"
-#include "../Graphics/Octree.h"
-#include "../Graphics/Terrain.h"
-#include "../Graphics/TerrainPatch.h"
-#include "../Graphics/VertexBuffer.h"
-#include "../IO/Log.h"
-#include "../Resource/Image.h"
-#include "../Resource/ResourceCache.h"
-#include "../Resource/ResourceEvents.h"
-#include "../Scene/Node.h"
-#include "../Scene/Scene.h"
+#include "Core/Context.h"
+#include "Core/Profiler.h"
+#include "Graphics/DrawableEvents.h"
+#include "Graphics/Geometry.h"
+#include "Graphics/IndexBuffer.h"
+#include "Graphics/Material.h"
+#include "Graphics/Octree.h"
+#include "Graphics/Terrain.h"
+#include "Graphics/TerrainPatch.h"
+#include "Graphics/VertexBuffer.h"
+#include "IO/Log.h"
+#include "Resource/Image.h"
+#include "Resource/ResourceCache.h"
+#include "Resource/ResourceEvents.h"
+#include "Scene/Node.h"
+#include "Scene/Scene.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

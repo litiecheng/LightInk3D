@@ -20,17 +20,17 @@
 // THE SOFTWARE.
 //
 
-#include "../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../Core/Context.h"
-#include "../IO/Log.h"
-#include "../Scene/Node.h"
-#include "../Scene/Scene.h"
-#include "../Urho2D/CollisionShape2D.h"
-#include "../Urho2D/PhysicsUtils2D.h"
-#include "../Urho2D/RigidBody2D.h"
+#include "Core/Context.h"
+#include "IO/Log.h"
+#include "Scene/Node.h"
+#include "Scene/Scene.h"
+#include "2D/CollisionShape2D.h"
+#include "2D/PhysicsUtils2D.h"
+#include "2D/RigidBody2D.h"
 
-#include "../DebugNew.h"
+#include "DebugNew.h"
 
 namespace Urho3D
 {

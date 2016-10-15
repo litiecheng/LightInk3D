@@ -17,10 +17,10 @@ add_subfiles("../LightInk3DOption.lua")
 
 set_mode_config(name)
 
-
+--[[
 for k, v in pairs(deps) do
 	add_subdirs(v.xmake)
-end
+end--]]
 
 local prefixInclude = "../../include/LightInk3D/"
 local prefixSrc = "../../src/LightInk3D/"
@@ -41,6 +41,9 @@ target(name)
 	for k, v in pairs(deps) do
 		add_includedirs(v.include)
 	end
+	
+	add_defines("Urho3D_EXPORTS", "URHO3D_IS_BUILDING")
+	
 	if output then
 		set_targetdir(output.bin)
 		set_objectdir(output.obj)
@@ -85,14 +88,14 @@ target(name)
 	
 	
     -- add files
-	add_files(prefixSrc .. "*.cpp", prefixSrc .. "*.c")
+	add_files(prefixSrc .. "*.cpp")
     for k, v in pairs(normalDir) do
-		add_files(prefixSrc .. k .. v .. ".cpp", prefixSrc .. k .. v .. ".c")
+		add_files(prefixSrc .. k .. v .. ".cpp")
 	end
 	
 	
 	local optionDir = {
-		LightInk3DLua = "LuaScript/**",
+		--LightInk3DLua = "LuaScript/**",
 		LightInk3DSQLite = "Database/**",
 		LightInk3DOPENGL = "Graphics/OpenGL/**",
 		LightInk3DDX9 = "Graphics/Direct3D9/**",
@@ -107,8 +110,16 @@ target(name)
 	for k, v in pairs(optionDir) do
 		if is_option(k) then
 			add_headers(prefixInclude .. v .. ".h", prefixInclude .. v .. ".hpp")
-			add_files(prefixSrc .. v .. ".cpp", prefixSrc .. v .. ".c")
+			add_files(prefixSrc .. v .. ".cpp")
 		end
+	end
+	
+	if is_option("LightInk3DDX9") then
+		add_links("d3dcompiler", "d3d9")
+	end
+	
+	if is_option("LightInk3DDX11") then
+		add_links("d3dcompiler", "d3d11")
 	end
 	
 	

@@ -23,7 +23,7 @@
 #pragma once
 
 #include "../Scene/Component.h"
-#include "../Urho2D/TileMapDefs2D.h"
+#include "../2D/TileMapDefs2D.h"
 
 #ifdef GetObject
 #undef GetObject
