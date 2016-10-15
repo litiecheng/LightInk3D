@@ -3,10 +3,7 @@
 
 local name = "LightInk3D"
 local deps = { 
-	ThirdParty = {
-		include = "../../include/ThirdParty",
-		xmake = "../ThirdParty",
-	}
+	ThirdParty = "../../include/ThirdParty",
 }
 local output = g_output
 
@@ -17,10 +14,6 @@ add_subfiles("../LightInk3DOption.lua")
 
 set_mode_config(name)
 
---[[
-for k, v in pairs(deps) do
-	add_subdirs(v.xmake)
-end--]]
 
 local prefixInclude = "../../include/LightInk3D/"
 local prefixSrc = "../../src/LightInk3D/"
@@ -39,7 +32,7 @@ target(name)
 	
 	add_includedirs(prefixInclude)
 	for k, v in pairs(deps) do
-		add_includedirs(v.include)
+		add_includedirs(v)
 	end
 	
 	add_defines("Urho3D_EXPORTS", "URHO3D_IS_BUILDING")
