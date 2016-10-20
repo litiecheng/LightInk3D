@@ -1,21 +1,41 @@
 
-if is_option("LightInk3DNAVIGATION") then
 
-	local name = "DetourTileCache"
+local name = "DetourTileCache"
 
-	local prefixInclude = "../../../include/ThirdParty/" .. name
-	local prefixSrc = "../../../src/ThirdParty/" .. name
+if ThirdPartyCall then
+ThirdPartyCall[name] = function(prefixInclude, prefixSrc)
+	if is_option("LightInk3DNAVIGATION") then
 
-	add_includedirs(prefixInclude)
+		prefixInclude = prefixInclude .. name
+		prefixSrc = prefixSrc .. name
 
-	-- add headers
-	add_headers(prefixInclude .. "/**.h", prefixInclude .. "/**.hpp")
+		add_includedirs(prefixInclude)
 
-		
-	-- add files
-	add_files(prefixSrc .. "/**.cpp")
+		-- add headers
+		add_headers(prefixInclude .. "/**.h", prefixInclude .. "/**.hpp")
+
+			
+		-- add files
+		add_files(prefixSrc .. "/**.cpp")
 
 
 
+	end
+	
+end
 end
 
+
+if LightInk3DCall then
+LightInk3DCall[name] = function(prefixInclude, prefixSrc)
+	if is_option("LightInk3DNAVIGATION") then
+
+		prefixInclude = prefixInclude .. name
+		prefixSrc = prefixSrc .. name
+
+		add_includedirs(prefixInclude)
+
+	end
+	
+end
+end

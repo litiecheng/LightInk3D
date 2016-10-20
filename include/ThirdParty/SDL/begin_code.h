@@ -56,15 +56,11 @@
 #ifdef SDL_EXPORTS
 #ifndef DECLSPEC
 # if defined(__WIN32__) || defined(__WINRT__)
-#  ifdef __BORLANDC__
 #   ifdef BUILD_SDL
-#    define DECLSPEC
+#    define DECLSPEC __declspec(dllexport)
 #   else
 #    define DECLSPEC    __declspec(dllimport)
 #   endif
-#  else
-#   define DECLSPEC __declspec(dllexport)
-#  endif
 # else
 #  if defined(__GNUC__) && __GNUC__ >= 4
 #   define DECLSPEC __attribute__ ((visibility("default")))

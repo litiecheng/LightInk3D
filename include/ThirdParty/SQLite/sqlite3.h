@@ -33,7 +33,6 @@
 #ifndef _SQLITE3_H_
 #define _SQLITE3_H_
 #include <stdarg.h>     /* Needed for the definition of va_list */
-#include "Common/Config.h"
 /*
 ** Make sure we can call this stuff from C++.
 */
@@ -49,7 +48,7 @@ extern "C" {
 # define SQLITE_EXTERN extern
 #endif
 #ifndef SQLITE_API
-# define SQLITE_API LIGHTINK_DECL
+# define SQLITE_API
 #endif
 #ifndef SQLITE_CDECL
 # define SQLITE_CDECL

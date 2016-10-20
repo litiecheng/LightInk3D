@@ -2,19 +2,34 @@
 
 local name = "PugiXml"
 
-local prefixInclude = "../../../include/ThirdParty/" .. name
-local prefixSrc = "../../../src/ThirdParty/" .. name
+if ThirdPartyCall then
+ThirdPartyCall[name] = function(prefixInclude, prefixSrc)
 
-add_includedirs(prefixInclude)
+	prefixInclude = prefixInclude .. name
+	prefixSrc = prefixSrc .. name
 
--- add headers
-add_headers(prefixInclude .. "/*.hpp")
+	add_includedirs(prefixInclude)
 
+	-- add headers
+	add_headers(prefixInclude .. "/*.hpp")
+
+		
+	-- add files
+	add_files(prefixSrc .. "/*.cpp")
+
+
+end
+end
 	
--- add files
-add_files(prefixSrc .. "/*.cpp")
 
+if LightInk3DCall then
+LightInk3DCall[name] = function(prefixInclude, prefixSrc)
 
-
+	prefixInclude = prefixInclude .. name
+	prefixSrc = prefixSrc .. name
 	
+	add_includedirs(prefixInclude)
 
+
+end
+end

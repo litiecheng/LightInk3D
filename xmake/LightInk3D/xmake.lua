@@ -3,14 +3,47 @@
 
 local name = "LightInk3D"
 local deps = { 
-	ThirdParty = "../../include/ThirdParty",
+	ThirdParty = {
+		include = "../../include/ThirdParty/",
+		src = "../../src/ThirdParty/",
+		},
 }
 local output = g_output
 
-set_project(name)
-set_version("0.0.1")
+local ThirdPartySubsystem = {
+	"../ThirdParty/Box2D", 
+	"../ThirdParty/Bullet", 
+	"../ThirdParty/Civetweb", 
+	"../ThirdParty/Common",
+	"../ThirdParty/Detour", 
+	"../ThirdParty/DetourCrowd", 
+	"../ThirdParty/DetourTileCache", 
+	"../ThirdParty/FreeType", 
+	"../ThirdParty/GLEW", 
+	"../ThirdParty/JO", 
+	"../ThirdParty/kNet", 
+	"../ThirdParty/LibCpuId", 
+	"../ThirdParty/LightInkLua", 
+	"../ThirdParty/LightInkMsgPack", 
+	"../ThirdParty/LZ4", 
+	"../ThirdParty/MojoShader", 
+	"../ThirdParty/Mustache", 
+	"../ThirdParty/PugiXml", 
+	"../ThirdParty/rapidjson", 
+	"../ThirdParty/Recast", 
+	"../ThirdParty/SDL", 
+	"../ThirdParty/SQLite", 
+	"../ThirdParty/StanHull",
+	"../ThirdParty/STB", 
+}
+
+LightInk3DCall = {}
 
 add_subfiles("../LightInk3DOption.lua")
+
+for k, v in ipairs(ThirdPartySubsystem) do
+	add_subdirs(v)
+end
 
 set_mode_config(name)
 
@@ -32,7 +65,10 @@ target(name)
 	
 	add_includedirs(prefixInclude)
 	for k, v in pairs(deps) do
-		add_includedirs(v)
+		add_includedirs(v.include)
+		for kc, vc in pairs(LightInk3DCall) do
+			vc(v.include, v.src)
+		end
 	end
 	
 	add_defines("Urho3D_EXPORTS", "URHO3D_IS_BUILDING")

@@ -22,7 +22,6 @@
 
 #include <ft2build.h>
 
-
 FT_BEGIN_HEADER
 
   /*************************************************************************/
@@ -266,8 +265,8 @@ FT_BEGIN_HEADER
   /*   Do not #undef these macros here since the build system might define */
   /*   them for certain configurations only.                               */
   /*                                                                       */
-/* #define FT_EXPORT(x)      extern x */
-/* #define FT_EXPORT_DEF(x)  x */
+  /*#define FT_EXPORT(x)      LIGHTINK_DECL x */
+  /*#define FT_EXPORT_DEF(x)  x */
 
 
   /*************************************************************************/

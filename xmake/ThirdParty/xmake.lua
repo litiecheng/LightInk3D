@@ -3,7 +3,7 @@
 
 local name = "ThirdParty"
 
-local dirs = {
+local ThirdPartySubsystem = {
 	"Box2D", 
 	"Bullet", 
 	"Civetweb", 
@@ -29,16 +29,18 @@ local dirs = {
 	"StanHull",
 	"STB", 
 }
+ThirdPartyCall = {}
 
 local output = g_output
 
 local prefixInclude = "../../include/ThirdParty/"
 local prefixSrc = "../../src/ThirdParty/"
 
-set_project(name)
-set_version("0.0.1")
-
 add_subfiles("../LightInk3DOption.lua")
+
+for k, v in ipairs(ThirdPartySubsystem) do
+	add_subdirs(v)
+end
 
 set_mode_config(name)
 
@@ -47,7 +49,7 @@ set_mode_config(name)
 target(name)
 
     -- set kind
-    set_kind("shared")
+    set_kind("static")
 	
 	add_includedirs(prefixInclude)
 
@@ -71,10 +73,9 @@ target(name)
 	add_options("LightInk3DDISKAUDIO")
 	add_options("LightInk3DVIDEO_DUMMY")
 
-
-for k, v in ipairs(dirs) do
-	add_subdirs(v)
-end
+	for k, v in pairs(ThirdPartyCall) do
+		v(prefixInclude, prefixSrc)
+	end
 
 
 	

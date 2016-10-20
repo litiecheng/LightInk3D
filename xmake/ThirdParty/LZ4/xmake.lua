@@ -2,19 +2,34 @@
 
 local name = "LZ4"
 
-local prefixInclude = "../../../include/ThirdParty/" .. name
-local prefixSrc = "../../../src/ThirdParty/" .. name
+if ThirdPartyCall then
+ThirdPartyCall[name] = function(prefixInclude, prefixSrc)
 
-add_includedirs(prefixInclude)
+	prefixInclude = prefixInclude .. name
+	prefixSrc = prefixSrc .. name
 
--- add headers
-add_headers(prefixInclude .. "/*.h")
+	add_includedirs(prefixInclude)
 
-	
--- add files
-add_files( prefixSrc .. "/*.c")
+	-- add headers
+	add_headers(prefixInclude .. "/*.h")
+
+		
+	-- add files
+	add_files( prefixSrc .. "/*.c")
 
 
+end
+end
 
-	
 
+if LightInk3DCall then
+LightInk3DCall[name] = function(prefixInclude, prefixSrc)
+
+	prefixInclude = prefixInclude .. name
+	prefixSrc = prefixSrc .. name
+
+	add_includedirs(prefixInclude)
+
+
+end
+end

@@ -64,7 +64,7 @@
 #endif
 
 #else
-#define LIGHTINK_DECL extern
+#define LIGHTINK_DECL
 #define LIGHTINK_TEMPLATE_DECL
 #endif // LIGHTINK_BUILD_DLL
 

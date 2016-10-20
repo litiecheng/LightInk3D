@@ -1,22 +1,44 @@
 
-if not is_plat("linux") then
 
-	local name = "LibCpuId"
+local name = "LibCpuId"
 
-	local prefixInclude = "../../../include/ThirdParty/" .. name
-	local prefixSrc = "../../../src/ThirdParty/" .. name
+if ThirdPartyCall then
+ThirdPartyCall[name] = function(prefixInclude, prefixSrc)
+	if not is_plat("linux") then
 
-	add_links("advapi32")
-	
-	add_includedirs(prefixInclude)
-	
-	-- add headers
-	add_headers(prefixInclude .. "/*.h")
+		prefixInclude = prefixInclude .. name
+		prefixSrc = prefixSrc .. name
 
+		add_links("advapi32")
 		
-	-- add files
-	add_files(prefixSrc .. "/*.c")
+		add_includedirs(prefixInclude)
+		
+		-- add headers
+		add_headers(prefixInclude .. "/*.h")
+
+			
+		-- add files
+		add_files(prefixSrc .. "/*.c")
+
+	end
+
+end
+end
 
 
+if LightInk3DCall then
+LightInk3DCall[name] = function(prefixInclude, prefixSrc)
+	if not is_plat("linux") then
 
+		prefixInclude = prefixInclude .. name
+		prefixSrc = prefixSrc .. name
+
+		add_links("advapi32")
+		
+		add_includedirs(prefixInclude)
+		
+
+	end
+
+end
 end
