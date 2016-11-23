@@ -35,12 +35,19 @@ const char * name(int e)
 
 namespace LightInk
 {
-	//´íÎó´úÂë
+	//é”™è¯¯ä»£ç 
 	enum RuntimeError
 	{
 		RE_Success = 0,
 		RE_ThreadSelfExit = 1,
 		RE_UnknownError = 2,
+		
+		RE_Log_HaveInited,
+		RE_Log_FileFailed,
+		RE_Log_WriteChannelFailed,
+		RE_Log_FlushChannelFailed,
+		RE_Log_LogFailed,
+		RE_Log_LoggerNameExist,
 		
 		RE_Msgpack_TypeError,
 		RE_Msgpack_StringLenError,

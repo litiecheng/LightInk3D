@@ -16,6 +16,7 @@ local ThirdPartySubsystem = {
 	"JO", 
 	"kNet", 
 	"LibCpuId", 
+	"LightInkLog", 
 	"LightInkLua", 
 	"LightInkMsgPack", 
 	"LZ4", 

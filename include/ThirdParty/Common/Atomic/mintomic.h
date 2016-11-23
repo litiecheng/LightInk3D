@@ -1,8 +1,6 @@
 #ifndef __MINTOMIC_MINTOMIC_H__
 #define __MINTOMIC_MINTOMIC_H__
 
-#include "Common/Type.h"
-
 #include "platform_detect.h"
 
 #if MINT_COMPILER_MSVC
@@ -142,6 +140,10 @@ extern "C" {
     {
         mint_store_32_relaxed((mint_atomic32_t *) object, (size_t) desired);
     }
+	 MINT_C_INLINE void * mint_exchange_ptr_relaxed(mint_atomicPtr_t *object, void *desired)
+    {
+        return (void *) mint_exchange_32_relaxed((mint_atomic32_t *) object, (size_t) desired);
+    }
     MINT_C_INLINE void *mint_compare_exchange_strong_ptr_relaxed(mint_atomicPtr_t *object, void *expected, void *desired)
     {
         return (void *) mint_compare_exchange_strong_32_relaxed((mint_atomic32_t *) object, (size_t) expected, (size_t) desired);
@@ -166,6 +168,10 @@ extern "C" {
     MINT_C_INLINE void mint_store_ptr_relaxed(mint_atomicPtr_t *object, void *desired)
     {
         mint_store_64_relaxed((mint_atomic64_t *) object, (size_t) desired);
+    }
+	MINT_C_INLINE void * mint_exchange_ptr_relaxed(mint_atomicPtr_t *object, void *desired)
+    {
+        return (void *) mint_exchange_64_relaxed((mint_atomic64_t *) object, (size_t) desired);
     }
     MINT_C_INLINE void *mint_compare_exchange_strong_ptr_relaxed(mint_atomicPtr_t *object, void *expected, void *desired)
     {

@@ -61,11 +61,12 @@ namespace LightInk
 	private:
 		static void * lua_allocator(void * ud, void * ptr, size_t osize, size_t nsize);
 		static int lua_error_catch(lua_State * L);
-		static int log_string(lua_State * L, LogMsg::LEVEL level);
+		static int log_string(lua_State * L, LogLevel::LEVEL level);
 		static int lua_print_debug(lua_State * L);
 		static int lua_replace_print(lua_State * L);
 		static int lua_print_warning(lua_State * L);
 		static int lua_print_error(lua_State * L);
+		static int lua_print_fatal(lua_State * L);
 	public:
 		template <typename T>
 		RuntimeError open_module(T m)
@@ -114,7 +115,7 @@ namespace LightInk
 			LogTraceReturn(RE_Success);
 		}
 /*
---lua…˙≥…
+--luaÁîüÊàê
 function create_traits(count)
 
 	local str = ""

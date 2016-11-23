@@ -9,6 +9,7 @@ ThirdPartyCall[name] = function(prefixInclude, prefixSrc)
 		prefixSrc = prefixSrc .. name
 
 		--add_defines("LIGHTINK_AS_DLL", "LIGHTINK_EXPORTS")
+		add_defines("LIGHTINK_EXPORTS")
 
 		-- add headers
 		add_headers(prefixInclude .. "/*.h", prefixInclude .. "/*.cpp")

@@ -56,11 +56,19 @@ namespace LightInk
 	template<RuntimeError e>
 	const char * RuntimeErrorDes<e>::error = "Undefined Error!!!";
 
-	//´íÎóÃèÊö
+	//é”™è¯¯æè¿°
 	LIGHTINK_DEFINE_ERROR_DES(RE_Success, "Sucess!!!");
 	LIGHTINK_DEFINE_ERROR_DES(RE_ThreadSelfExit, "Thread Self Exit!!!");
 	LIGHTINK_DEFINE_ERROR_DES(RE_UnknownError, "Error!!!Unknown --> Unknown Error!!!");
 
+	LIGHTINK_DEFINE_ERROR_DES(RE_Log_HaveInited, "Error!!!Log --> LogMsg Have Inited!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Log_FileFailed, "Error!!!Log --> LogMsg Open File Failed!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Log_WriteChannelFailed, "Error!!!Log --> LogMsg Write Channel Failed!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Log_FlushChannelFailed, "Error!!!Log --> LogMsg Flush Channel Failed!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Log_LogFailed, "Error!!!Log --> LogMsg Log Failed!!!");
+	LIGHTINK_DEFINE_ERROR_DES(RE_Log_LoggerNameExist, "Error!!!Log --> LogMsg This Logger Name Is Exist!!!");
+	
+	
 	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_TypeError, "Error!!!Msgpack --> Type Error!!!");
 	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_StringLenError, "Error!!!Msgpack --> String Length Error!!!");
 	LIGHTINK_DEFINE_ERROR_DES(RE_Msgpack_ArrayLenError, "Error!!!Msgpack --> Array Length Error!!!");
@@ -91,13 +99,21 @@ namespace LightInk
 	LIGHTINK_DEFINE_ERROR_DES(RE_Lua_CheckConfigError, "Error!!!Lua --> Check Server Config Error!!!Config Have Some Problem!!!");
 
 
-	//´íÎó´úÂëºÍ´íÎóÃèÊöÓ³Éä
+	//é”™è¯¯ä»£ç å’Œé”™è¯¯æè¿°æ˜ å°„
 	LIGHTINK_GET_ERROR_DES_BEGIN(get_runtime_error)
 
 
 	LIGHTINK_GET_ERROR_DES(RE_Success)
 	LIGHTINK_GET_ERROR_DES(RE_ThreadSelfExit)
 	LIGHTINK_GET_ERROR_DES(RE_UnknownError)
+	
+	
+	LIGHTINK_GET_ERROR_DES(RE_Log_HaveInited)
+	LIGHTINK_GET_ERROR_DES(RE_Log_FileFailed)
+	LIGHTINK_GET_ERROR_DES(RE_Log_WriteChannelFailed)
+	LIGHTINK_GET_ERROR_DES(RE_Log_FlushChannelFailed)
+	LIGHTINK_GET_ERROR_DES(RE_Log_LogFailed)
+	LIGHTINK_GET_ERROR_DES(RE_Log_LoggerNameExist)
 	
 	LIGHTINK_GET_ERROR_DES(RE_Msgpack_TypeError)
 	LIGHTINK_GET_ERROR_DES(RE_Msgpack_StringLenError)

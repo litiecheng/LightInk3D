@@ -30,10 +30,10 @@
 #endif // DEBUG
 
 
-#define LightInkNoTrace //关闭trace日志
+#define LightInkNoTrace //鍏抽棴trace鏃ュ織
 
 #ifndef LIGHTINK_DEBUG
-#define LightInkNoDebug //关闭debug日志
+#define LightInkNoDebug //鍏抽棴debug鏃ュ織
 #endif
 
 //#define LightInkNoMessage
@@ -47,38 +47,59 @@
 //#define LightInkNoScriptError
 
 
+#define LIGHTINK_SHOWVERSION
+
+
+#ifdef _MSC_VER
+#pragma warning(disable:4251)
+#endif
+
 
 /////////////////////////////////////////////////////////
-//导出,导入变量
+//瀵煎嚭,瀵煎叆鍙橀噺
 ////////////////////////////////////////////////////////
-#ifdef WIN32
-
 #ifdef LIGHTINK_AS_DLL
 
 #ifdef LIGHTINK_EXPORTS
+
+#ifdef WIN32
 #define LIGHTINK_DECL __declspec(dllexport)
-#define LIGHTINK_TEMPLATE_DECL __declspec(dllexport)
-#else
-#define LIGHTINK_DECL __declspec(dllimport)
-#define LIGHTINK_TEMPLATE_DECL __declspec(dllexport)
-#endif
-
-#else
-#define LIGHTINK_DECL
-#define LIGHTINK_TEMPLATE_DECL
-#endif // LIGHTINK_BUILD_DLL
-
-
-
+#define LIGHTINK_TEMPLATE_DECL //__declspec(dllexport)
 #elif defined __GNUC__ && __GNUC__ >= 4
 #define LIGHTINK_DECL __attribute__((visibility ("default")))
 #define LIGHTINK_TEMPLATE_DECL
+#else
+#define LIGHTINK_DECL
+#define LIGHTINK_TEMPLATE_DECL
+#endif
 
 #else
+#ifdef WIN32
+#define LIGHTINK_DECL __declspec(dllimport)
+#define LIGHTINK_TEMPLATE_DECL //__declspec(dllexport)
+#else
+#define LIGHTINK_DECL
+#define LIGHTINK_TEMPLATE_DECL
+#endif
+
+#endif
+
+#else
+
+#ifdef LIGHTINK_EXPORTS
+
+#define LIGHTINK_DECL
+#define LIGHTINK_TEMPLATE_DECL
+
+#else
+
 #define LIGHTINK_DECL
 #define LIGHTINK_TEMPLATE_DECL
 
 #endif
+	
+	
+#endif // LIGHTINK_BUILD_DLL
 
 
 

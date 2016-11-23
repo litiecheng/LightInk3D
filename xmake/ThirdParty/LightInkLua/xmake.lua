@@ -12,6 +12,7 @@ ThirdPartyCall[name] = function(prefixInclude, prefixSrc)
 		add_includedirs(prefixInclude)
 		
 		--add_defines("LIGHTINK_AS_DLL", "LIGHTINK_EXPORTS")
+		add_defines("LIGHTINK_EXPORTS")
 
 		-- add headers
 		add_headers(prefixInclude .. "/LuaEngine/**.h", 
