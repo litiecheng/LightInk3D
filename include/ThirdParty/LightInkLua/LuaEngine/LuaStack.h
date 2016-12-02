@@ -35,6 +35,7 @@
 #include "Common/RuntimeError.h"
 #include "LuaEngine/LuaFixFunction.h"
 #include "Common/CharPtrBridge.h"
+#include "Common/TypeTool.h"
 
 namespace LightInk
 {
