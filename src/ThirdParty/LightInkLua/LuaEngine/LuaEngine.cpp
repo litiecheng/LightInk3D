@@ -166,7 +166,6 @@ namespace LightInk
 				.def(&LuaInt64::pow_set_st, "pow_set_st")
 
 		];
-		
 		LogTraceReturn(do_init());
 	}
 
