@@ -1,0 +1,60 @@
+
+
+/* Copyright ChenDong(Wilbur), email <baisaichen@live.com>. All rights reserved.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
+
+ 
+#ifdef URHO3D_DATABASE
+
+#include "../Precompiled.h"
+#include "LuaEngine/LuaEngine.h"
+
+
+namespace Urho3D
+{
+	using namespace LightInk;
+
+	extern void bind_class_DbResult(LuaModele & lm);
+	extern void bind_class_DbConnection(LuaModele & lm);
+	extern void bind_class_Database(LuaModele & lm);
+
+	void bind_database_module(lua_State * lua, Context * context)
+	{
+		lua_pushvalue(lua, LUA_GLOBALSINDEX);
+		LuaRef lrf(lua, true);
+		
+		LuaModele lm(lua, "LightInk3D__", lrf);
+		
+		bind_class_DbResult(lm);
+		bind_class_DbConnection(lm);
+		bind_class_Database(lm);
+
+		lrf["DBAPI_SQLITE"] = DBAPI_SQLITE;
+		lrf["DBAPI_ODBC"] = DBAPI_ODBC;
+		
+		lrf["database"] = GetSubsystem<Database>(context);
+		LuaDefAutoTool::def(lua, GetSubsystem<Database>, "GetDatabase");
+		
+		
+	}
+}
+
+#endif
