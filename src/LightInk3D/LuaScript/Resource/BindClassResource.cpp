@@ -21,62 +21,51 @@
  * IN THE SOFTWARE.
  */
 
-
 #include "../../Precompiled.h"
-#include "../../Graphics/IndexBuffer.h"
-#include "../../IO/VectorBuffer.h"
+#include "../../IO/File.h"
+#include "../../Resource/Resource.h"
 #include "../../LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D
 {
 	using namespace LightInk;
-	static SharedPtr<IndexBuffer> CreateIndexBuffer(Context * context, bool forceHeadless = false)
+	static bool ResourceLoad(Resource* self, Context * context, const String& fileName)
 	{
-		return SharedPtr<IndexBuffer>(new IndexBuffer(context, forceHeadless));
-	}
-	
-	static bool IndexBufferSetData(IndexBuffer* self, VectorBuffer& src)
-	{
-		// Make sure there is enough data
-		if (self->GetIndexCount() && src.GetSize() >= self->GetIndexCount() * self->GetIndexSize())
-			return self->SetData(&src.GetBuffer()[0]);
-		else
+		SharedPtr<File> file(new File(context, fileName));
+		if (!file->IsOpen())
 			return false;
+		return self->Load(*file);
 	}
 
-	static VectorBuffer IndexBufferGetData(IndexBuffer* self)
+	static bool ResourceSave(const Resource* self, Context * context, const String& fileName)
 	{
-		VectorBuffer ret;
-		
-		void* data = self->Lock(0, self->GetIndexCount(), false);
-		if (data)
-		{
-			ret.Write(data, self->GetIndexCount() * self->GetIndexSize());
-			ret.Seek(0);
-			self->Unlock();
-		}
-
-		return ret;
+		SharedPtr<File> file(new File(context, fileName, FILE_WRITE));
+		if (!file->IsOpen())
+			return false;
+		return self->Save(*file);
 	}
-
-	void bind_class_IndexBuffer(LuaModele & lm)
+	void bind_class_Resource(LuaModele & lm)
 	{
 		lm
 		[
-			LuaRegister<IndexBuffer, void ()>(lm.state(), "IndexBuffer", BaseClassStrategy<Object>())
+			LuaRegister<Resource, void ()>(lm.state(), "Resource", BaseClassStrategy<Object>())
 				.disable_new()
-				.def(CreateIndexBuffer, "new")
-				.def(IndexBufferSetData, "SetData")
-				.def(IndexBufferGetData, "GetData")
-				.def(&IndexBuffer::SetShadowed, "SetShadowed")
-				.def(&IndexBuffer::SetSize, "SetSize")
-				.def(&IndexBuffer::IsShadowed, "IsShadowed")
-				.def(&IndexBuffer::IsDynamic, "IsDynamic")
-				.def(&IndexBuffer::GetIndexCount, "GetIndexCount")
-				.def(&IndexBuffer::GetIndexSize, "GetIndexSize")
-				
+				.def(CreateObject<Resource>, "new")
+				.def(ResourceLoad, "LoadCS")
+				.def(&Resource::Load, "LoadD")
+				.def(ResourceSave, "SaveCS")
+				.def(&Resource::Save, "SaveS")
+				.def(&Resource::SetName, "SetName")
+				.def(&Resource::SetMemoryUse, "SetMemoryUse")
+				.def(&Resource::ResetUseTimer, "ResetUseTimer")
+				.def(&Resource::SetAsyncLoadState, "SetAsyncLoadState")
+				.def(&Resource::GetName, "GetName")
+				.def(&Resource::GetNameHash, "GetNameHash")
+				.def(&Resource::GetMemoryUse, "GetMemoryUse")
+				.def(&Resource::GetUseTimer, "GetUseTimer")
+				.def(&Resource::GetAsyncLoadState, "GetAsyncLoadState")
+			
 		];
 	}
 }
-

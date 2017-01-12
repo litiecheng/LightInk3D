@@ -24,6 +24,7 @@
  
 
 #include "../Precompiled.h"
+#include "../../Math/Random.h"
 #include "LuaEngine/LuaEngine.h"
 
 
@@ -42,7 +43,6 @@ namespace Urho3D
 	extern void bind_class_Plane(LuaModele & lm);
 	extern void bind_class_Polyhedron(LuaModele & lm);
 	extern void bind_class_Quaternion(LuaModele & lm);
-	extern void bind_class_Random(LuaModele & lm);
 	extern void bind_class_Ray(LuaModele & lm);
 	extern void bind_class_Rect(LuaModele & lm);
 	extern void bind_class_Sphere(LuaModele & lm);
@@ -70,7 +70,6 @@ namespace Urho3D
 		bind_class_Plane(lm);
 		bind_class_Polyhedron(lm);
 		bind_class_Quaternion(lm);
-		bind_class_Random(lm);
 		bind_class_Ray(lm);
 		bind_class_Rect(lm);
 		bind_class_Sphere(lm);
@@ -93,10 +92,12 @@ namespace Urho3D
 		lrf["NUM_FRUSTUM_PLANES"] = NUM_FRUSTUM_PLANES;
 		// [Constant] unsigned NUM_FRUSTUM_VERTICES
 		lrf["NUM_FRUSTUM_VERTICES"] = NUM_FRUSTUM_VERTICES;
-			
-
-		lrf["fileSystem"] = GetSubsystem<FileSystem>(context);
-		LuaDefAutoTool::def(lua, GetSubsystem<FileSystem>, "GetFileSystem");
+		
+		
+		LuaDefAutoTool::def(lua, SetRandomSeed, "SetRandomSeed");
+		LuaDefAutoTool::def(lua, GetRandomSeed, "GetRandomSeed");
+		LuaDefAutoTool::def(lua, Rand, "Rand");
+		LuaDefAutoTool::def(lua, RandStandardNormal, "RandStandardNormal");
 
 
 }

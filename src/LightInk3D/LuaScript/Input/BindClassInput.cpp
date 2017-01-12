@@ -32,25 +32,25 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	static bool InputSaveGestures(Input* self, const String& fileName)
+	static bool InputSaveGestures(Input* self, Context * context, const String& fileName)
 	{
-		SharedPtr<File> file(new File(globalContext, fileName, FILE_WRITE));
+		SharedPtr<File> file(new File(context, fileName, FILE_WRITE));
 		if (!file->IsOpen())
 			return false;
 		return self->SaveGestures(*file);
 	}
 
-	static bool InputSaveGesture(Input* self, const String& fileName, unsigned gestureID)
+	static bool InputSaveGesture(Input* self, Context * context, const String& fileName, unsigned gestureID)
 	{
-		SharedPtr<File> file(new File(globalContext, fileName, FILE_WRITE));
+		SharedPtr<File> file(new File(context, fileName, FILE_WRITE));
 		if (!file->IsOpen())
 			return false;
 		return self->SaveGesture(*file, gestureID);
 	}
 
-	static unsigned InputLoadGestures(Input* self, const String& fileName)
+	static unsigned InputLoadGestures(Input* self, Context * context, const String& fileName)
 	{
-		SharedPtr<File> file(new File(globalContext, fileName));
+		SharedPtr<File> file(new File(context, fileName));
 		if (!file->IsOpen())
 			return false;
 		return self->LoadGestures(*file);

@@ -21,62 +21,35 @@
  * IN THE SOFTWARE.
  */
 
-
 #include "../../Precompiled.h"
-#include "../../Graphics/IndexBuffer.h"
-#include "../../IO/VectorBuffer.h"
+#include "../../IO/File.h"
+#include "../../Resource/JSONFile.h"
 #include "../../LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D
 {
 	using namespace LightInk;
-	static SharedPtr<IndexBuffer> CreateIndexBuffer(Context * context, bool forceHeadless = false)
+	static bool JSONFileSave(const JSONFile* self, Context * context, const String& fileName, const String& indentation)
 	{
-		return SharedPtr<IndexBuffer>(new IndexBuffer(context, forceHeadless));
+		SharedPtr<File> file(new File(context, fileName, FILE_WRITE));
+		if (!file->IsOpen())
+			return false;
+		return self->Save(*file, indentation);
 	}
 	
-	static bool IndexBufferSetData(IndexBuffer* self, VectorBuffer& src)
-	{
-		// Make sure there is enough data
-		if (self->GetIndexCount() && src.GetSize() >= self->GetIndexCount() * self->GetIndexSize())
-			return self->SetData(&src.GetBuffer()[0]);
-		else
-			return false;
-	}
-
-	static VectorBuffer IndexBufferGetData(IndexBuffer* self)
-	{
-		VectorBuffer ret;
-		
-		void* data = self->Lock(0, self->GetIndexCount(), false);
-		if (data)
-		{
-			ret.Write(data, self->GetIndexCount() * self->GetIndexSize());
-			ret.Seek(0);
-			self->Unlock();
-		}
-
-		return ret;
-	}
-
-	void bind_class_IndexBuffer(LuaModele & lm)
+	void bind_class_JSONFile(LuaModele & lm)
 	{
 		lm
 		[
-			LuaRegister<IndexBuffer, void ()>(lm.state(), "IndexBuffer", BaseClassStrategy<Object>())
+			LuaRegister<JSONFile, void ()>(lm.state(), "JSONFile", BaseClassStrategy<Resource>())
 				.disable_new()
-				.def(CreateIndexBuffer, "new")
-				.def(IndexBufferSetData, "SetData")
-				.def(IndexBufferGetData, "GetData")
-				.def(&IndexBuffer::SetShadowed, "SetShadowed")
-				.def(&IndexBuffer::SetSize, "SetSize")
-				.def(&IndexBuffer::IsShadowed, "IsShadowed")
-				.def(&IndexBuffer::IsDynamic, "IsDynamic")
-				.def(&IndexBuffer::GetIndexCount, "GetIndexCount")
-				.def(&IndexBuffer::GetIndexSize, "GetIndexSize")
+				.def(CreateObject<JSONFile>, "new")
+				.def(JSONFileSave, "Save")
+				.def(&JSONFile::FromString, "FromString")
+				.def(static_cast<JSONValue&(JSONFile::*)()>(&JSONFile::GetRoot), "CreateRoot")
+				.def(static_cast<const JSONValue&(JSONFile::*)() const>(&JSONFile::GetRoot), "GetRoot")
 				
 		];
 	}
 }
-

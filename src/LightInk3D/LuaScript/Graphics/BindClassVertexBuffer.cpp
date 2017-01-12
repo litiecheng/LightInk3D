@@ -55,9 +55,9 @@ namespace Urho3D
 		return ret;
 	}
 
-	static SharedPtr<VertexBuffer> CreateVertexBuffer(bool forceHeadless = false)
+	static SharedPtr<VertexBuffer> CreateVertexBuffer(Context * context, bool forceHeadless = false)
 	{
-		return SharedPtr<VertexBuffer>(new VertexBuffer(globalContext, forceHeadless));
+		return SharedPtr<VertexBuffer>(new VertexBuffer(context, forceHeadless));
 	}
 	void bind_class_VertexBuffer(LuaModele & lm)
 	{

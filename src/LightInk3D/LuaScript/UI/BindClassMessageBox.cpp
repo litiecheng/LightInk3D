@@ -21,62 +21,36 @@
  * IN THE SOFTWARE.
  */
 
-
 #include "../../Precompiled.h"
-#include "../../Graphics/IndexBuffer.h"
-#include "../../IO/VectorBuffer.h"
+#include "../../UI/MessageBox.h"
+#include "../../UI/UIElement.h"
 #include "../../LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D
 {
 	using namespace LightInk;
-	static SharedPtr<IndexBuffer> CreateIndexBuffer(Context * context, bool forceHeadless = false)
+	static SharedPtr<MessageBox> CreateMessageBox(Context * context, const String& messageString, const String& titleString = "", XMLFile* layoutFile = 0, XMLFile* styleFile = 0)
 	{
-		return SharedPtr<IndexBuffer>(new IndexBuffer(context, forceHeadless));
+		return SharedPtr<MessageBox>(new MessageBox(context, messageString, titleString, layoutFile, styleFile));
 	}
-	
-	static bool IndexBufferSetData(IndexBuffer* self, VectorBuffer& src)
+	static SharedPtr<UIElement> MessageBoxGetWindow(const MessageBox* self)
 	{
-		// Make sure there is enough data
-		if (self->GetIndexCount() && src.GetSize() >= self->GetIndexCount() * self->GetIndexSize())
-			return self->SetData(&src.GetBuffer()[0]);
-		else
-			return false;
+		return SharedPtr<UIElement>(self->GetWindow());
 	}
-
-	static VectorBuffer IndexBufferGetData(IndexBuffer* self)
-	{
-		VectorBuffer ret;
-		
-		void* data = self->Lock(0, self->GetIndexCount(), false);
-		if (data)
-		{
-			ret.Write(data, self->GetIndexCount() * self->GetIndexSize());
-			ret.Seek(0);
-			self->Unlock();
-		}
-
-		return ret;
-	}
-
-	void bind_class_IndexBuffer(LuaModele & lm)
+	void bind_class_MessageBox(LuaModele & lm)
 	{
 		lm
 		[
-			LuaRegister<IndexBuffer, void ()>(lm.state(), "IndexBuffer", BaseClassStrategy<Object>())
+			LuaRegister<MessageBox, void ()>(lm.state(), "MessageBox", BaseClassStrategy<Object>())
 				.disable_new()
-				.def(CreateIndexBuffer, "new")
-				.def(IndexBufferSetData, "SetData")
-				.def(IndexBufferGetData, "GetData")
-				.def(&IndexBuffer::SetShadowed, "SetShadowed")
-				.def(&IndexBuffer::SetSize, "SetSize")
-				.def(&IndexBuffer::IsShadowed, "IsShadowed")
-				.def(&IndexBuffer::IsDynamic, "IsDynamic")
-				.def(&IndexBuffer::GetIndexCount, "GetIndexCount")
-				.def(&IndexBuffer::GetIndexSize, "GetIndexSize")
+				.def(CreateMessageBox, "new")
+				.def(&MessageBox::SetTitle, "SetTitle")
+				.def(&MessageBox::SetMessage, "SetMessage")
+				.def(&MessageBox::GetTitle, "GetTitle")
+				.def(&MessageBox::GetMessage, "GetMessage")
+				.def(MessageBoxGetWindow, "GetWindow")
 				
 		];
 	}
 }
-

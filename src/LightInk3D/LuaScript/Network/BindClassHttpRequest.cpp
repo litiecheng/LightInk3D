@@ -20,63 +20,40 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  */
-
+ 
+#ifdef URHO3D_NETWORK
 
 #include "../../Precompiled.h"
-#include "../../Graphics/IndexBuffer.h"
 #include "../../IO/VectorBuffer.h"
+#include "../../Network/HttpRequest.h"
 #include "../../LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D
 {
 	using namespace LightInk;
-	static SharedPtr<IndexBuffer> CreateIndexBuffer(Context * context, bool forceHeadless = false)
+	static VectorBuffer HttpRequestRead(HttpRequest* self, unsigned int size)
 	{
-		return SharedPtr<IndexBuffer>(new IndexBuffer(context, forceHeadless));
+		unsigned char* data = new unsigned char[size];
+		self->Read(data, size);
+		VectorBuffer buffer(data, size);
+		delete[] data;
+		return buffer;
 	}
-	
-	static bool IndexBufferSetData(IndexBuffer* self, VectorBuffer& src)
-	{
-		// Make sure there is enough data
-		if (self->GetIndexCount() && src.GetSize() >= self->GetIndexCount() * self->GetIndexSize())
-			return self->SetData(&src.GetBuffer()[0]);
-		else
-			return false;
-	}
-
-	static VectorBuffer IndexBufferGetData(IndexBuffer* self)
-	{
-		VectorBuffer ret;
-		
-		void* data = self->Lock(0, self->GetIndexCount(), false);
-		if (data)
-		{
-			ret.Write(data, self->GetIndexCount() * self->GetIndexSize());
-			ret.Seek(0);
-			self->Unlock();
-		}
-
-		return ret;
-	}
-
-	void bind_class_IndexBuffer(LuaModele & lm)
+	void bind_class_HttpRequest(LuaModele & lm)
 	{
 		lm
 		[
-			LuaRegister<IndexBuffer, void ()>(lm.state(), "IndexBuffer", BaseClassStrategy<Object>())
-				.disable_new()
-				.def(CreateIndexBuffer, "new")
-				.def(IndexBufferSetData, "SetData")
-				.def(IndexBufferGetData, "GetData")
-				.def(&IndexBuffer::SetShadowed, "SetShadowed")
-				.def(&IndexBuffer::SetSize, "SetSize")
-				.def(&IndexBuffer::IsShadowed, "IsShadowed")
-				.def(&IndexBuffer::IsDynamic, "IsDynamic")
-				.def(&IndexBuffer::GetIndexCount, "GetIndexCount")
-				.def(&IndexBuffer::GetIndexSize, "GetIndexSize")
-				
+			LuaRegister<HttpRequest, void (const String&, const String&, const Vector<String>&, const String&)>(lm.state(), "HttpRequest", BaseClassStrategy<RefCounted>())
+				.def(&HttpRequest::GetURL, "GetURL")
+				.def(&HttpRequest::GetVerb, "GetVerb")
+				.def(&HttpRequest::GetError, "GetError")
+				.def(&HttpRequest::GetState, "GetState")
+				.def(&HttpRequest::GetAvailableSize, "GetAvailableSize")
+				.def(&HttpRequest::IsOpen, "IsOpen")
+				.def(HttpRequestRead, "Read")
 		];
 	}
 }
 
+#endif
