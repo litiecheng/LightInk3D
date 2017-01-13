@@ -109,6 +109,33 @@ namespace Urho3D
 		lrf["LM_FORCE_LOOPED"] = LM_FORCE_LOOPED;
 		lrf["LM_FORCE_CLAMPED"] = LM_FORCE_CLAMPED;
 		
+		// [Constant] float PIXEL_SIZE
+		lrf["PIXEL_SIZE"] = PIXEL_SIZE;
+		
+		// [Enum] EmitterType2D
+		lrf["EMITTER_TYPE_GRAVITY"] = EMITTER_TYPE_GRAVITY;
+		lrf["EMITTER_TYPE_RADIAL"] = EMITTER_TYPE_RADIAL;
+		
+		// [Enum] TileMapLayerType2D
+		lrf["LT_TILE_LAYER"] = LT_TILE_LAYER;
+		lrf["LT_OBJECT_GROUP"] = LT_OBJECT_GROUP;
+		lrf["LT_IMAGE_LAYER"] = LT_IMAGE_LAYER;
+		lrf["LT_INVALID"] = LT_INVALID;
+
+		// [Enum] TileMapObjectType2D
+		lrf["OT_RECTANGLE"] = OT_RECTANGLE;
+		lrf["OT_ELLIPSE"] = OT_ELLIPSE;
+		lrf["OT_POLYGON"] = OT_POLYGON;
+		lrf["OT_POLYLINE"] = OT_POLYLINE;
+		lrf["OT_TILE"] = OT_TILE;
+		lrf["OT_INVALID"] = OT_INVALID;
+		
+		// [Enum] Orientation2D
+		lrf["O_ORTHOGONAL"] = O_ORTHOGONAL;
+		lrf["O_ISOMETRIC"] = O_ISOMETRIC;
+		lrf["O_STAGGERED"] = O_STAGGERED;
+		lrf["O_HEXAGONAL"] = O_HEXAGONAL;
+		
 
 }
 
