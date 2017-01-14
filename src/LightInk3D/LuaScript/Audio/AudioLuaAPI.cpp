@@ -21,9 +21,9 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../Audio/Audio.h"
-#include "../../Core/Context.h"
+#include "Precompiled.h"
+#include "Audio/Audio.h"
+#include "Core/Context.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

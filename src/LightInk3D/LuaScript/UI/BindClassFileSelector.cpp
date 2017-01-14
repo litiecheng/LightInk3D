@@ -21,15 +21,15 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../UI/Button.h"
-#include "../../UI/DropDownList.h"
-#include "../../UI/FileSelector.h"
-#include "../../UI/LineEdit.h"
-#include "../../UI/ListView.h"
-#include "../../UI/Text.h"
-#include "../../UI/Window.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "UI/Button.h"
+#include "UI/DropDownList.h"
+#include "UI/FileSelector.h"
+#include "UI/LineEdit.h"
+#include "UI/ListView.h"
+#include "UI/Text.h"
+#include "UI/Window.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

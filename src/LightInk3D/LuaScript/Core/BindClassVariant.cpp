@@ -21,11 +21,11 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../../Core/Variant.h"
-#include "../../IO/VectorBuffer.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Core/Variant.h"
+#include "IO/VectorBuffer.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

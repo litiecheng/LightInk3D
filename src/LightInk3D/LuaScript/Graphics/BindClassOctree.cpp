@@ -22,10 +22,10 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Graphics/DebugRenderer.h"
-#include "../../Graphics/Octree.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Graphics/DebugRenderer.h"
+#include "Graphics/Octree.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

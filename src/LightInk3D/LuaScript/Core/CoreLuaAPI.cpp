@@ -22,7 +22,7 @@
  */
 
 #include "../Precompiled.h"
-#include "../../Core/Context.h"
+#include "Core/Context.h"
 #include "../LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 

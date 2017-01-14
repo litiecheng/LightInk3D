@@ -25,7 +25,7 @@
 #define LIGHTINK_LUAENGINE_LUAUSERDATAFORCLASS_H_
 
 #include "Common/Type.h"
-#include "Common/Log.h"
+#include "Log/Log.h"
 
 namespace LightInk
 {

@@ -21,11 +21,11 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../Urho2D/ParticleEffect2D.h"
-#include "../../Urho2D/ParticleEmitter2D.h"
-#include "../../Urho2D/Sprite2D.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Urho2D/ParticleEffect2D.h"
+#include "Urho2D/ParticleEmitter2D.h"
+#include "Urho2D/Sprite2D.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

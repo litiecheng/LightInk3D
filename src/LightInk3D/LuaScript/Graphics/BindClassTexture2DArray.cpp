@@ -22,11 +22,11 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Graphics/Texture2D.h"
-#include "../../Graphics/Texture2DArray.h"
-#include "../../Resource/Image.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Graphics/Texture2D.h"
+#include "Graphics/Texture2DArray.h"
+#include "Resource/Image.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

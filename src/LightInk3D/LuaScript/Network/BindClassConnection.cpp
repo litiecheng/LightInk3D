@@ -23,11 +23,11 @@
  
 #ifdef URHO3D_NETWORK
 
-#include "../../Precompiled.h"
-#include "../../IO/PackageFile.h"
-#include "../../Network/Connection.h"
-#include "../../Scene/Scene.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "IO/PackageFile.h"
+#include "Network/Connection.h"
+#include "Scene/Scene.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

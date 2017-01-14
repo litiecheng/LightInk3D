@@ -23,7 +23,7 @@
  */
 
 #include <math.h>
-#include "Common/Log.h"
+#include "Log/Log.h"
 #include "LuaEngine/LuaInt64.h"
 
 namespace LightInk

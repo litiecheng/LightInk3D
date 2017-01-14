@@ -22,7 +22,7 @@
  * IN THE SOFTWARE.
  */
 #include "Common/LightInkVersion.h"
-#include "Common/Log.h"
+#include "Log/Log.h"
 
 namespace LightInk
 {

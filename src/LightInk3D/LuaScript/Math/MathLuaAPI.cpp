@@ -24,7 +24,7 @@
  
 
 #include "../Precompiled.h"
-#include "../../Math/Random.h"
+#include "Math/Random.h"
 #include "LuaEngine/LuaEngine.h"
 
 

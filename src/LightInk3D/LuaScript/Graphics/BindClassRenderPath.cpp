@@ -22,12 +22,12 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Core/Variant.h"
-#include "../../Graphics/RenderPath.h"
-#include "../../Resource/XMLElement.h"
-#include "../../Resource/XMLFile.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Core/Variant.h"
+#include "Graphics/RenderPath.h"
+#include "Resource/XMLElement.h"
+#include "Resource/XMLFile.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

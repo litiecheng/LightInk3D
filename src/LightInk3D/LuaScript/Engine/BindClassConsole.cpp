@@ -22,13 +22,13 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Engine/Console.h"
-#include "../../Resource/XMLFile.h"
-#include "../../UI/BorderImage.h"
-#include "../../UI/Button.h"
-#include "../../UI/LineEdit.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Engine/Console.h"
+#include "Resource/XMLFile.h"
+#include "UI/BorderImage.h"
+#include "UI/Button.h"
+#include "UI/LineEdit.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

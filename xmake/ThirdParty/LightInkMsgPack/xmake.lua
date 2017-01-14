@@ -5,6 +5,8 @@ local name = "LightInkMsgPack"
 if ThirdPartyCall then
 ThirdPartyCall[name] = function(prefixInclude, prefixSrc)
 	if is_option("LightInk3DNETWORK") then
+	
+		add_includedirs(prefixInclude .. "LightInkLog")
 
 		prefixInclude = prefixInclude .. name
 		prefixSrc = prefixSrc .. name
@@ -32,6 +34,8 @@ end
 if LightInk3DCall then
 LightInk3DCall[name] = function(prefixInclude, prefixSrc)
 	if is_option("LightInk3DNETWORK") then
+	
+		add_includedirs(prefixInclude .. "LightInkLog")
 
 		prefixInclude = prefixInclude .. name
 		prefixSrc = prefixSrc .. name

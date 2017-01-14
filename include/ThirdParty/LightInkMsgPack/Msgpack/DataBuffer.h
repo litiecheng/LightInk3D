@@ -28,7 +28,7 @@
 #include <string>
 #include "Common/RuntimeError.h"
 #include "Common/Type.h"
-#include "Common/Log.h"
+#include "Log/Log.h"
 
 namespace LightInk
 {

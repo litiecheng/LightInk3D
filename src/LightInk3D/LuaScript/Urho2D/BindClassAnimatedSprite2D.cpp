@@ -21,10 +21,10 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../Urho2D/AnimatedSprite2D.h"
-#include "../../Urho2D/AnimationSet2D.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Urho2D/AnimatedSprite2D.h"
+#include "Urho2D/AnimationSet2D.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

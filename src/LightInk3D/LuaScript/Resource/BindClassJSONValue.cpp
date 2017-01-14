@@ -21,11 +21,11 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../Core/Context.h"
-#include "../../Core/Variant.h"
-#include "../../Resource/JSONValue.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Core/Context.h"
+#include "Core/Variant.h"
+#include "Resource/JSONValue.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

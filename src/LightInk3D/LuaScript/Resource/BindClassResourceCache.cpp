@@ -21,10 +21,10 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../IO/PackageFile.h"
-#include "../../Resource/ResourceCache.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "IO/PackageFile.h"
+#include "Resource/ResourceCache.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

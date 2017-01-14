@@ -21,11 +21,11 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../Urho2D/TileMap2D.h"
-#include "../../Urho2D/TileMapLayer2D.h"
-#include "../../Urho2D/TmxFile2D.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Urho2D/TileMap2D.h"
+#include "Urho2D/TileMapLayer2D.h"
+#include "Urho2D/TmxFile2D.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

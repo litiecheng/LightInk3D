@@ -25,7 +25,7 @@
 #define LIGHTINK_LUAENGINE_LUACFUNCTIONTRAITS_H_
 
 #include "Common/Type.h"
-#include "Common/Log.h"
+#include "Log/Log.h"
 #include "LuaEngine/lua/lua.hpp"
 #include "LuaEngine/LuaMetatableTraits.h"
 #include "LuaEngine/LuaStack.h"

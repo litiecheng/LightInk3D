@@ -27,7 +27,7 @@
 
 #include "Common/RuntimeError.h"
 #include "LuaEngine/lua/lua.hpp"
-#include "Common/Log.h"
+#include "Log/Log.h"
 #include "LuaEngine/LuaRef.h"
 #include "LuaEngine/LuaRegister.h"
 #include "LuaEngine/LuaModule.h"

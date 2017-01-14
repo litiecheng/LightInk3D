@@ -5,7 +5,7 @@
 #include "Common/Type.h"
 #include "LuaEngine/lua/lua.hpp"
 #include "Common/StlType.h"
-#include "Common/Log.h"
+#include "Log/Log.h"
 
 namespace LightInk
 {

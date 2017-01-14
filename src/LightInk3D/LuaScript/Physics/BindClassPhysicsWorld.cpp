@@ -23,13 +23,13 @@
  
 #ifdef URHO3D_PHYSICS
 
-#include "../../Precompiled.h"
-#include "../../Graphics/Model.h"
-#include "../../Math/Ray.h"
-#include "../../Physics/CollisionShape.h"
-#include "../../Physics/PhysicsWorld.h"
-#include "../../Physics/RigidBody.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Graphics/Model.h"
+#include "Math/Ray.h"
+#include "Physics/CollisionShape.h"
+#include "Physics/PhysicsWorld.h"
+#include "Physics/RigidBody.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

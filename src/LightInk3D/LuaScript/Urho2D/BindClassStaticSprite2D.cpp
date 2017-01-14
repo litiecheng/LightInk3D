@@ -21,11 +21,11 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../Graphics/Material.h"
-#include "../../Urho2D/Sprite2D.h"
-#include "../../Urho2D/StaticSprite2D.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Graphics/Material.h"
+#include "Urho2D/Sprite2D.h"
+#include "Urho2D/StaticSprite2D.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

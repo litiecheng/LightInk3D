@@ -22,11 +22,11 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Graphics/Drawable.h"
-#include "../../Graphics/Zone.h"
-#include "../../Graphics/Camera.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Graphics/Drawable.h"
+#include "Graphics/Zone.h"
+#include "Graphics/Camera.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

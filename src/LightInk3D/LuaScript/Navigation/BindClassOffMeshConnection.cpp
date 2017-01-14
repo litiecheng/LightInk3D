@@ -23,11 +23,11 @@
  
 #ifdef URHO3D_NAVIGATION
 
-#include "../../Precompiled.h"
-#include "../../Navigation/OffMeshConnection.h"
-#include "../../Scene/Node.h"
+#include "Precompiled.h"
+#include "Navigation/OffMeshConnection.h"
+#include "Scene/Node.h"
 #include <Detour/DetourNavMeshQuery.h>
-#include "../../LuaScript/LuaUtils.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

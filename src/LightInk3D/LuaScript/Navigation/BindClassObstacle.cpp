@@ -23,9 +23,9 @@
  
 #ifdef URHO3D_NAVIGATION
 
-#include "../../Precompiled.h"
-#include "../../Navigation/Obstacle.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Navigation/Obstacle.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

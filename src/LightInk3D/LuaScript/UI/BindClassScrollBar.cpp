@@ -21,11 +21,11 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../UI/Button.h"
-#include "../../UI/ScrollBar.h"
-#include "../../UI/Slider.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "UI/Button.h"
+#include "UI/ScrollBar.h"
+#include "UI/Slider.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

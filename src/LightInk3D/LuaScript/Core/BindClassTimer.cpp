@@ -21,9 +21,9 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../../Core/Timer.h"
+#include "Core/Timer.h"
 #include "../LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 

@@ -22,8 +22,8 @@
  * IN THE SOFTWARE.
  */
 
-#ifndef LIGHTINK_COMMON_LOG_H_
-#define LIGHTINK_COMMON_LOG_H_
+#ifndef LIGHTINK_LOG_LOG_H_
+#define LIGHTINK_LOG_LOG_H_
 
 #include "Common/Config.h"
 #include "Log/LoggerMgr.h"

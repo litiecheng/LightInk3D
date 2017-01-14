@@ -124,7 +124,7 @@ target(name)
 	
 	
 	local optionDir = {
-		--LightInk3DLua = "LuaScript/**",
+		LightInk3DLua = "LuaScript/**",
 		LightInk3DSQLite = "Database/**",
 		LightInk3DOPENGL = "Graphics/OpenGL/**",
 		LightInk3DDX9 = "Graphics/Direct3D9/**",

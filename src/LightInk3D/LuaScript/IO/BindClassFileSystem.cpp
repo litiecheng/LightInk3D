@@ -22,10 +22,10 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Core/StringUtils.h"
-#include "../../IO/FileSystem.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Core/StringUtils.h"
+#include "IO/FileSystem.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

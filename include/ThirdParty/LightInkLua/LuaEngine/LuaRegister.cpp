@@ -231,17 +231,16 @@ namespace LightInk
 	{
 		LogTrace("LuaRegister<ClassType, CtorType> & LuaRegister<ClassType, CtorType>::def_property(T ClassType::* obj, const std::string & name)");
 		LuaStateProtect lsp(m_lua, true);
-		if (get_class_table() != RE_Success)
+		if (get_class_metatable() != RE_Success)
 		{
-			LogError("Error!!!Get Class Table Failed!!!");
+			LogError("Error!!!Get Class Metatable Failed!!!");
 		}
-		if (!lua_getmetatable(m_lua, -1))
-		{
-			LogError("Error!!!The Class Table Have Not Metatable!!!");
-		}
-		new (lua_newuserdata(m_lua, sizeof(LuaClassPropertyInfo))) LuaClassPropertyInfo(LuaClassPropertyTraits<T, void>::pt_index_function, 
-																						LuaClassPropertyTraits<T, void>::pt_newindex_function, obj);
-		rawsetfieldlen(m_lua, -2, name.c_str(), name.size());
+		new (lua_newuserdata(m_lua, sizeof(T))) T(obj);
+		lua_pushcclosure(m_lua, &LuaCFunctionTraits<T>::call, 1);
+		lua_pushvalue(m_lua, -1);
+		rawsetfieldlen(m_lua, -3, name.c_str(), name.size());
+		rawsetfieldlen(m_lua, -3, name.c_str(), name.size());
+
 		LogTraceReturn(*this);
 	}
 

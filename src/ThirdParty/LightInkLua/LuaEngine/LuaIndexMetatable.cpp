@@ -23,7 +23,7 @@
  */
 
 #include "Common/Type.h"
-#include "Common/Log.h"
+#include "Log/Log.h"
 #include "LuaEngine/LuaClassPropertyTraits.h"
 #include "LuaEngine/LuaIndexMetatable.h"
 #include "LuaEngine/LuaEngine.h"

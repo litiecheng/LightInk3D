@@ -25,7 +25,7 @@
 #define LIGHTINK_LUAENGINE_LUAMETATABLETRAITS_H_
 
 #include "Common/Type.h"
-#include "Common/Log.h"
+#include "Log/Log.h"
 #include "LuaEngine/LuaClassInfo.h"
 #include "LuaEngine/LuaUserdataForClass.h"
 #include "LuaEngine/LuaFixFunction.h"

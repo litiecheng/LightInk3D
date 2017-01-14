@@ -21,13 +21,13 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../Graphics/Camera.h"
-#include "../../Graphics/Texture2D.h"
-#include "../../Graphics/Viewport.h"
-#include "../../Scene/Scene.h"
-#include "../../UI/View3D.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Graphics/Camera.h"
+#include "Graphics/Texture2D.h"
+#include "Graphics/Viewport.h"
+#include "Scene/Scene.h"
+#include "UI/View3D.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

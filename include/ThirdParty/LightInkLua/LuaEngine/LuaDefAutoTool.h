@@ -26,7 +26,7 @@
 
 #include "Common/Type.h"
 #include "LuaEngine/lua/lua.hpp"
-#include "Common/Log.h"
+#include "Log/Log.h"
 #include "LuaEngine/LuaStateProtect.h"
 #include "LuaEngine/LuaDefTraits.h"
 

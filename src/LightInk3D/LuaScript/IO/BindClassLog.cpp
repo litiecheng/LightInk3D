@@ -22,9 +22,9 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../IO/Log.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "IO/Log.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

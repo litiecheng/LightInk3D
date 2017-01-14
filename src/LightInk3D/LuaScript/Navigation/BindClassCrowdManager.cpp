@@ -23,12 +23,12 @@
  
 #ifdef URHO3D_NAVIGATION
 
-#include "../../Precompiled.h"
-#include "../../Navigation/CrowdAgent.h"
-#include "../../Navigation/CrowdManager.h"
-#include "../../Navigation/NavigationMesh.h"
-#include "../../Scene/Node.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Navigation/CrowdAgent.h"
+#include "Navigation/CrowdManager.h"
+#include "Navigation/NavigationMesh.h"
+#include "Scene/Node.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

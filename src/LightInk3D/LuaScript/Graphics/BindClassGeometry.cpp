@@ -22,11 +22,11 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Graphics/Geometry.h"
-#include "../../Graphics/IndexBuffer.h"
-#include "../../Graphics/VertexBuffer.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Graphics/Geometry.h"
+#include "Graphics/IndexBuffer.h"
+#include "Graphics/VertexBuffer.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

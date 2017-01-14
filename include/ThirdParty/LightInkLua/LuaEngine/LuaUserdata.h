@@ -25,7 +25,7 @@
 #define LIGHTINK_LUAENGINE_LUAUSERDATA_H_
 
 #include "Common/Type.h"
-#include "Common/Log.h"
+#include "Log/Log.h"
 #include "LuaEngine/lua/lua.hpp"
 #include "LuaEngine/LuaClassInfo.h"
 #include "LuaEngine/LuaMetatableTraits.h"

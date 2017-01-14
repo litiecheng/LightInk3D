@@ -21,11 +21,11 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../UI/BorderImage.h"
-#include "../../UI/ScrollBar.h"
-#include "../../UI/ScrollView.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "UI/BorderImage.h"
+#include "UI/ScrollBar.h"
+#include "UI/ScrollView.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

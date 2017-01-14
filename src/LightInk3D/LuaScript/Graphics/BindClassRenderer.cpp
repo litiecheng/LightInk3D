@@ -22,14 +22,14 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Graphics/Renderer.h"
-#include "../../Graphics/RenderPath.h"
-#include "../../Graphics/Technique.h"
-#include "../../Graphics/Texture2D.h"
-#include "../../Graphics/Zone.h"
-#include "../../Resource/XMLFile.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Graphics/Renderer.h"
+#include "Graphics/RenderPath.h"
+#include "Graphics/Technique.h"
+#include "Graphics/Texture2D.h"
+#include "Graphics/Zone.h"
+#include "Resource/XMLFile.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

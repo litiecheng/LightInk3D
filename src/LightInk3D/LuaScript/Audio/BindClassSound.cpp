@@ -21,10 +21,10 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
+#include "Precompiled.h"
 
-#include "../../Audio/Sound.h"
-#include "../../IO/File.h"
+#include "Audio/Sound.h"
+#include "IO/File.h"
 #include "LuaEngine/LuaEngine.h"
 
 

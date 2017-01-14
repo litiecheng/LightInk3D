@@ -5,6 +5,8 @@ local name = "LightInkLua"
 if ThirdPartyCall then
 ThirdPartyCall[name] = function(prefixInclude, prefixSrc)
 	if is_option("LightInk3DLua") then
+	
+		add_includedirs(prefixInclude .. "LightInkLog")
 
 		prefixInclude = prefixInclude .. name
 		prefixSrc = prefixSrc .. name
@@ -34,6 +36,8 @@ if LightInk3DCall then
 LightInk3DCall[name] = function(prefixInclude, prefixSrc)
 	if is_option("LightInk3DLua") then
 
+		add_includedirs(prefixInclude .. "LightInkLog")
+	
 		prefixInclude = prefixInclude .. name
 		prefixSrc = prefixSrc .. name
 		

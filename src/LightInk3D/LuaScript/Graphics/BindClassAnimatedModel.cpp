@@ -22,11 +22,11 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Graphics/AnimatedModel.h"
-#include "../../Graphics/Animation.h"
-#include "../../Graphics/AnimationState.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Graphics/AnimatedModel.h"
+#include "Graphics/Animation.h"
+#include "Graphics/AnimationState.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

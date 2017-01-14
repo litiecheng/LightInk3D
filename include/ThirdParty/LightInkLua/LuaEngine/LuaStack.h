@@ -30,7 +30,7 @@
 #include <map>
 #include <set>
 #include "Common/Type.h"
-#include "Common/Log.h"
+#include "Log/Log.h"
 #include "LuaEngine/LuaUserdata.h"
 #include "Common/RuntimeError.h"
 #include "LuaEngine/LuaFixFunction.h"

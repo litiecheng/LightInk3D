@@ -22,13 +22,13 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Container/ArrayPtr.h"
-#include "../../Graphics/Material.h"
-#include "../../Graphics/Terrain.h"
-#include "../../Graphics/TerrainPatch.h"
-#include "../../Resource/Image.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Container/ArrayPtr.h"
+#include "Graphics/Material.h"
+#include "Graphics/Terrain.h"
+#include "Graphics/TerrainPatch.h"
+#include "Resource/Image.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

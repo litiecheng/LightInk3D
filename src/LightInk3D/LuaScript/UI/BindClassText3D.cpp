@@ -21,12 +21,12 @@
  * IN THE SOFTWARE.
  */
 
-#include "../../Precompiled.h"
-#include "../../Graphics/Material.h"
-#include "../../Resource/Image.h"
-#include "../../UI/Font.h"
-#include "../../UI/Text3D.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Graphics/Material.h"
+#include "Resource/Image.h"
+#include "UI/Font.h"
+#include "UI/Text3D.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

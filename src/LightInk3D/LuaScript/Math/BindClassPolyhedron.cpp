@@ -22,11 +22,11 @@
  */
 
 
-#include "../../Precompiled.h"
-#include "../../Math/BoundingBox.h"
-#include "../../Math/Frustum.h"
-#include "../../Math/Polyhedron.h"
-#include "../../LuaScript/LuaUtils.h"
+#include "Precompiled.h"
+#include "Math/BoundingBox.h"
+#include "Math/Frustum.h"
+#include "Math/Polyhedron.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D
