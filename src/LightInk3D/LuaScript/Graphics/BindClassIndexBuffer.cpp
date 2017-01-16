@@ -60,7 +60,7 @@ namespace Urho3D
 		return ret;
 	}
 
-	void bind_class_IndexBuffer(LuaModele & lm)
+	void bind_class_IndexBuffer(LuaModule & lm)
 	{
 		lm
 		[

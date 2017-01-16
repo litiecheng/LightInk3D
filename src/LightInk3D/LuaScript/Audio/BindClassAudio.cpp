@@ -33,7 +33,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_Audio(LuaModele & lm)
+	void bind_class_Audio(LuaModule & lm)
 	{
 		lm
 		[

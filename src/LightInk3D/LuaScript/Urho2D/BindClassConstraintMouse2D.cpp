@@ -29,7 +29,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_ConstraintMouse2D(LuaModele & lm)
+	void bind_class_ConstraintMouse2D(LuaModule & lm)
 	{
 		lm
 		[

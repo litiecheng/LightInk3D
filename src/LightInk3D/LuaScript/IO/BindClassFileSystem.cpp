@@ -37,7 +37,7 @@ namespace Urho3D
 		self->ScanDir(result, pathName, filter, flags, recursive);
 		return result;
 	}
-	void bind_class_FileSystem(LuaModele & lm)
+	void bind_class_FileSystem(LuaModule & lm)
 	{
 		lm
 		[

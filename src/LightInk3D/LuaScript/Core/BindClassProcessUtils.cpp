@@ -30,7 +30,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_ProcessUtils(LuaModele & lm)
+	void bind_class_ProcessUtils(LuaModule & lm)
 	{
 		lua_State * lua = lm.state();
 		LuaDefAutoTool::def(lua, ErrorDialog, "ErrorDialog");

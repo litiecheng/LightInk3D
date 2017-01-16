@@ -44,7 +44,7 @@ namespace Urho3D
 	{
 		*self = str;
 	}
-	void bind_class_StringHash(LuaModele & lm)
+	void bind_class_StringHash(LuaModule & lm)
 	{
 		lm
 		[

@@ -156,7 +156,7 @@ namespace Urho3D
 		return SharedPtr<Component>(node->GetParentComponent(type, fullTraversal));
 	}
 
-	void bind_class_Node(LuaModele & lm)
+	void bind_class_Node(LuaModule & lm)
 	{
 		lm
 		[

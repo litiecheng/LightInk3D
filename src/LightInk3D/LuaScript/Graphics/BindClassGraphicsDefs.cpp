@@ -30,7 +30,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_GraphicsDefs(LuaModele & lm)
+	void bind_class_GraphicsDefs(LuaModule & lm)
 	{
 		lua_pushvalue(lm.state(), LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);

@@ -112,7 +112,7 @@ namespace Urho3D
 		return SharedPtr<Node>(self->InstantiateJSON(*file, position, rotation, mode));
 	}
 	
-	void bind_class_Scene(LuaModele & lm)
+	void bind_class_Scene(LuaModule & lm)
 	{
 		lm
 		[

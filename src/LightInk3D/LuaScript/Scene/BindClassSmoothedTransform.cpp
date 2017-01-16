@@ -29,7 +29,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_SmoothedTransform(LuaModele & lm)
+	void bind_class_SmoothedTransform(LuaModule & lm)
 	{
 		lm
 		[

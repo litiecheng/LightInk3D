@@ -38,7 +38,7 @@ namespace Urho3D
 		return self->Save(*file, indentation);
 	}
 	
-	void bind_class_JSONFile(LuaModele & lm)
+	void bind_class_JSONFile(LuaModule & lm)
 	{
 		lm
 		[

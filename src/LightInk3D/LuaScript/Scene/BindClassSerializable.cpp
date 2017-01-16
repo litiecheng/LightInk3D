@@ -44,7 +44,7 @@ namespace Urho3D
 		return self->Save(*file);
 	}
 	
-	void bind_class_Serializable(LuaModele & lm)
+	void bind_class_Serializable(LuaModule & lm)
 	{
 		lm
 		[

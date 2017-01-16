@@ -52,7 +52,7 @@ namespace Urho3D
 		return SharedPtr<Resource>(cache->GetExistingResource(type, name));
 	}
 	
-	void bind_class_ResourceCache(LuaModele & lm)
+	void bind_class_ResourceCache(LuaModule & lm)
 	{
 		lm
 		[

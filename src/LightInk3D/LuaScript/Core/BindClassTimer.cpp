@@ -30,7 +30,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	LuaRegisterNode bind_class_Timer(LuaModele & lm)
+	LuaRegisterNode bind_class_Timer(LuaModule & lm)
 	{
 		lm
 		[

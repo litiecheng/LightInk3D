@@ -31,10 +31,10 @@ namespace Urho3D
 {
 	using namespace LightInk;
 
-	extern void bind_class_Connection(LuaModele & lm);
-	extern void bind_class_HttpRequest(LuaModele & lm);
-	extern void bind_class_Network(LuaModele & lm);
-	extern void bind_class_NetworkPriority(LuaModele & lm);
+	extern void bind_class_Connection(LuaModule & lm);
+	extern void bind_class_HttpRequest(LuaModule & lm);
+	extern void bind_class_Network(LuaModule & lm);
+	extern void bind_class_NetworkPriority(LuaModule & lm);
 	
 
 	void bind_network_module(lua_State * lua, Context * context)
@@ -42,7 +42,7 @@ namespace Urho3D
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_Connection(lm);
 		bind_class_HttpRequest(lm);

@@ -40,7 +40,7 @@ namespace Urho3D
 		delete[] data;
 		return buffer;
 	}
-	void bind_class_HttpRequest(LuaModele & lm)
+	void bind_class_HttpRequest(LuaModule & lm)
 	{
 		lm
 		[

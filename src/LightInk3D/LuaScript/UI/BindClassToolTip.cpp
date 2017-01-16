@@ -29,7 +29,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_ToolTip(LuaModele & lm)
+	void bind_class_ToolTip(LuaModule & lm)
 	{
 		lm
 		[

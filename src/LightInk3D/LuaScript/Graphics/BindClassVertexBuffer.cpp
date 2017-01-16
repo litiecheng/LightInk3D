@@ -59,7 +59,7 @@ namespace Urho3D
 	{
 		return SharedPtr<VertexBuffer>(new VertexBuffer(context, forceHeadless));
 	}
-	void bind_class_VertexBuffer(LuaModele & lm)
+	void bind_class_VertexBuffer(LuaModule & lm)
 	{
 		lm
 		[

@@ -29,7 +29,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_CollisionCircle2D(LuaModele & lm)
+	void bind_class_CollisionCircle2D(LuaModule & lm)
 	{
 		lm
 		[

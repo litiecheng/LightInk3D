@@ -31,7 +31,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_Obstacle(LuaModele & lm)
+	void bind_class_Obstacle(LuaModule & lm)
 	{
 		lm
 		[

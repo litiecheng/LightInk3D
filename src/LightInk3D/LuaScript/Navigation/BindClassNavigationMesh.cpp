@@ -50,7 +50,7 @@ namespace Urho3D
 		return vv;
 	}
 		
-	void bind_class_NavigationMesh(LuaModele & lm)
+	void bind_class_NavigationMesh(LuaModule & lm)
 	{
 		lm
 		[

@@ -30,7 +30,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_InputEvents(LuaModele & lm)
+	void bind_class_InputEvents(LuaModule & lm)
 	{
 		lua_State * lua = lm.state();
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);

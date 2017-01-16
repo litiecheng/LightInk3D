@@ -32,24 +32,24 @@ namespace Urho3D
 {
 	using namespace LightInk;
 
-	extern void bind_class_BoundingBox(LuaModele & lm);
-	extern void bind_class_Color(LuaModele & lm);
-	extern void bind_class_Frustum(LuaModele & lm);
-	extern void bind_class_MathDefs(LuaModele & lm);
-	extern void bind_class_Matrix2(LuaModele & lm);
-	extern void bind_class_Matrix3(LuaModele & lm);
-	extern void bind_class_Matrix3x4(LuaModele & lm);
-	extern void bind_class_Matrix4(LuaModele & lm);
-	extern void bind_class_Plane(LuaModele & lm);
-	extern void bind_class_Polyhedron(LuaModele & lm);
-	extern void bind_class_Quaternion(LuaModele & lm);
-	extern void bind_class_Ray(LuaModele & lm);
-	extern void bind_class_Rect(LuaModele & lm);
-	extern void bind_class_Sphere(LuaModele & lm);
-	extern void bind_class_StringHash(LuaModele & lm);
-	extern void bind_class_Vector2(LuaModele & lm);
-	extern void bind_class_Vector3(LuaModele & lm);
-	extern void bind_class_Vector4(LuaModele & lm);
+	extern void bind_class_BoundingBox(LuaModule & lm);
+	extern void bind_class_Color(LuaModule & lm);
+	extern void bind_class_Frustum(LuaModule & lm);
+	extern void bind_class_MathDefs(LuaModule & lm);
+	extern void bind_class_Matrix2(LuaModule & lm);
+	extern void bind_class_Matrix3(LuaModule & lm);
+	extern void bind_class_Matrix3x4(LuaModule & lm);
+	extern void bind_class_Matrix4(LuaModule & lm);
+	extern void bind_class_Plane(LuaModule & lm);
+	extern void bind_class_Polyhedron(LuaModule & lm);
+	extern void bind_class_Quaternion(LuaModule & lm);
+	extern void bind_class_Ray(LuaModule & lm);
+	extern void bind_class_Rect(LuaModule & lm);
+	extern void bind_class_Sphere(LuaModule & lm);
+	extern void bind_class_StringHash(LuaModule & lm);
+	extern void bind_class_Vector2(LuaModule & lm);
+	extern void bind_class_Vector3(LuaModule & lm);
+	extern void bind_class_Vector4(LuaModule & lm);
 	
 
 	void bind_math_module(lua_State * lua, Context * context)
@@ -57,7 +57,7 @@ namespace Urho3D
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_BoundingBox(lm);
 		bind_class_Color(lm);

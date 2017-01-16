@@ -70,7 +70,7 @@ namespace Urho3D
 	{
 		self = value;
 	}
-	void bind_class_JSONFile(LuaModele & lm)
+	void bind_class_JSONFile(LuaModule & lm)
 	{
 		lm
 		[

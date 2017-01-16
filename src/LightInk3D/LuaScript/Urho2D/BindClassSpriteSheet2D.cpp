@@ -31,7 +31,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_SpriteSheet2D(LuaModele & lm)
+	void bind_class_SpriteSheet2D(LuaModule & lm)
 	{
 		lm
 		[

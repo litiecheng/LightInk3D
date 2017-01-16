@@ -81,7 +81,7 @@ namespace Urho3D
 	}
 
 
-	void bind_class_UIElement(LuaModele & lm)
+	void bind_class_UIElement(LuaModule & lm)
 	{
 		lm
 		[

@@ -32,7 +32,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_Texture2DArray(LuaModele & lm)
+	void bind_class_Texture2DArray(LuaModule & lm)
 	{
 		lm
 		[

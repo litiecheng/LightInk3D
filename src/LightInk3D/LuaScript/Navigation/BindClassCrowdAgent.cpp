@@ -31,7 +31,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_CrowdAgent(LuaModele & lm)
+	void bind_class_CrowdAgent(LuaModule & lm)
 	{
 		lm
 		[

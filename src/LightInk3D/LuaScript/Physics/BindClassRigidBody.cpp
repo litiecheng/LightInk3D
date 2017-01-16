@@ -42,7 +42,7 @@ namespace Urho3D
 		return result;
 	}
 	
-	void bind_class_RigidBody(LuaModele & lm)
+	void bind_class_RigidBody(LuaModule & lm)
 	{
 		lm
 		[

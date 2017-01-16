@@ -47,7 +47,7 @@ namespace Urho3D
 		rv.distance_ = self->HitDistance(v0, v1, v2, rv.outNormal_, rv.outBary_);
 		return rv;
 	}
-	void bind_class_Ray(LuaModele & lm)
+	void bind_class_Ray(LuaModule & lm)
 	{
 		lm
 		[

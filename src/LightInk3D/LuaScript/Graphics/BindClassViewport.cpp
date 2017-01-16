@@ -58,7 +58,7 @@ namespace Urho3D
 	{
 		return SharedPtr<Viewport>(new Viewport(context, scene, camera, rect, renderPath));
 	}
-	void bind_class_Viewport(LuaModele & lm)
+	void bind_class_Viewport(LuaModule & lm)
 	{
 		lm
 		[

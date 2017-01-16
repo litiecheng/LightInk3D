@@ -25,13 +25,14 @@
 
 #include "Audio/Sound.h"
 #include "IO/File.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_Sound(LuaModele & lm)
+	void bind_class_Sound(LuaModule & lm)
 	{
 		lm
 		[

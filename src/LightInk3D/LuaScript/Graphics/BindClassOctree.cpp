@@ -60,7 +60,7 @@ namespace Urho3D
 		return result[0];
 	}
 
-	void bind_class_Octree(LuaModele & lm)
+	void bind_class_Octree(LuaModule & lm)
 	{
 		lm
 		[

@@ -32,16 +32,16 @@ namespace Urho3D
 {
 	using namespace LightInk;
 
-	extern void bind_class_DbResult(LuaModele & lm);
-	extern void bind_class_DbConnection(LuaModele & lm);
-	extern void bind_class_Database(LuaModele & lm);
+	extern void bind_class_DbResult(LuaModule & lm);
+	extern void bind_class_DbConnection(LuaModule & lm);
+	extern void bind_class_Database(LuaModule & lm);
 
 	void bind_database_module(lua_State * lua, Context * context)
 	{
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_DbResult(lm);
 		bind_class_DbConnection(lm);

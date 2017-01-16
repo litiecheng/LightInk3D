@@ -43,7 +43,7 @@ namespace Urho3D
 		self->Decompose(mvqv.translation_, mvqv.rotation_, mvqv.scale_);
 		return mvqv;
 	}
-	void bind_class_Matrix3x4(LuaModele & lm)
+	void bind_class_Matrix3x4(LuaModule & lm)
 	{
 		lm
 		[

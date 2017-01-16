@@ -88,7 +88,7 @@ namespace Urho3D
 	{
 		return SharedPtr<UIElement>(self->GetDragElement(index));
 	}
-	void bind_class_UI(LuaModele & lm)
+	void bind_class_UI(LuaModule & lm)
 	{
 		lm
 		[

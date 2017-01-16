@@ -42,37 +42,35 @@ extern "C"
 #include <lualib.h>
 }
 
-#include <toluapp/tolua++.h>
-#include "LuaScript/ToluaUtils.h"
 
 #include "DebugNew.h"
 
-extern int tolua_AudioLuaAPI_open(lua_State*);
-extern int tolua_CoreLuaAPI_open(lua_State*);
-extern int tolua_EngineLuaAPI_open(lua_State*);
-extern int tolua_GraphicsLuaAPI_open(lua_State*);
-extern int tolua_InputLuaAPI_open(lua_State*);
-extern int tolua_IOLuaAPI_open(lua_State*);
-extern int tolua_MathLuaAPI_open(lua_State*);
+extern void bind_audio_module(lua_State * lua, Context * context);
+extern void bind_core_module(lua_State * lua, Context * context);
+extern void bind_engine_module(lua_State * lua, Context * context);
+extern void bind_graphics_module(lua_State * lua, Context * context);
+extern void bind_input_module(lua_State * lua, Context * context);
+extern void bind_io_module(lua_State * lua, Context * context);
+extern void bind_math_module(lua_State * lua, Context * context);
 #ifdef URHO3D_NAVIGATION
-extern int tolua_NavigationLuaAPI_open(lua_State*);
+extern void bind_navigation_module(lua_State * lua, Context * context);
 #endif
 #ifdef URHO3D_NETWORK
-extern int tolua_NetworkLuaAPI_open(lua_State*);
+extern void bind_newwork_module(lua_State * lua, Context * context);
 #endif
 #ifdef URHO3D_DATABASE
-extern int tolua_DatabaseLuaAPI_open(lua_State*);
+extern void bind_database_module(lua_State * lua, Context * context);
 #endif
 #ifdef URHO3D_PHYSICS
-extern int tolua_PhysicsLuaAPI_open(lua_State*);
+extern void bind_physics_module(lua_State * lua, Context * context);
 #endif
-extern int tolua_ResourceLuaAPI_open(lua_State*);
-extern int tolua_SceneLuaAPI_open(lua_State*);
-extern int tolua_UILuaAPI_open(lua_State*);
+extern void bind_resource_module(lua_State * lua, Context * context);
+extern void bind_scene_module(lua_State * lua, Context * context);
+extern void bind_ui_module(lua_State * lua, Context * context);
 #ifdef URHO3D_URHO2D
-extern int tolua_Urho2DLuaAPI_open(lua_State*);
+extern void bind_urho2d_module(lua_State * lua, Context * context);
 #endif
-extern int tolua_LuaScriptLuaAPI_open(lua_State*);
+extern void bind_luascript_module(lua_State * lua, Context * context);
 
 namespace Urho3D
 {
@@ -97,32 +95,32 @@ LuaScript::LuaScript(Context* context) :
     RegisterLoader();
     ReplacePrint();
 
-    tolua_MathLuaAPI_open(luaState_);
-    tolua_CoreLuaAPI_open(luaState_);
-    tolua_IOLuaAPI_open(luaState_);
-    tolua_ResourceLuaAPI_open(luaState_);
-    tolua_SceneLuaAPI_open(luaState_);
-    tolua_AudioLuaAPI_open(luaState_);
-    tolua_EngineLuaAPI_open(luaState_);
-    tolua_GraphicsLuaAPI_open(luaState_);
-    tolua_InputLuaAPI_open(luaState_);
+	bind_math_module(luaState_, context);
+    bind_core_module(luaState_, context);
+	bind_io_module(luaState_, context);
+    bind_resource_module(luaState_, context);
+    bind_scene_module(luaState_, context);
+    bind_audio_module(luaState_, context);
+    bind_engine_module(luaState_, context);
+    bind_graphics_module(luaState_, context);
+    bind_input_module(luaState_, context);
 #ifdef URHO3D_NAVIGATION
-    tolua_NavigationLuaAPI_open(luaState_);
+	bind_navigation_module(luaState_, context);
 #endif
 #ifdef URHO3D_NETWORK
-    tolua_NetworkLuaAPI_open(luaState_);
+    tolua_NetworkLuaAPI_open(luaState_, context);
 #endif
 #ifdef URHO3D_DATABASE
-    tolua_DatabaseLuaAPI_open(luaState_);
+	bind_database_module(luaState_, context);
 #endif
 #ifdef URHO3D_PHYSICS
-    tolua_PhysicsLuaAPI_open(luaState_);
+	bind_physics_module(luaState_, context);
 #endif
-    tolua_UILuaAPI_open(luaState_);
+	bind_ui_module(luaState_, context);
 #ifdef URHO3D_URHO2D
-    tolua_Urho2DLuaAPI_open(luaState_);
+	bind_urho2d_module(luaState_, context);
 #endif
-    tolua_LuaScriptLuaAPI_open(luaState_);
+	bind_luascript_module(luaState_, context);
 
     SetContext(luaState_, context_);
 

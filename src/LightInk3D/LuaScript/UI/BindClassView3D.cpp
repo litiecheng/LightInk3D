@@ -33,7 +33,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_View3D(LuaModele & lm)
+	void bind_class_View3D(LuaModule & lm)
 	{
 		lm
 		[

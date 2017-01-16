@@ -34,7 +34,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_CollisionShape(LuaModele & lm)
+	void bind_class_CollisionShape(LuaModule & lm)
 	{
 		lm
 		[

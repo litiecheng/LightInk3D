@@ -31,21 +31,21 @@ namespace Urho3D
 {
 	using namespace LightInk;
 
-	extern void bind_class_Context(LuaModele & lm);
-	extern void bind_class_Object(LuaModele & lm);
-	extern void bind_class_ProcessUtils(LuaModele & lm);
-	extern void bind_class_Spline(LuaModele & lm);
-	extern void bind_class_StringUtils(LuaModele & lm);
-	extern void bind_class_Timer(LuaModele & lm);
-	extern void bind_class_Variant(LuaModele & lm);
-	extern void bind_class_VariantMap(LuaModele & lm);
+	extern void bind_class_Context(LuaModule & lm);
+	extern void bind_class_Object(LuaModule & lm);
+	extern void bind_class_ProcessUtils(LuaModule & lm);
+	extern void bind_class_Spline(LuaModule & lm);
+	extern void bind_class_StringUtils(LuaModule & lm);
+	extern void bind_class_Timer(LuaModule & lm);
+	extern void bind_class_Variant(LuaModule & lm);
+	extern void bind_class_VariantMap(LuaModule & lm);
 
 	void bind_core_module(lua_State * lua, Context * context)
 	{
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_Context(lm);
 		bind_class_Object(lm);

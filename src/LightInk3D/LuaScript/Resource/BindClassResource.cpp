@@ -45,7 +45,7 @@ namespace Urho3D
 			return false;
 		return self->Save(*file);
 	}
-	void bind_class_Resource(LuaModele & lm)
+	void bind_class_Resource(LuaModule & lm)
 	{
 		lm
 		[

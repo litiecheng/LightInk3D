@@ -33,7 +33,7 @@ namespace Urho3D
 	{
 		return SharedPtr<UIElement>(self->GetPopup());
 	}
-	void bind_class_Menu(LuaModele & lm)
+	void bind_class_Menu(LuaModule & lm)
 	{
 		lm
 		[

@@ -29,38 +29,38 @@ namespace Urho3D
 {
 	using namespace LightInk;
 
-	extern void bind_class_Drawable2D(LuaModele & lm); 
-	extern void bind_class_StaticSprite2D(LuaModele & lm);
-	extern void bind_class_CollisionShape2D(LuaModele & lm);
-	extern void bind_class_Constraint2D(LuaModele & lm);
-	extern void bind_class_AnimatedSprite2D(LuaModele & lm);
-	extern void bind_class_AnimationSet2D(LuaModele & lm);
-	extern void bind_class_CollisionBox2D(LuaModele & lm);
-	extern void bind_class_CollisionChain2D(LuaModele & lm);
-	extern void bind_class_CollisionCircle2D(LuaModele & lm);
-	extern void bind_class_CollisionEdge2D(LuaModele & lm);
-	extern void bind_class_CollisionPolygon2D(LuaModele & lm);
-	extern void bind_class_ConstraintDistance2D(LuaModele & lm);
-	extern void bind_class_ConstraintFriction2D(LuaModele & lm);
-	extern void bind_class_ConstraintGear2D(LuaModele & lm);
-	extern void bind_class_ConstraintMotor2D(LuaModele & lm);
-	extern void bind_class_ConstraintMouse2D(LuaModele & lm);
-	extern void bind_class_ConstraintPrismatic2D(LuaModele & lm);
-	extern void bind_class_ConstraintPulley2D(LuaModele & lm);
-	extern void bind_class_ConstraintRevolute2D(LuaModele & lm);
-	extern void bind_class_ConstraintRope2D(LuaModele & lm);
-	extern void bind_class_ConstraintWeld2D(LuaModele & lm);
-	extern void bind_class_ConstraintWheel2D(LuaModele & lm);
-	extern void bind_class_ParticleEffect2D(LuaModele & lm);
-	extern void bind_class_ParticleEmitter2D(LuaModele & lm);
-	extern void bind_class_PhysicsWorld2D(LuaModele & lm);
-	extern void bind_class_RigidBody2D(LuaModele & lm);
-	extern void bind_class_Sprite2D(LuaModele & lm);
-	extern void bind_class_SpriteSheet2D(LuaModele & lm);
-	extern void bind_class_TileMap2D(LuaModele & lm);
-	extern void bind_class_TileMapDefs2D(LuaModele & lm);
-	extern void bind_class_TileMapLayer2D(LuaModele & lm);
-	extern void bind_class_TmxFile2D(LuaModele & lm);
+	extern void bind_class_Drawable2D(LuaModule & lm); 
+	extern void bind_class_StaticSprite2D(LuaModule & lm);
+	extern void bind_class_CollisionShape2D(LuaModule & lm);
+	extern void bind_class_Constraint2D(LuaModule & lm);
+	extern void bind_class_AnimatedSprite2D(LuaModule & lm);
+	extern void bind_class_AnimationSet2D(LuaModule & lm);
+	extern void bind_class_CollisionBox2D(LuaModule & lm);
+	extern void bind_class_CollisionChain2D(LuaModule & lm);
+	extern void bind_class_CollisionCircle2D(LuaModule & lm);
+	extern void bind_class_CollisionEdge2D(LuaModule & lm);
+	extern void bind_class_CollisionPolygon2D(LuaModule & lm);
+	extern void bind_class_ConstraintDistance2D(LuaModule & lm);
+	extern void bind_class_ConstraintFriction2D(LuaModule & lm);
+	extern void bind_class_ConstraintGear2D(LuaModule & lm);
+	extern void bind_class_ConstraintMotor2D(LuaModule & lm);
+	extern void bind_class_ConstraintMouse2D(LuaModule & lm);
+	extern void bind_class_ConstraintPrismatic2D(LuaModule & lm);
+	extern void bind_class_ConstraintPulley2D(LuaModule & lm);
+	extern void bind_class_ConstraintRevolute2D(LuaModule & lm);
+	extern void bind_class_ConstraintRope2D(LuaModule & lm);
+	extern void bind_class_ConstraintWeld2D(LuaModule & lm);
+	extern void bind_class_ConstraintWheel2D(LuaModule & lm);
+	extern void bind_class_ParticleEffect2D(LuaModule & lm);
+	extern void bind_class_ParticleEmitter2D(LuaModule & lm);
+	extern void bind_class_PhysicsWorld2D(LuaModule & lm);
+	extern void bind_class_RigidBody2D(LuaModule & lm);
+	extern void bind_class_Sprite2D(LuaModule & lm);
+	extern void bind_class_SpriteSheet2D(LuaModule & lm);
+	extern void bind_class_TileMap2D(LuaModule & lm);
+	extern void bind_class_TileMapDefs2D(LuaModule & lm);
+	extern void bind_class_TileMapLayer2D(LuaModule & lm);
+	extern void bind_class_TmxFile2D(LuaModule & lm);
 	
 
 	void bind_urho2d_module(lua_State * lua, Context * context)
@@ -68,7 +68,7 @@ namespace Urho3D
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_Drawable2D(lm); 
 		bind_class_StaticSprite2D(lm);

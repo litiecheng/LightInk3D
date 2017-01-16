@@ -29,28 +29,28 @@ namespace Urho3D
 {
 	using namespace LightInk;
 
-	extern void bind_class_BorderImage(LuaModele & lm);
-	extern void bind_class_Button(LuaModele & lm);
-	extern void bind_class_CheckBox(LuaModele & lm);
-	extern void bind_class_Cursor(LuaModele & lm);
-	extern void bind_class_DropDownList(LuaModele & lm);
-	extern void bind_class_FileSelector(LuaModele & lm);
-	extern void bind_class_Font(LuaModele & lm);
-	extern void bind_class_LineEdit(LuaModele & lm);
-	extern void bind_class_ListView(LuaModele & lm);
-	extern void bind_class_Menu(LuaModele & lm);
-	extern void bind_class_MessageBox(LuaModele & lm);
-	extern void bind_class_ScrollBar(LuaModele & lm);
-	extern void bind_class_ScrollView(LuaModele & lm);
-	extern void bind_class_Slider(LuaModele & lm);
-	extern void bind_class_Sprite(LuaModele & lm);
-	extern void bind_class_Text(LuaModele & lm);
-	extern void bind_class_Text3D(LuaModele & lm);
-	extern void bind_class_ToolTip(LuaModele & lm);
-	extern void bind_class_UI(LuaModele & lm);
-	extern void bind_class_View3D(LuaModele & lm);
-	extern void bind_class_Window(LuaModele & lm);
-	extern void bind_class_UIElement(LuaModele & lm);
+	extern void bind_class_BorderImage(LuaModule & lm);
+	extern void bind_class_Button(LuaModule & lm);
+	extern void bind_class_CheckBox(LuaModule & lm);
+	extern void bind_class_Cursor(LuaModule & lm);
+	extern void bind_class_DropDownList(LuaModule & lm);
+	extern void bind_class_FileSelector(LuaModule & lm);
+	extern void bind_class_Font(LuaModule & lm);
+	extern void bind_class_LineEdit(LuaModule & lm);
+	extern void bind_class_ListView(LuaModule & lm);
+	extern void bind_class_Menu(LuaModule & lm);
+	extern void bind_class_MessageBox(LuaModule & lm);
+	extern void bind_class_ScrollBar(LuaModule & lm);
+	extern void bind_class_ScrollView(LuaModule & lm);
+	extern void bind_class_Slider(LuaModule & lm);
+	extern void bind_class_Sprite(LuaModule & lm);
+	extern void bind_class_Text(LuaModule & lm);
+	extern void bind_class_Text3D(LuaModule & lm);
+	extern void bind_class_ToolTip(LuaModule & lm);
+	extern void bind_class_UI(LuaModule & lm);
+	extern void bind_class_View3D(LuaModule & lm);
+	extern void bind_class_Window(LuaModule & lm);
+	extern void bind_class_UIElement(LuaModule & lm);
 	
 
 	void bind_ui_module(lua_State * lua, Context * context)
@@ -58,7 +58,7 @@ namespace Urho3D
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_UIElement(lm);
 

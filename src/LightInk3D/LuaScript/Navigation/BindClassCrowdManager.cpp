@@ -66,7 +66,7 @@ namespace Urho3D
 		return vv;
 	}
 	
-	void bind_class_CrowdManager(LuaModele & lm)
+	void bind_class_CrowdManager(LuaModule & lm)
 	{
 		lm
 		[

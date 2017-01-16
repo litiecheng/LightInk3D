@@ -29,7 +29,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_ValueAnimation(LuaModele & lm)
+	void bind_class_ValueAnimation(LuaModule & lm)
 	{
 		lm
 		[

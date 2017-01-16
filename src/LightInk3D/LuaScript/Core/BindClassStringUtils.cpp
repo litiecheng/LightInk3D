@@ -30,7 +30,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_StringUtils(LuaModele & lm)
+	void bind_class_StringUtils(LuaModule & lm)
 	{
 		lua_State * lua = lm.state();
 		LuaDefAutoTool::def(lua, static_cast<bool(*)(const char*)>(ToBool), "ToBool");

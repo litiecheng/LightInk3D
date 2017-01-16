@@ -31,7 +31,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_NetworkPriority(LuaModele & lm)
+	void bind_class_NetworkPriority(LuaModule & lm)
 	{
 		lm
 		[

@@ -44,7 +44,7 @@ namespace Urho3D
 	{
 		return VectorBuffer(self->ReadBuffer());
 	}
-	void bind_class_Deserializer(LuaModele & lm)
+	void bind_class_Deserializer(LuaModule & lm)
 	{
 		lm
 		[

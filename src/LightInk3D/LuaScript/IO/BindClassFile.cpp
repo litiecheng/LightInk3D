@@ -50,7 +50,7 @@ namespace Urho3D
 	{
 		return SharedPtr<File>(new File(context, package, fileName));
 	}
-	void bind_class_File(LuaModele & lm)
+	void bind_class_File(LuaModule & lm)
 	{
 		lm
 		[

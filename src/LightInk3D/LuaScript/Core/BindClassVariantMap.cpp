@@ -45,7 +45,7 @@ namespace Urho3D
 	}
 	
 	using namespace LightInk;
-	void RegisterVariantMap(LuaModele & lm)
+	void RegisterVariantMap(LuaModule & lm)
 	{
 		
 		lm

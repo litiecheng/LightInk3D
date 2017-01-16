@@ -31,9 +31,9 @@ namespace Urho3D
 {
 	using namespace LightInk;
 
-	extern void bind_class_Controls(LuaModele & lm);
-	extern void bind_class_Input(LuaModele & lm);
-	extern void bind_class_InputEvents(LuaModele & lm);
+	extern void bind_class_Controls(LuaModule & lm);
+	extern void bind_class_Input(LuaModule & lm);
+	extern void bind_class_InputEvents(LuaModule & lm);
 	
 
 	void bind_input_module(lua_State * lua, Context * context)
@@ -41,7 +41,7 @@ namespace Urho3D
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_Controls(lm);
 		bind_class_Input(lm);

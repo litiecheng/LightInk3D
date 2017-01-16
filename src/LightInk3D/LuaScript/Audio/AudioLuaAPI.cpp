@@ -24,24 +24,25 @@
 #include "Precompiled.h"
 #include "Audio/Audio.h"
 #include "Core/Context.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D
 {
 	using namespace LightInk;
 	
-	extern void bind_class_Audio(LuaModele & lm);
-	extern void bind_class_Sound(LuaModele & lm);
-	extern void bind_class_SoundListener(LuaModele & lm);
-	extern void bind_class_SoundSource(LuaModele & lm);
-	extern void bind_class_SoundSource3D(LuaModele & lm);
+	extern void bind_class_Audio(LuaModule & lm);
+	extern void bind_class_Sound(LuaModule & lm);
+	extern void bind_class_SoundListener(LuaModule & lm);
+	extern void bind_class_SoundSource(LuaModule & lm);
+	extern void bind_class_SoundSource3D(LuaModule & lm);
 
 	void bind_audio_module(lua_State * lua, Context * context)
 	{
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_Audio(lm);
 		bind_class_Sound(lm);

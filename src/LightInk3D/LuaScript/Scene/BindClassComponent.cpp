@@ -42,7 +42,7 @@ namespace Urho3D
 		self->GetComponents(dest);
 		return dest;
 	}
-	void bind_class_Component(LuaModele & lm)
+	void bind_class_Component(LuaModule & lm)
 	{
 		lm
 		[

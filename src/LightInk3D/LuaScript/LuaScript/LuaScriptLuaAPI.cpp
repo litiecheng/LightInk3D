@@ -22,30 +22,34 @@
  */
 
 #include "Precompiled.h"
-#include "Urho2D/ConstraintMotor2D.h"
-#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_ConstraintMotor2D(LuaModule & lm)
+	
+	extern void bind_class_Coroutine(LuaScript * ls);
+	extern void bind_class_LuaScript(LuaModule & lm);
+	extern void bind_class_LuaScriptInstance(LuaScript * ls, LuaModule & lm);
+
+
+	void bind_luascript_module(lua_State * lua, Context * context)
 	{
-		lm
-		[
-			LuaRegister<ConstraintMotor2D, void ()>(lm.state(), "ConstraintMotor2D", BaseClassStrategy<Constraint2D>())
-				.disable_new()
-				.def(CreateObject<ConstraintMotor2D>, "new")
-				.def(&ConstraintMotor2D::SetLinearOffset, "SetLinearOffset")
-				.def(&ConstraintMotor2D::SetAngularOffset, "SetAngularOffset")
-				.def(&ConstraintMotor2D::SetMaxForce, "SetMaxForce")
-				.def(&ConstraintMotor2D::SetMaxTorque, "SetMaxTorque")
-				.def(&ConstraintMotor2D::SetCorrectionFactor, "SetCorrectionFactor")
-				.def(&ConstraintMotor2D::GetAngularOffset, "GetAngularOffset")
-				.def(&ConstraintMotor2D::GetMaxForce, "GetMaxForce")
-				.def(&ConstraintMotor2D::GetMaxTorque, "GetMaxTorque")
-				.def(&ConstraintMotor2D::GetCorrectionFactor, "GetCorrectionFactor")
-				
-		];
+		lua_pushvalue(lua, LUA_GLOBALSINDEX);
+		LuaRef lrf(lua, true);
+		
+		LuaModule lm(lua, "LightInk3D__", lrf);
+		
+		bind_class_LuaScript(lm);
+		
+		lrf["luascript"] = GetSubsystem<LuaScript>(context);
+		LuaDefAutoTool::def(lua, GetSubsystem<LuaScript>, "GetLuaScript");
+		
+		bind_class_Coroutine(GetSubsystem<LuaScript>(context));
+		bind_class_LuaScriptInstance(GetSubsystem<LuaScript>(context), lm);
+		
+		
+		
+
 	}
 }

@@ -35,7 +35,7 @@ namespace Urho3D
 	{
 		return SharedPtr<UIElement>(self->GetContentElement());
 	}
-	void bind_class_ScrollView(LuaModele & lm)
+	void bind_class_ScrollView(LuaModule & lm)
 	{
 		lm
 		[

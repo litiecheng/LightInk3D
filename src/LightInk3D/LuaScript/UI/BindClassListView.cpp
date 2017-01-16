@@ -38,7 +38,7 @@ namespace Urho3D
 	{
 		return SharedPtr<UIElement>(self->GetSelectedItem());
 	}
-	void bind_class_ListView(LuaModele & lm)
+	void bind_class_ListView(LuaModule & lm)
 	{
 		lm
 		[

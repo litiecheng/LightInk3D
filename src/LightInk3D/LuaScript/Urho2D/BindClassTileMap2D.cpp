@@ -44,7 +44,7 @@ namespace Urho3D
 		return iib;
 	}
 
-	void bind_class_TileMap2D(LuaModele & lm)
+	void bind_class_TileMap2D(LuaModule & lm)
 	{
 		lm
 		[

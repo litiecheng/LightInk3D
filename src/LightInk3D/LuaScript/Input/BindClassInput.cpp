@@ -59,7 +59,7 @@ namespace Urho3D
 	{
 		return SharedPtr<UIElement>(self->GetTouchedElement());
 	}
-	void bind_class_Input(LuaModele & lm)
+	void bind_class_Input(LuaModule & lm)
 	{
 		lm
 		[

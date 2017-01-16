@@ -33,7 +33,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_OffMeshConnection(LuaModele & lm)
+	void bind_class_OffMeshConnection(LuaModule & lm)
 	{
 		lm
 		[

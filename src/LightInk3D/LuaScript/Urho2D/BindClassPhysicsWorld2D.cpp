@@ -51,7 +51,7 @@ namespace Urho3D
 		return result;
 	}
 	
-	void bind_class_PhysicsWorld2D(LuaModele & lm)
+	void bind_class_PhysicsWorld2D(LuaModule & lm)
 	{
 		lm
 		[

@@ -44,7 +44,7 @@ namespace Urho3D
 	{
 		return SharedPtr<UIElement>(self->GetPlaceholder());
 	}
-	void bind_class_DropDownList(LuaModele & lm)
+	void bind_class_DropDownList(LuaModule & lm)
 	{
 		lm
 		[

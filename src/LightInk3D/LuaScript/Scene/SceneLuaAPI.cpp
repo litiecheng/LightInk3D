@@ -29,16 +29,16 @@ namespace Urho3D
 {
 	using namespace LightInk;
 
-	extern void bind_class_Serializable(LuaModele & lm);
-	extern void bind_class_Animatable(LuaModele & lm);
-	extern void bind_class_Component(LuaModele & lm);
-	extern void bind_class_LogicComponent(LuaModele & lm);
-	extern void bind_class_Node(LuaModele & lm);
-	extern void bind_class_ObjectAnimation(LuaModele & lm);
-	extern void bind_class_Scene(LuaModele & lm);
-	extern void bind_class_SmoothedTransform(LuaModele & lm);
-	extern void bind_class_SplinePath(LuaModele & lm);
-	extern void bind_class_ValueAnimation(LuaModele & lm);
+	extern void bind_class_Serializable(LuaModule & lm);
+	extern void bind_class_Animatable(LuaModule & lm);
+	extern void bind_class_Component(LuaModule & lm);
+	extern void bind_class_LogicComponent(LuaModule & lm);
+	extern void bind_class_Node(LuaModule & lm);
+	extern void bind_class_ObjectAnimation(LuaModule & lm);
+	extern void bind_class_Scene(LuaModule & lm);
+	extern void bind_class_SmoothedTransform(LuaModule & lm);
+	extern void bind_class_SplinePath(LuaModule & lm);
+	extern void bind_class_ValueAnimation(LuaModule & lm);
 	
 
 	void bind_scene_module(lua_State * lua, Context * context)
@@ -46,7 +46,7 @@ namespace Urho3D
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_Serializable(lm);
 

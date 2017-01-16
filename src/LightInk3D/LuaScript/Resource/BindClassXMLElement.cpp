@@ -30,7 +30,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_XMLElement(LuaModele & lm)
+	void bind_class_XMLElement(LuaModule & lm)
 	{
 		lm
 		[

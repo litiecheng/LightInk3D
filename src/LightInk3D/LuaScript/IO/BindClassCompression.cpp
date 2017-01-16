@@ -31,7 +31,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_Compression(LuaModele & lm)
+	void bind_class_Compression(LuaModule & lm)
 	{
 		lua_State * lua = lm.state();
 		LuaDefAutoTool::def(lua, CompressVectorBuffer, "CompressVectorBuffer");

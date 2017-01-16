@@ -30,7 +30,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_Vector2(LuaModele & lm)
+	void bind_class_Vector2(LuaModule & lm)
 	{
 		lm
 		[

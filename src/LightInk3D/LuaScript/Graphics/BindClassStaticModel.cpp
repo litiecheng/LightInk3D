@@ -32,7 +32,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_StaticModel(LuaModele & lm)
+	void bind_class_StaticModel(LuaModule & lm)
 	{
 		lm
 		[

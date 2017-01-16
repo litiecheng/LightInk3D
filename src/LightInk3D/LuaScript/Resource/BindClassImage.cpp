@@ -34,7 +34,7 @@ namespace Urho3D
 		return SharedPtr<Image>(self->GetSubimage(rect));
 	}
 	
-	void bind_class_Image(LuaModele & lm)
+	void bind_class_Image(LuaModule & lm)
 	{
 		lm
 		[

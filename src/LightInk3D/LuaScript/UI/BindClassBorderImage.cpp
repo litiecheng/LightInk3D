@@ -30,7 +30,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	void bind_class_BorderImage(LuaModele & lm)
+	void bind_class_BorderImage(LuaModule & lm)
 	{
 		lm
 		[

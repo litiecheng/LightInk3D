@@ -31,15 +31,15 @@ namespace Urho3D
 {
 	using namespace LightInk;
 
-	extern void bind_class_Compression(LuaModele & lm);
-	extern void bind_class_Deserializer(LuaModele & lm);
-	extern void bind_class_Serializer(LuaModele & lm);
-	extern void bind_class_File(LuaModele & lm);
-	extern void bind_class_FileSystem(LuaModele & lm);
-	extern void bind_class_Log(LuaModele & lm);
-	extern void bind_class_NamedPipe(LuaModele & lm);
-	extern void bind_class_PackageFile(LuaModele & lm);
-	extern void bind_class_VectorBuffer(LuaModele & lm);
+	extern void bind_class_Compression(LuaModule & lm);
+	extern void bind_class_Deserializer(LuaModule & lm);
+	extern void bind_class_Serializer(LuaModule & lm);
+	extern void bind_class_File(LuaModule & lm);
+	extern void bind_class_FileSystem(LuaModule & lm);
+	extern void bind_class_Log(LuaModule & lm);
+	extern void bind_class_NamedPipe(LuaModule & lm);
+	extern void bind_class_PackageFile(LuaModule & lm);
+	extern void bind_class_VectorBuffer(LuaModule & lm);
 	
 
 	void bind_io_module(lua_State * lua, Context * context)
@@ -47,7 +47,7 @@ namespace Urho3D
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_Compression(lm);
 		bind_class_Deserializer(lm);

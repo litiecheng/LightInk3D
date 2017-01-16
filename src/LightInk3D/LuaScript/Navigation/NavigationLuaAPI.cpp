@@ -31,14 +31,14 @@ namespace Urho3D
 {
 	using namespace LightInk;
 
-	extern void bind_class_NavigationMesh(LuaModele & lm);
-	extern void bind_class_CrowdAgent(LuaModele & lm);
-	extern void bind_class_CrowdManager(LuaModele & lm);
-	extern void bind_class_DynamicNavigationMesh(LuaModele & lm);
-	extern void bind_class_NavArea(LuaModele & lm);
-	extern void bind_class_Navigable(LuaModele & lm);
-	extern void bind_class_Obstacle(LuaModele & lm);
-	extern void bind_class_OffMeshConnection(LuaModele & lm);
+	extern void bind_class_NavigationMesh(LuaModule & lm);
+	extern void bind_class_CrowdAgent(LuaModule & lm);
+	extern void bind_class_CrowdManager(LuaModule & lm);
+	extern void bind_class_DynamicNavigationMesh(LuaModule & lm);
+	extern void bind_class_NavArea(LuaModule & lm);
+	extern void bind_class_Navigable(LuaModule & lm);
+	extern void bind_class_Obstacle(LuaModule & lm);
+	extern void bind_class_OffMeshConnection(LuaModule & lm);
 	
 
 	void bind_navigation_module(lua_State * lua, Context * context)
@@ -46,7 +46,7 @@ namespace Urho3D
 		lua_pushvalue(lua, LUA_GLOBALSINDEX);
 		LuaRef lrf(lua, true);
 		
-		LuaModele lm(lua, "LightInk3D__", lrf);
+		LuaModule lm(lua, "LightInk3D__", lrf);
 		
 		bind_class_NavigationMesh(lm);
 		bind_class_CrowdAgent(lm);

@@ -40,7 +40,7 @@ namespace Urho3D
 	{
 		return self->WriteBuffer(buffer.GetBuffer());
 	}
-	void bind_class_Serializer(LuaModele & lm)
+	void bind_class_Serializer(LuaModule & lm)
 	{
 		lm
 		[

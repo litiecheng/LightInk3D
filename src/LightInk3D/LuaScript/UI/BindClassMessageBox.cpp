@@ -38,7 +38,7 @@ namespace Urho3D
 	{
 		return SharedPtr<UIElement>(self->GetWindow());
 	}
-	void bind_class_MessageBox(LuaModele & lm)
+	void bind_class_MessageBox(LuaModule & lm)
 	{
 		lm
 		[
