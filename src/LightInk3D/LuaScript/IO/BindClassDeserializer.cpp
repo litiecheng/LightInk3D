@@ -48,7 +48,8 @@ namespace Urho3D
 	{
 		lm
 		[
-			LuaRegister<Deserializer, void ()>(lm.state(), "Deserializer")
+			LuaRegister<Deserializer, void>(lm.state(), "Deserializer")
+				.disable_new()
 				.def(DeserializerRead, "Read")
 				.def(&Deserializer::Seek, "Seek")
 				.def(&Deserializer::GetName, "GetName")

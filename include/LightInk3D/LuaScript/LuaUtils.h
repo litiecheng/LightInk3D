@@ -24,17 +24,12 @@
 #include "../Core/Context.h"
 #include "../Container/Ptr.h"
 #include "../Container/Str.h"
+#include "LuaEngine/LuaStack.h"
 
 struct lua_State;
 
 namespace Urho3D
 {
-	/// Set context.
-	void SetContext(lua_State* L, Context* context);
-	/// Return context.
-	Context* GetContext(lua_State* L);
-	
-	
 	 /// Create object.
     template<typename T>
     SharedPtr<T> CreateObject(Context* ct)
@@ -49,6 +44,269 @@ namespace Urho3D
     {
         return ct->GetSubsystem<T>();
     }
+	
+}
+
+namespace LightInk
+{
+	
+	//Urho3D::String
+	template <>
+	struct LuaStack <Urho3D::String>
+	{
+		static inline void push(lua_State * L, Urho3D::String & str)
+		{
+			lua_pushlstring (L, str.CString(), str.Length());
+		}
+
+		static inline Urho3D::String get(lua_State * L, int idx)
+		{
+			size_t len = 0;
+			const char * str = luaL_checklstring(L, idx, &len);
+			return(Urho3D::String(str, len));
+		}
+	};
+
+	//const Urho3D::String
+	template <>
+	struct LuaStack <const Urho3D::String>
+	{
+		static inline void push(lua_State * L, const Urho3D::String & str)
+		{
+			lua_pushlstring (L, str.CString(), str.Length());
+		}
+
+		static inline Urho3D::String get(lua_State * L, int idx)
+		{
+			size_t len = 0;
+			const char * str = luaL_checklstring(L, idx, &len);
+			return(Urho3D::String(str, len));
+		}
+	};
+
+	//const Urho3D::String &
+	template <>
+	struct LuaStack <const Urho3D::String &>
+	{
+		static inline void push(lua_State * L, const Urho3D::String & str)
+		{
+			lua_pushlstring (L, str.CString(), str.Length());
+		}
+
+		static inline Urho3D::String get(lua_State * L, int idx)
+		{
+			size_t len = 0;
+			const char * str = luaL_checklstring(L, idx, &len);
+			return(Urho3D::String(str, len));
+		}
+	};
+	
+	
+	//vector
+	template <typename T>
+	struct LuaStack <Urho3D::PODVector<T> >
+	{
+		static inline void push(lua_State * L, typename Urho3D::PODVector<T> & vec)
+		{
+			lua_createtable(L, vec.Size(), 0);
+			for (size_t i = 0; i < vec.Size(); ++i)
+			{
+				LuaStack<const T>::push(L, vec[i]);
+				lua_rawseti(L, -2, i+1);
+			}
+		}
+
+		static inline typename Urho3D::PODVector<T> get(lua_State * L, int idx)
+		{
+			if (!lua_istable(L, idx))
+			{
+				LogScriptErrorJump(L, "Error!!!The {} data is not a table, convert Urho3D::PODVector<T> failed!!!", idx);
+			}
+			idx = lua_absindex(L, idx);
+			size_t len = lua_objlen(L, idx);
+			Urho3D::PODVector<T> vec;
+			vec.Reserve(len);
+			for (size_t i = 1; i <= len; i++)
+			{
+				lua_rawgeti(L, idx, i);
+				vec.Push(LuaStack<const T>::get(L, -1));
+				lua_pop(L, 1);
+			}
+			LogTraceReturn(vec);
+		}
+	};
+
+	//const vector
+	template <typename T>
+	struct LuaStack <const Urho3D::PODVector<T> >
+	{
+		static inline void push(lua_State * L, const typename Urho3D::PODVector<T> & vec)
+		{
+			lua_createtable(L, vec.Size(), 0);
+			for (size_t i = 0; i < vec.Size(); ++i)
+			{
+				LuaStack<const T>::push(L, vec[i]);
+				lua_rawseti(L, -2, i+1);
+			}
+		}
+
+		static inline typename Urho3D::PODVector<T> get(lua_State * L, int idx)
+		{
+			if (!lua_istable(L, idx))
+			{
+				LogScriptErrorJump(L, "Error!!!The {} data is not a table, convert Urho3D::PODVector<T> failed!!!", idx);
+			}
+			idx = lua_absindex(L, idx);
+			size_t len = lua_objlen(L, idx);
+			Urho3D::PODVector<T> vec;
+			vec.Reserve(len);
+			for (size_t i = 1; i <= len; i++)
+			{
+				lua_rawgeti(L, idx, i);
+				vec.Push(LuaStack<const T>::get(L, -1));
+				lua_pop(L, 1);
+			}
+			LogTraceReturn(vec);
+		}
+	};
+
+	//const vector &
+	template <typename T>
+	struct LuaStack <const Urho3D::PODVector<T> &>
+	{
+		static inline void push(lua_State * L, const typename Urho3D::PODVector<T> & vec)
+		{
+			lua_createtable(L, vec.Size(), 0);
+			for (size_t i = 0; i < vec.Size(); ++i)
+			{
+				LuaStack<const T>::push(L, vec[i]);
+				lua_rawseti(L, -2, i+1);
+			}
+		}
+
+		static inline typename Urho3D::PODVector<T> get(lua_State * L, int idx)
+		{
+			if (!lua_istable(L, idx))
+			{
+				LogScriptErrorJump(L, "Error!!!The {} data is not a table, convert Urho3D::PODVector<T> failed!!!", idx);
+			}
+			idx = lua_absindex(L, idx);
+			size_t len = lua_objlen(L, idx);
+			Urho3D::PODVector<T> vec;
+			vec.Reserve(len);
+			for (size_t i = 1; i <= len; i++)
+			{
+				lua_rawgeti(L, idx, i);
+				vec.Push(LuaStack<const T>::get(L, -1));
+				lua_pop(L, 1);
+			}
+			LogTraceReturn(vec);
+		}
+	};
+	
+	
+	//vector
+	template <typename T>
+	struct LuaStack <Urho3D::Vector<T> >
+	{
+		static inline void push(lua_State * L, typename Urho3D::Vector<T> & vec)
+		{
+			lua_createtable(L, vec.Size(), 0);
+			for (size_t i = 0; i < vec.Size(); ++i)
+			{
+				LuaStack<const T>::push(L, vec[i]);
+				lua_rawseti(L, -2, i+1);
+			}
+		}
+
+		static inline typename Urho3D::Vector<T> get(lua_State * L, int idx)
+		{
+			if (!lua_istable(L, idx))
+			{
+				LogScriptErrorJump(L, "Error!!!The {} data is not a table, convert Urho3D::Vector<T> failed!!!", idx);
+			}
+			idx = lua_absindex(L, idx);
+			size_t len = lua_objlen(L, idx);
+			Urho3D::Vector<T> vec;
+			vec.Reserve(len);
+			for (size_t i = 1; i <= len; i++)
+			{
+				lua_rawgeti(L, idx, i);
+				vec.Push(LuaStack<const T>::get(L, -1));
+				lua_pop(L, 1);
+			}
+			LogTraceReturn(vec);
+		}
+	};
+
+	//const vector
+	template <typename T>
+	struct LuaStack <const Urho3D::Vector<T> >
+	{
+		static inline void push(lua_State * L, const typename Urho3D::Vector<T> & vec)
+		{
+			lua_createtable(L, vec.Size(), 0);
+			for (size_t i = 0; i < vec.Size(); ++i)
+			{
+				LuaStack<const T>::push(L, vec[i]);
+				lua_rawseti(L, -2, i+1);
+			}
+		}
+
+		static inline typename Urho3D::Vector<T> get(lua_State * L, int idx)
+		{
+			if (!lua_istable(L, idx))
+			{
+				LogScriptErrorJump(L, "Error!!!The {} data is not a table, convert Urho3D::Vector<T> failed!!!", idx);
+			}
+			idx = lua_absindex(L, idx);
+			size_t len = lua_objlen(L, idx);
+			Urho3D::Vector<T> vec;
+			vec.Reserve(len);
+			for (size_t i = 1; i <= len; i++)
+			{
+				lua_rawgeti(L, idx, i);
+				vec.Push(LuaStack<const T>::get(L, -1));
+				lua_pop(L, 1);
+			}
+			LogTraceReturn(vec);
+		}
+	};
+
+	//const vector &
+	template <typename T>
+	struct LuaStack <const Urho3D::Vector<T> &>
+	{
+		static inline void push(lua_State * L, const typename Urho3D::Vector<T> & vec)
+		{
+			lua_createtable(L, vec.Size(), 0);
+			for (size_t i = 0; i < vec.Size(); ++i)
+			{
+				LuaStack<const T>::push(L, vec[i]);
+				lua_rawseti(L, -2, i+1);
+			}
+		}
+
+		static inline typename Urho3D::Vector<T> get(lua_State * L, int idx)
+		{
+			if (!lua_istable(L, idx))
+			{
+				LogScriptErrorJump(L, "Error!!!The {} data is not a table, convert Urho3D::Vector<T> failed!!!", idx);
+			}
+			idx = lua_absindex(L, idx);
+			size_t len = lua_objlen(L, idx);
+			Urho3D::Vector<T> vec;
+			vec.Reserve(len);
+			for (size_t i = 1; i <= len; i++)
+			{
+				lua_rawgeti(L, idx, i);
+				vec.Push(LuaStack<const T>::get(L, -1));
+				lua_pop(L, 1);
+			}
+			LogTraceReturn(vec);
+		}
+	};
+	
 	
 }
 

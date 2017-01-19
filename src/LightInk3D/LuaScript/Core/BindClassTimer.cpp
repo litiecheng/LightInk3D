@@ -24,7 +24,7 @@
 #include "Precompiled.h"
 
 #include "Core/Timer.h"
-#include "../LuaScript/LuaUtils.h"
+#include "LuaScript/LuaUtils.h"
 #include "LuaEngine/LuaEngine.h"
 
 namespace Urho3D

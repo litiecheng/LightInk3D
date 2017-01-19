@@ -28,6 +28,7 @@
 #include "Audio/SoundListener.h"
 #include "Audio/SoundSource.h"
 #include "LuaEngine/LuaEngine.h"
+#include "LuaScript/LuaUtils.h"
 
 
 namespace Urho3D

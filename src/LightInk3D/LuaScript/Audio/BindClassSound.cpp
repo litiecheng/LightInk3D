@@ -32,6 +32,29 @@
 namespace Urho3D
 {
 	using namespace LightInk;
+	static bool SoundLoadRaw(Sound* sound, Context * context, const String& fileName)
+	{
+		SharedPtr<File> file(new File(context, fileName));
+		if (!file->IsOpen())
+			return false;
+		return sound->LoadRaw(*file);
+	}
+
+	static bool SoundLoadWav(Sound* sound, Context * context, const String& fileName)
+	{
+		SharedPtr<File> file(new File(context, fileName));
+		if (!file->IsOpen())
+			return false;
+		return sound->LoadWav(*file);
+	}
+
+	static bool SoundLoadOggVorbis(Sound* sound, Context * context, const String& fileName)
+	{
+		SharedPtr<File> file(new File(context, fileName));
+		if (!file->IsOpen())
+			return false;
+		return sound->LoadOggVorbis(*file);
+	}
 	void bind_class_Sound(LuaModule & lm)
 	{
 		lm
@@ -40,8 +63,11 @@ namespace Urho3D
 				.disable_new()
 				.def(CreateObject<Sound>, "new")
 				.def(&Sound::LoadRaw, "LoadRaw")
+				.def(SoundLoadRaw, "LoadRawF")
 				.def(&Sound::LoadWav, "LoadWav")
+				.def(SoundLoadWav, "LoadWavF")
 				.def(&Sound::LoadOggVorbis, "LoadOggVorbis")
+				.def(SoundLoadOggVorbis, "LoadOggVorbisF")
 				.def(&Sound::SetSize, "SetSize")
 				.def(&Sound::SetData, "SetData")
 				.def(&Sound::SetFormat, "SetFormat")

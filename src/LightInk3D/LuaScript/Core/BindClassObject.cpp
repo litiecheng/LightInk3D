@@ -34,7 +34,7 @@ namespace Urho3D
 	{
 		lm
 		[
-			LuaRegister<Object, void ()>(lm.state(), "Object", BaseClassStrategy<RefCounted>())
+			LuaRegister<Object, void>(lm.state(), "Object", BaseClassStrategy<RefCounted>())
 				.def(&Object::GetType, "GetType")
 				.def(&Object::GetTypeName, "GetTypeName")
 				.def(&Object::GetCategory, "GetCategory")

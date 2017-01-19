@@ -36,8 +36,8 @@ namespace Urho3D
 		LuaDefAutoTool::def(lua, static_cast<bool(*)(const char*)>(ToBool), "ToBool");
 		LuaDefAutoTool::def(lua, static_cast<float(*)(const char*)>(ToFloat), "ToFloat");
 		LuaDefAutoTool::def(lua, static_cast<double(*)(const char*)>(ToDouble), "ToDouble");
-		LuaDefAutoTool::def(lua, static_cast<int(*)(const char*)>(ToInt), "ToInt");
-		LuaDefAutoTool::def(lua, static_cast<unsigned int(*)(const char*)>(ToUInt), "ToUInt");
+		LuaDefAutoTool::def(lua, static_cast<int(*)(const char*, int)>(ToInt), "ToInt");
+		LuaDefAutoTool::def(lua, static_cast<unsigned int(*)(const char*, int)>(ToUInt), "ToUInt");
 		LuaDefAutoTool::def(lua, static_cast<Color(*)(const char*)>(ToColor), "ToColor");
 		LuaDefAutoTool::def(lua, static_cast<IntRect(*)(const char*)>(ToIntRect), "ToIntRect");
 		LuaDefAutoTool::def(lua, static_cast<IntVector2(*)(const char*)>(ToIntVector2), "ToIntVector2");
@@ -45,7 +45,7 @@ namespace Urho3D
 		LuaDefAutoTool::def(lua, static_cast<Rect(*)(const char*)>(ToRect), "ToRect");
 		LuaDefAutoTool::def(lua, static_cast<Vector2(*)(const char*)>(ToVector2), "ToVector2");
 		LuaDefAutoTool::def(lua, static_cast<Vector3(*)(const char*)>(ToVector3), "ToVector3");
-		LuaDefAutoTool::def(lua, static_cast<Vector4(*)(const char*)>(ToVector4), "ToVector4");
+		LuaDefAutoTool::def(lua, static_cast<Vector4(*)(const char*, bool)>(ToVector4), "ToVector4");
 		LuaDefAutoTool::def(lua, static_cast<Matrix3(*)(const char*)>(ToMatrix3), "ToMatrix3");
 		LuaDefAutoTool::def(lua, static_cast<Matrix3x4(*)(const char*)>(ToMatrix3x4), "ToMatrix3x4");
 		LuaDefAutoTool::def(lua, static_cast<Matrix4(*)(const char*)>(ToMatrix4), "ToMatrix4");

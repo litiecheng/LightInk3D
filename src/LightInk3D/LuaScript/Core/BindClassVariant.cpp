@@ -267,7 +267,7 @@ namespace Urho3D
 				.def(&ResourceRefList::type_, "type_")
 			<=
 			LuaRegister<ResourceRef, void ()>(lua, "ResourceRef")
-				.def(, "__eq")
+				.def(&ResourceRef::operator==, "__eq")
 				.def(&ResourceRef::type_, "type_")
 				.def(&ResourceRef::name_, "name_")
 		];
