@@ -36,7 +36,7 @@ namespace Urho3D
 	{
 		lm
 		[
-			LuaRegister<Database, void ()>(lm.state(), "Database", BaseClassStrategy<Object>())
+			LuaRegister<Database, void (Context *)>(lm.state(), "Database", BaseClassStrategy<Object>())
 				.def(Database::GetAPI, "GetAPI")
 				.def(&Database::Connect, "Connect")
 				.def(&Database::Disconnect, "Disconnect")

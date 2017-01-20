@@ -30,18 +30,18 @@
 namespace Urho3D
 {
 
-	static const Variant& VariantMapGetVariant(const VariantMap& variantMap, StringHash key)
+	static const Variant * VariantMapGetVariant(const VariantMap * variantMap, StringHash key)
 	{
-		VariantMap::ConstIterator i = variantMap.Find(key);
-		if (i == variantMap.End())
-			return Variant::EMPTY;
+		VariantMap::ConstIterator i = variantMap->Find(key);
+		if (i == variantMap->End())
+			return &Variant::EMPTY;
 
-		return i->second_;
+		return &(i->second_);
 	}
 
-	static void VariantMapSetVariant(VariantMap& variantMap, StringHash key, const Variant& value)
+	static void VariantMapSetVariant(VariantMap * variantMap, StringHash key, const Variant * value)
 	{
-		variantMap[key] = value;
+		(*variantMap)[key] = *value;
 	}
 	
 	using namespace LightInk;
@@ -50,7 +50,7 @@ namespace Urho3D
 		
 		lm
 		[
-			LuaRegister<VariantMap, void ()>(lua, "VariantMap")
+			LuaRegister<VariantMap, void ()>(lm.state(), "VariantMap")
 				.def(VariantMapGetVariant, "GetVariant")
 				.def(VariantMapSetVariant, "SetVariant")
 		];

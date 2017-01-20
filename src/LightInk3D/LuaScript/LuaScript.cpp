@@ -108,7 +108,7 @@ LuaScript::LuaScript(Context* context) :
 	bind_navigation_module(luaState_, context);
 #endif
 #ifdef URHO3D_NETWORK
-    tolua_NetworkLuaAPI_open(luaState_, context);
+    bind_newwork_module(luaState_, context);
 #endif
 #ifdef URHO3D_DATABASE
 	bind_database_module(luaState_, context);

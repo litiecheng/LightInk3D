@@ -41,9 +41,9 @@ namespace Urho3D
 		return Variant(value);
 	}
 
-	static Variant StringHashToVariant(const StringHash& value)
+	static Variant StringHashToVariant(const StringHash * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static Variant BoolToVariant(bool value)
@@ -66,9 +66,9 @@ namespace Urho3D
 		return Variant(Vector2(x, y));
 	}
 
-	static Variant Vector2ToVariant(const Vector2& value)
+	static Variant Vector2ToVariant(const Vector2 * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static Variant Vector3ToVariant3(float x, float y, float z)
@@ -76,9 +76,9 @@ namespace Urho3D
 		return Variant(Vector3(x, y, z));
 	}
 
-	static Variant Vector3ToVariant(const Vector3& value)
+	static Variant Vector3ToVariant(const Vector3 * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static Variant Vector4ToVariant4(float x, float y, float z, float w)
@@ -86,9 +86,9 @@ namespace Urho3D
 		return Variant(Vector4(x, y, z, w));
 	}
 
-	static Variant Vector4ToVariant(const Vector4& value)
+	static Variant Vector4ToVariant(const Vector4 * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static Variant QuaternionToVariant4(float w, float x, float y, float z)
@@ -96,9 +96,9 @@ namespace Urho3D
 		return Variant(Quaternion(w, x, y, z));
 	}
 
-	static Variant QuaternionToVariant(const Quaternion& value)
+	static Variant QuaternionToVariant(const Quaternion * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static Variant ColorToVariant3(float r, float g, float b)
@@ -111,19 +111,19 @@ namespace Urho3D
 		return Variant(Color(r, g, b, a));
 	}
 
-	static Variant ColorToVariant(const Color& value)
+	static Variant ColorToVariant(const Color * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
-	static Variant StringToVariant(const String& value)
+	static Variant StringToVariant(const String * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
-	static Variant VectorBufferToVariant(const VectorBuffer& value)
+	static Variant VectorBufferToVariant(const VectorBuffer * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static Variant ResourceRefToVariantS(StringHash type)
@@ -131,14 +131,14 @@ namespace Urho3D
 		return Variant(ResourceRef(type));
 	}
 
-	static Variant ResourceRefToVariant2(StringHash type, const String& name)
+	static Variant ResourceRefToVariant2(StringHash type, const String * name)
 	{
-		return Variant(ResourceRef(type, name));
+		return Variant(ResourceRef(type, *name));
 	}
 
-	static Variant ResourceRefToVariant(const ResourceRef& value)
+	static Variant ResourceRefToVariant(const ResourceRef * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static Variant ResourceRefListToVariantS(StringHash type)
@@ -146,29 +146,29 @@ namespace Urho3D
 		return Variant(ResourceRefList(type));
 	}
 
-	static Variant ResourceRefListToVariant2(StringHash type, const StringVector& names)
+	static Variant ResourceRefListToVariant2(StringHash type, const StringVector * names)
 	{
-		return Variant(ResourceRefList(type, names));
+		return Variant(ResourceRefList(type, *names));
 	}
 
-	static Variant ResourceRefListToVariant(const ResourceRefList& value)
+	static Variant ResourceRefListToVariant(const ResourceRefList * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
-	static Variant VariantVectorToVariant(const VariantVector& value)
+	static Variant VariantVectorToVariant(const VariantVector * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
-	static Variant VariantMapToVariant(const VariantMap& value)
+	static Variant VariantMapToVariant(const VariantMap * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
-	static Variant StringVectorToVariant(const StringVector& value)
+	static Variant StringVectorToVariant(const StringVector * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static Variant IntRectToVariant4(int left, int top, int right, int bottom)
@@ -176,9 +176,9 @@ namespace Urho3D
 		return Variant(IntRect(left, top, right, bottom));
 	}
 
-	static Variant IntRectToVariant(const IntRect& value)
+	static Variant IntRectToVariant(const IntRect * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static Variant IntVector2ToVariant2(int x, int y)
@@ -186,9 +186,9 @@ namespace Urho3D
 		return Variant(IntVector2(x, y));
 	}
 
-	static Variant IntVector2ToVariant(const IntVector2& value)
+	static Variant IntVector2ToVariant(const IntVector2 * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static Variant PtrToVariant(RefCounted* value)
@@ -201,19 +201,19 @@ namespace Urho3D
 		return Variant(Matrix3(v00, v01, v02, v10, v11, v12, v20, v21, v22));
 	}
 
-	static Variant Matrix3ToVariant(const Matrix3& value)
+	static Variant Matrix3ToVariant(const Matrix3 * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
-	static Variant Matrix3x4ToVariant(const Matrix3x4& value)
+	static Variant Matrix3x4ToVariant(const Matrix3x4 * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
-	static Variant Matrix4ToVariant(const Matrix4& value)
+	static Variant Matrix4ToVariant(const Matrix4 * value)
 	{
-		return Variant(value);
+		return Variant(*value);
 	}
 
 	static SharedPtr<RefCounted> VariantGetPtr(const Variant* self)

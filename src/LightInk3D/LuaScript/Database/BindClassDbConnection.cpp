@@ -35,7 +35,7 @@ namespace Urho3D
 	{
 		lm
 		[
-			LuaRegister<DbConnection, void ()>(lm.state(), "DbConnection", BaseClassStrategy<Object>())
+			LuaRegister<DbConnection, void (Context *, const String &)>(lm.state(), "DbConnection", BaseClassStrategy<Object>())
 				.def(&DbConnection::Finalize, "Finalize")
 				.def(&DbConnection::Execute, "Execute")
 				.def(&DbConnection::GetConnectionString, "GetConnectionString")

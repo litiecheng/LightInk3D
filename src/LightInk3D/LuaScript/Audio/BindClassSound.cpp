@@ -32,7 +32,7 @@
 namespace Urho3D
 {
 	using namespace LightInk;
-	static bool SoundLoadRaw(Sound* sound, Context * context, const String& fileName)
+	static bool SoundLoadRawS(Sound* sound, Context * context, const String& fileName)
 	{
 		SharedPtr<File> file(new File(context, fileName));
 		if (!file->IsOpen())
@@ -40,21 +40,38 @@ namespace Urho3D
 		return sound->LoadRaw(*file);
 	}
 
-	static bool SoundLoadWav(Sound* sound, Context * context, const String& fileName)
+	static bool SoundLoadRawF(Sound* sound, Deserializer * source)
+	{
+		return sound->LoadRaw(*source);
+	}
+	
+	static bool SoundLoadWavS(Sound* sound, Context * context, const String& fileName)
 	{
 		SharedPtr<File> file(new File(context, fileName));
 		if (!file->IsOpen())
 			return false;
 		return sound->LoadWav(*file);
 	}
+	
+	static bool SoundLoadWavF(Sound* sound, Deserializer * source)
+	{
+		return sound->LoadWav(*source);
+	}
 
-	static bool SoundLoadOggVorbis(Sound* sound, Context * context, const String& fileName)
+
+	static bool SoundLoadOggVorbisS(Sound* sound, Context * context, const String& fileName)
 	{
 		SharedPtr<File> file(new File(context, fileName));
 		if (!file->IsOpen())
 			return false;
 		return sound->LoadOggVorbis(*file);
 	}
+	
+	static bool SoundLoadOggVorbisF(Sound* sound, Deserializer * source)
+	{
+		return sound->LoadOggVorbis(*source);
+	}
+	
 	void bind_class_Sound(LuaModule & lm)
 	{
 		lm
@@ -62,12 +79,12 @@ namespace Urho3D
 			LuaRegister<Sound, void (Context *)>(lm.state(), "Sound", BaseClassStrategy<Resource>())
 				.disable_new()
 				.def(CreateObject<Sound>, "new")
-				.def(&Sound::LoadRaw, "LoadRaw")
-				.def(SoundLoadRaw, "LoadRawF")
-				.def(&Sound::LoadWav, "LoadWav")
-				.def(SoundLoadWav, "LoadWavF")
-				.def(&Sound::LoadOggVorbis, "LoadOggVorbis")
-				.def(SoundLoadOggVorbis, "LoadOggVorbisF")
+				.def(SoundLoadRawF, "LoadRaw")
+				.def(SoundLoadRawS, "LoadRawS")
+				.def(SoundLoadWavF, "LoadWav")
+				.def(SoundLoadWavS, "LoadWavS")
+				.def(SoundLoadOggVorbisF, "LoadOggVorbis")
+				.def(SoundLoadOggVorbisS, "LoadOggVorbisS")
 				.def(&Sound::SetSize, "SetSize")
 				.def(&Sound::SetData, "SetData")
 				.def(&Sound::SetFormat, "SetFormat")
